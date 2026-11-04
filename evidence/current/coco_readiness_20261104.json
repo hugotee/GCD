@@ -1,0 +1,37 @@
+{
+  "audit_completed": true,
+  "dataset": {
+    "prepared": false,
+    "user_confirmed_not_prepared": true,
+    "supplied_root": null
+  },
+  "protocol_frozen": false,
+  "taxonomy_sha256": "2f2aa666dbd03812b5a44048b68870b24f96dddf054d7ed787a48bd38449eb2f",
+  "source_script_sha256": "35908e49f590892e34fa7571548d097442c8d45e00d036e361bbd74e5ac56755",
+  "tokenizer_class": "BertTokenizerFast",
+  "prompt_checks": {
+    "all80": {
+      "classes": 80,
+      "tokens_including_special": 195,
+      "fits_256": true
+    },
+    "first70": {
+      "classes": 70,
+      "tokens_including_special": 170,
+      "fits_256": true
+    },
+    "first40": {
+      "classes": 40,
+      "tokens_including_special": 101,
+      "fits_256": true
+    },
+    "VOC_unadapted60": {
+      "classes": 60,
+      "tokens_including_special": 152,
+      "fits_256": true
+    }
+  },
+  "cuda_initialized": false,
+  "incremental_training_started": false,
+  "note": "VOC_unadapted60 means not supervised during VOC adaptation, not unseen in foundation pretraining."
+}

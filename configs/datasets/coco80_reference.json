@@ -1,0 +1,495 @@
+{
+  "reference_only": true,
+  "protocol_frozen": false,
+  "dataset_prepared": false,
+  "source_repository": "Never-wx/GCD",
+  "source_commit": "420708a7cca19d320b082a859cc72039dbdd0dbf",
+  "source_path": "mmdet/datasets/coco_increment.py",
+  "source_sha256": "850ddd391eec6c25d0db2fdc5043b9d4df27e519a748bd1675bb7d9939882d52",
+  "categories": [
+    {
+      "index": 0,
+      "id": 1,
+      "name": "person"
+    },
+    {
+      "index": 1,
+      "id": 2,
+      "name": "bicycle"
+    },
+    {
+      "index": 2,
+      "id": 3,
+      "name": "car"
+    },
+    {
+      "index": 3,
+      "id": 4,
+      "name": "motorcycle"
+    },
+    {
+      "index": 4,
+      "id": 5,
+      "name": "airplane"
+    },
+    {
+      "index": 5,
+      "id": 6,
+      "name": "bus"
+    },
+    {
+      "index": 6,
+      "id": 7,
+      "name": "train"
+    },
+    {
+      "index": 7,
+      "id": 8,
+      "name": "truck"
+    },
+    {
+      "index": 8,
+      "id": 9,
+      "name": "boat"
+    },
+    {
+      "index": 9,
+      "id": 10,
+      "name": "traffic light"
+    },
+    {
+      "index": 10,
+      "id": 11,
+      "name": "fire hydrant"
+    },
+    {
+      "index": 11,
+      "id": 13,
+      "name": "stop sign"
+    },
+    {
+      "index": 12,
+      "id": 14,
+      "name": "parking meter"
+    },
+    {
+      "index": 13,
+      "id": 15,
+      "name": "bench"
+    },
+    {
+      "index": 14,
+      "id": 16,
+      "name": "bird"
+    },
+    {
+      "index": 15,
+      "id": 17,
+      "name": "cat"
+    },
+    {
+      "index": 16,
+      "id": 18,
+      "name": "dog"
+    },
+    {
+      "index": 17,
+      "id": 19,
+      "name": "horse"
+    },
+    {
+      "index": 18,
+      "id": 20,
+      "name": "sheep"
+    },
+    {
+      "index": 19,
+      "id": 21,
+      "name": "cow"
+    },
+    {
+      "index": 20,
+      "id": 22,
+      "name": "elephant"
+    },
+    {
+      "index": 21,
+      "id": 23,
+      "name": "bear"
+    },
+    {
+      "index": 22,
+      "id": 24,
+      "name": "zebra"
+    },
+    {
+      "index": 23,
+      "id": 25,
+      "name": "giraffe"
+    },
+    {
+      "index": 24,
+      "id": 27,
+      "name": "backpack"
+    },
+    {
+      "index": 25,
+      "id": 28,
+      "name": "umbrella"
+    },
+    {
+      "index": 26,
+      "id": 31,
+      "name": "handbag"
+    },
+    {
+      "index": 27,
+      "id": 32,
+      "name": "tie"
+    },
+    {
+      "index": 28,
+      "id": 33,
+      "name": "suitcase"
+    },
+    {
+      "index": 29,
+      "id": 34,
+      "name": "frisbee"
+    },
+    {
+      "index": 30,
+      "id": 35,
+      "name": "skis"
+    },
+    {
+      "index": 31,
+      "id": 36,
+      "name": "snowboard"
+    },
+    {
+      "index": 32,
+      "id": 37,
+      "name": "sports ball"
+    },
+    {
+      "index": 33,
+      "id": 38,
+      "name": "kite"
+    },
+    {
+      "index": 34,
+      "id": 39,
+      "name": "baseball bat"
+    },
+    {
+      "index": 35,
+      "id": 40,
+      "name": "baseball glove"
+    },
+    {
+      "index": 36,
+      "id": 41,
+      "name": "skateboard"
+    },
+    {
+      "index": 37,
+      "id": 42,
+      "name": "surfboard"
+    },
+    {
+      "index": 38,
+      "id": 43,
+      "name": "tennis racket"
+    },
+    {
+      "index": 39,
+      "id": 44,
+      "name": "bottle"
+    },
+    {
+      "index": 40,
+      "id": 46,
+      "name": "wine glass"
+    },
+    {
+      "index": 41,
+      "id": 47,
+      "name": "cup"
+    },
+    {
+      "index": 42,
+      "id": 48,
+      "name": "fork"
+    },
+    {
+      "index": 43,
+      "id": 49,
+      "name": "knife"
+    },
+    {
+      "index": 44,
+      "id": 50,
+      "name": "spoon"
+    },
+    {
+      "index": 45,
+      "id": 51,
+      "name": "bowl"
+    },
+    {
+      "index": 46,
+      "id": 52,
+      "name": "banana"
+    },
+    {
+      "index": 47,
+      "id": 53,
+      "name": "apple"
+    },
+    {
+      "index": 48,
+      "id": 54,
+      "name": "sandwich"
+    },
+    {
+      "index": 49,
+      "id": 55,
+      "name": "orange"
+    },
+    {
+      "index": 50,
+      "id": 56,
+      "name": "broccoli"
+    },
+    {
+      "index": 51,
+      "id": 57,
+      "name": "carrot"
+    },
+    {
+      "index": 52,
+      "id": 58,
+      "name": "hot dog"
+    },
+    {
+      "index": 53,
+      "id": 59,
+      "name": "pizza"
+    },
+    {
+      "index": 54,
+      "id": 60,
+      "name": "donut"
+    },
+    {
+      "index": 55,
+      "id": 61,
+      "name": "cake"
+    },
+    {
+      "index": 56,
+      "id": 62,
+      "name": "chair"
+    },
+    {
+      "index": 57,
+      "id": 63,
+      "name": "couch"
+    },
+    {
+      "index": 58,
+      "id": 64,
+      "name": "potted plant"
+    },
+    {
+      "index": 59,
+      "id": 65,
+      "name": "bed"
+    },
+    {
+      "index": 60,
+      "id": 67,
+      "name": "dining table"
+    },
+    {
+      "index": 61,
+      "id": 70,
+      "name": "toilet"
+    },
+    {
+      "index": 62,
+      "id": 72,
+      "name": "tv"
+    },
+    {
+      "index": 63,
+      "id": 73,
+      "name": "laptop"
+    },
+    {
+      "index": 64,
+      "id": 74,
+      "name": "mouse"
+    },
+    {
+      "index": 65,
+      "id": 75,
+      "name": "remote"
+    },
+    {
+      "index": 66,
+      "id": 76,
+      "name": "keyboard"
+    },
+    {
+      "index": 67,
+      "id": 77,
+      "name": "cell phone"
+    },
+    {
+      "index": 68,
+      "id": 78,
+      "name": "microwave"
+    },
+    {
+      "index": 69,
+      "id": 79,
+      "name": "oven"
+    },
+    {
+      "index": 70,
+      "id": 80,
+      "name": "toaster"
+    },
+    {
+      "index": 71,
+      "id": 81,
+      "name": "sink"
+    },
+    {
+      "index": 72,
+      "id": 82,
+      "name": "refrigerator"
+    },
+    {
+      "index": 73,
+      "id": 84,
+      "name": "book"
+    },
+    {
+      "index": 74,
+      "id": 85,
+      "name": "clock"
+    },
+    {
+      "index": 75,
+      "id": 86,
+      "name": "vase"
+    },
+    {
+      "index": 76,
+      "id": 87,
+      "name": "scissors"
+    },
+    {
+      "index": 77,
+      "id": 88,
+      "name": "teddy bear"
+    },
+    {
+      "index": 78,
+      "id": 89,
+      "name": "hair drier"
+    },
+    {
+      "index": 79,
+      "id": 90,
+      "name": "toothbrush"
+    }
+  ],
+  "voc20_semantic_mapping": {
+    "aeroplane": {
+      "coco_name": "airplane",
+      "coco_category_id": 5
+    },
+    "bicycle": {
+      "coco_name": "bicycle",
+      "coco_category_id": 2
+    },
+    "bird": {
+      "coco_name": "bird",
+      "coco_category_id": 16
+    },
+    "boat": {
+      "coco_name": "boat",
+      "coco_category_id": 9
+    },
+    "bottle": {
+      "coco_name": "bottle",
+      "coco_category_id": 44
+    },
+    "bus": {
+      "coco_name": "bus",
+      "coco_category_id": 6
+    },
+    "car": {
+      "coco_name": "car",
+      "coco_category_id": 3
+    },
+    "cat": {
+      "coco_name": "cat",
+      "coco_category_id": 17
+    },
+    "chair": {
+      "coco_name": "chair",
+      "coco_category_id": 62
+    },
+    "cow": {
+      "coco_name": "cow",
+      "coco_category_id": 21
+    },
+    "diningtable": {
+      "coco_name": "dining table",
+      "coco_category_id": 67
+    },
+    "dog": {
+      "coco_name": "dog",
+      "coco_category_id": 18
+    },
+    "horse": {
+      "coco_name": "horse",
+      "coco_category_id": 19
+    },
+    "motorbike": {
+      "coco_name": "motorcycle",
+      "coco_category_id": 4
+    },
+    "person": {
+      "coco_name": "person",
+      "coco_category_id": 1
+    },
+    "pottedplant": {
+      "coco_name": "potted plant",
+      "coco_category_id": 64
+    },
+    "sheep": {
+      "coco_name": "sheep",
+      "coco_category_id": 20
+    },
+    "sofa": {
+      "coco_name": "couch",
+      "coco_category_id": 63
+    },
+    "train": {
+      "coco_name": "train",
+      "coco_category_id": 7
+    },
+    "tvmonitor": {
+      "coco_name": "tv",
+      "coco_category_id": 72
+    }
+  },
+  "caveat": "Incrementally unadapted is not unseen during foundation-model pretraining.",
+  "source_git_blob_sha1": "6f48ce390e22a1bd64404edd3f42c90744ca702a"
+}
