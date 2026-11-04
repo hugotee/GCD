@@ -1,0 +1,40 @@
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=4.14s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=55.51s).
+Accumulating evaluation results...
+DONE (t=17.60s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.804
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.947
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.892
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.485
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.686
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.858
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.881
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.902
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.824
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.942
+{
+  "old15": {
+    "VOC07_AP50": 90.46536987490757,
+    "COCO_AP50": 95.83886596007693,
+    "COCO_AP": 81.56244091788247
+  },
+  "new5": {
+    "VOC07_AP50": 86.7799722544864,
+    "COCO_AP50": 91.27065234281095,
+    "COCO_AP": 76.79484723998424
+  },
+  "all20": {
+    "VOC07_AP50": 89.54402046980229,
+    "COCO_AP50": 94.69681255576042,
+    "COCO_AP": 80.37054249840793
+  }
+}

@@ -6,5 +6,6 @@
 - 历史结果只读导入自用户独立 GDINO-CIOD，commit 1bc53ea5fe61ee935ffaa42405ce36ea81b992f2。evidence/reference/import_manifest.json逐文件保存原始SHA256。旧目录和历史未改动。
 - LoRALinear依据标准低秩残差公式实现，保持历史检查点的weight/bias/lora_A/lora_B键和数值运算顺序；运行时不读取DGS文件，也没有合并、分组、专家或任务路由。历史LoRA文件带Microsoft/MIT头，本次未将其复制进项目。
 - 本项目两处DN兼容处理是对官方v3.3.0接口行为的显式适配：构造后用零query接口替换DN生成器；head在dn_meta为None时返回全部matching输出。检测分类、L1、GIoU和Hungarian匹配仍用上游实现。
+- configs/datasets/coco80_reference.json的COCO类别事实与原始ID提取自[GCD作者固定版本METAINFO](https://github.com/Never-wx/GCD/blob/420708a7cca19d320b082a859cc72039dbdd0dbf/mmdet/datasets/coco_increment.py)，另附VOC语义对应；只参考数据协议，未引入其蒸馏或模型代码。
 
-未为用户新代码擅自选择开源许可证；没有远端推送。若后续发布，须连同实际分发依赖和权重各自条件一并处理。
+未为用户新代码擅自选择开源许可证。已按用户授权推送GitHub；上游MMDetection许可证副本随仓库保留，模型权重、BERT资源与数据集不进入Git。

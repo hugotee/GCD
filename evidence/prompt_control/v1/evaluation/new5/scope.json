@@ -1,0 +1,9 @@
+{
+  "diagnostic_short_training": true,
+  "epochs": 1,
+  "training_prompt": "new5",
+  "evaluation_prompt": "all20",
+  "full_test_images": 4952,
+  "raw_prediction_path": "/home/data/dq/gcd-ciod-20261104/outputs/prompt_control_v1/new5_eval/predictions.bbox.json",
+  "raw_prediction_sha256": "6aebe8b2339dec7e8f52943dfe68f6c454a3ec6b2fae853c9fa8f29b6bac3380"
+}

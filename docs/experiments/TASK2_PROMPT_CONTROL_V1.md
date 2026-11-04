@@ -63,3 +63,9 @@ python scripts/summarize_prompt_control.py --root outputs/prompt_control_v1 \
 |all20|503 / 252|280.69|7.291|
 
 以上计时不含初次模型构建；完整评价另计。全test评价正在执行，此处不填入未完成的AP。详见evidence/prompt_control/v1/paired_training.json及training目录。
+
+## new5完整评价核查（2026-11-05）
+
+new5固定1epoch模型已完成4952图test，评价提示统一all20；原始完成日志为11月4日。VOC07 AP50：旧15类90.4654，新5类86.7800，全部20类89.5440。相对初始B1，旧类+0.0604、新类+7.8497点。COCO AP50:95分别81.5624/76.7948/80.3705。
+
+这是已完成的单组结果；all20组训练已完成，完整评价在本次核查后启动。两组比较和机制解释须等待统一评价全部完成。证据见evidence/prompt_control/v1/evaluation/new5；大型原始预测留在服务器，并记录路径与SHA256。
