@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "test_count": 23,
+  "engineering_only": true,
+  "arms": [
+    "new5",
+    "all20"
+  ],
+  "microsteps_per_arm": 8,
+  "updates_per_arm": 4,
+  "paired_input_trace_identical": true,
+  "native_positive_token_targets_verified": true,
+  "no_preflight_checkpoint_used_for_control": true
+}

@@ -73,4 +73,4 @@ python scripts/summarize_results.py --results-root outputs/results --out outputs
 
 同一阶段恢复用 --resume outputs/B1/epoch_N.pth 和原work-dir，保留optimizer/scheduler/loop状态；跨阶段用 --init，明确重置优化器。配置、模型模板、manifest和W0组成恢复指纹，改变后拒绝续训。--dry-run可只生成配置和来源记录。
 
-参考实现与许可见 THIRD_PARTY_NOTICES.md；本仓库尚未推送远端。
+参考实现与许可见 THIRD_PARTY_NOTICES.md。已按用户授权将基线与首轮诊断提交推送至GitHub main；后续任务在hugo/分支保留提交与结果。

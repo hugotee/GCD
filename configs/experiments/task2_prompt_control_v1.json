@@ -1,0 +1,20 @@
+{
+  "name": "task2_prompt_control_v1",
+  "diagnostic_short_training": true,
+  "arms": ["new5", "all20"],
+  "initial_checkpoint_sha256": "af92d30f638a4d74634185c50129320257d1616462bb87966dba27ea0d0f471e",
+  "base_experiment": "configs/experiments/voc15_5.json",
+  "epochs": 1,
+  "seed": 20261103,
+  "schedule": "constant_1e-4",
+  "expected_train_images": 1006,
+  "expected_train_annotations": 1640,
+  "expected_microsteps": 503,
+  "expected_optimizer_updates": 252,
+  "physical_gpu": 2,
+  "evaluation_prompt": "all20",
+  "evaluation_images": 4952,
+  "checkpoint_selection": "last_fixed_epoch_only",
+  "no_replay": true,
+  "no_distillation": true
+}

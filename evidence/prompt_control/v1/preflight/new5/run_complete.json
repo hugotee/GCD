@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "arm": "new5",
+  "diagnostic_short_training": true,
+  "engineering_only": true,
+  "checkpoint_sha256": "96cb040dc46b3aa0ea8258b8c7aba3eef897e4143c4c51de379967f6da58f1e8",
+  "checkpoint": "outputs/prompt_control_preflight_v1/new5/iter_8.pth",
+  "plan_sha256": "fe5151cc305708e03902ed7f688f44d6cff2c4d2270381dc83eee7136a7c00af",
+  "physical_gpu": 2
+}
