@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "arm": "all20",
+  "diagnostic_short_training": true,
+  "initial_adapter_sha256": "0f0a164e410ae666e838c4bb89c05477a2e0b47422ddc58b379a231f6c8a9e0c",
+  "final_adapter_sha256": "05d5042933b1020874488f99959ea5de067c8d0ac116b36e7b28a8adeb43734b",
+  "native_target_checks": [
+    {
+      "image_id": 8351,
+      "local_labels": [
+        18
+      ],
+      "global_labels": [
+        18
+      ],
+      "ground_truth_names": [
+        "train"
+      ],
+      "native_positive_map_verified": true,
+      "text_token_count": 51
+    },
+    {
+      "image_id": 6844,
+      "local_labels": [
+        18
+      ],
+      "global_labels": [
+        18
+      ],
+      "ground_truth_names": [
+        "train"
+      ],
+      "native_positive_map_verified": true,
+      "text_token_count": 51
+    }
+  ],
+  "microsteps": 503
+}

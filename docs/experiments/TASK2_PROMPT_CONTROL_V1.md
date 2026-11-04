@@ -21,6 +21,8 @@
 
 这是一轮单seed的1epoch机制筛查，不替代12epoch基线。若new5保持旧类更好，还须检查新类适应是否同步减弱。new5同时改变文本条件、query选择及匹配，不能把差异全部解释为纯粹移除负损失通道。若没有明显改善，则训练提示负监督不足以独立解释遗忘。无隐藏旧标注进入优化，无旧样本回放，无KD。
 
+固定官方源码的GroundingDINOHead先将所有query-token目标初始化为0，仅在匹配位置填入当前GT的positive_maps，再用有效text_mask筛选分类损失（[固定commit源码](https://github.com/open-mmlab/mmdetection/blob/44ebd17b145c2372c4b700bfb9cb20dbd28ab64a/mmdet/models/dense_heads/grounding_dino_head.py#L190)）。因此，all20中的旧类token有效且没有旧类正目标，确实存在负监督；但这不证明该通道是功能下降的唯一来源。后续若需隔离损失作用，应保留all20完整前向条件，仅控制旧类token的分类损失，再检查query匹配与新类适应。
+
 ## 运行与材料
 
 使用scripts/prepare_prompt_control.py生成不可覆盖的plan.json，固定数据、权重、源码与预算hash；scripts/train_prompt_control.py复用未修改的baseline dry-run配置，仅覆盖已注册的提示/标签和训练预算。配置模板与实际配置分开保留。所有输出使用新目录，失败日志不覆盖。
@@ -30,3 +32,34 @@
 ## 预检结果
 
 23项单元测试通过。new5/all20均完成完整分辨率、900query的8微步GPU2预检，各4次有效更新、无AMP跳步，48个LoRA张量更新、冻结参数不变。两组8批的图像ID、增广像素和全局GT指纹完全一致，初始LoRA hash相同；原生正token监督实际指向相同新类别。预检模型不进入后续对照，两个1epoch模型都重新从相同原始B1初始化。证据见evidence/prompt_control/v1/preflight_pair.json及preflight目录。
+
+预注册与预检已在任何1epoch对照结果产生前提交并推送：d44c865。以下为服务器复现命令模板；目录已存在时拒绝覆盖，不要重复提交已运行的实验。
+
+```bash
+python scripts/train_prompt_control.py --runtime configs/runtime.local.json \
+  --init /home/data/dq/dgs-experiments/gdino_ciod_voc15_5/checkpoints/task1_15classes.pth \
+  --arm new5 --plan evidence/prompt_control/v1/plan.json --out outputs/prompt_control_v1/new5
+# all20组仅替换--arm和--out，仍从同一原始B1初始化。
+python scripts/run.py eval --runtime configs/runtime.local.json --gpus 2 --phase task2 \
+  --init outputs/prompt_control_v1/new5/epoch_1.pth --work-dir outputs/prompt_control_v1/new5_eval
+python scripts/evaluate.py --manifest data/voc15_5/manifest.json \
+  --predictions outputs/prompt_control_v1/new5_eval/predictions.bbox.json \
+  --provenance outputs/prompt_control_v1/new5_eval/provenance.json \
+  --model B2 --out outputs/prompt_control_v1/new5_results
+# all20评价也仅替换对应目录；脚本内B2表示Task2评价接口，不是12epoch历史基线。
+python scripts/summarize_prompt_control.py --root outputs/prompt_control_v1 \
+  --plan evidence/prompt_control/v1/plan.json \
+  --reference-summary /home/data/dq/dgs-experiments/gdino_ciod_voc15_5/results/B1/summary.json \
+  --out outputs/prompt_control_v1/analysis
+```
+
+## 固定1epoch训练实测
+
+完整输入配对通过：两组503批、1006个不同图像的顺序、增广像素、框与全局类别指纹完全一致；初始LoRA相同。两组均252次有效更新、0次AMP跳步、48个LoRA张量更新，冻结参数不变。
+
+|训练提示|微步/更新|审计区间秒|峰值allocated GiB|
+|---|---:|---:|---:|
+|new5|503 / 252|277.21|6.435|
+|all20|503 / 252|280.69|7.291|
+
+以上计时不含初次模型构建；完整评价另计。全test评价正在执行，此处不填入未完成的AP。详见evidence/prompt_control/v1/paired_training.json及training目录。

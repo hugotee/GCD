@@ -31,3 +31,7 @@ GPU利用率另用只读nvidia-smi每2秒采样，共147次，均值35.5%、最�
 ## 后续机制探针实测（同日）
 
 GPU2空闲后已完成128训练图、6条件、900query配对前向，共771次前向（含3次数值重复）。计时区间186.66秒，初次模型构建另计；峰值allocated 1.462GiB。无训练/optimizer，冻结参数与LoRA均未变。该推理显存不能替代前述训练显存预算；结果不是完整test AP，详见MECHANISM_DIAGNOSTICS_V1.md与evidence/diagnostics/v1/full_probe。
+
+## Task2训练提示对照（固定1epoch）
+
+仅GPU2。new5/all20分别完成完整1006图、503微步、252更新；无AMP跳步、冻结参数未变，两组增广后输入及全局GT逐批指纹完全一致。new5审计区间277.21秒、峰值allocated 6.435GiB；all20为280.69秒、7.291GiB。初次构建另计，评价另计。这是预注册的短程机制筛查，不是重跑12epoch基线；证据见evidence/prompt_control/v1/paired_training.json。

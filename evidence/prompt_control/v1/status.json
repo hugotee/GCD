@@ -1,0 +1,8 @@
+{
+  "training_completed": true,
+  "uniform_full_test_evaluation_completed": false,
+  "new_formal_12_epoch_training": false,
+  "physical_gpu": 2,
+  "pre_registered_commit": "d44c865",
+  "test_count": 23
+}
