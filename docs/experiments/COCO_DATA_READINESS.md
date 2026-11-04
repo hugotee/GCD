@@ -31,7 +31,7 @@ evidence/current/coco_readiness_20261104.json记录当前状态与hash。attempt
 
 ## 数据到位后的验收
 
-需要完整train2017、val2017和annotations/instances_train2017.json、instances_val2017.json。先验证80类原始ID/名称、全部图像文件存在、训练/验证图像数量，再生成不可覆盖的阶段JSON与manifest，统计各阶段图像/实例数、交叠图像、隐藏旧框和crowd语义。训练图像筛选、无效框处理、min_size与原始ID映射均需留痕。正式profile只使用用户授权的GPU2，不能沿用VOC数据规模估计COCO成本。
+需要完整train2017、val2017和annotations/instances_train2017.json、instances_val2017.json。先验证80类原始ID/名称、全部图像文件存在、训练/验证图像数量，再生成不可覆盖的阶段JSON与manifest，统计各阶段图像/实例数、交叠图像、隐藏旧框和crowd语义。训练图像筛选、无效框处理、min_size与原始ID映射均需留痕。正式profile需从当前已授权的GPU0–3选择空闲卡，不能沿用VOC数据规模估计COCO成本。
 
 ```bash
 # 当前状态快照（已运行，输出已存在时拒绝覆盖）

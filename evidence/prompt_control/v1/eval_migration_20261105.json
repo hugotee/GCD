@@ -1,0 +1,7 @@
+{
+  "own_process_pid": 19818,
+  "signal": "SIGINT",
+  "reason": "Move own contended GPU2 evaluation to newly authorized lower-utilization GPU; other processes untouched.",
+  "previous_gpu": 2,
+  "new_gpu_candidate": 1
+}

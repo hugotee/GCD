@@ -1,0 +1,12 @@
+{
+  "interrupted": true,
+  "not_used_for_AP": true,
+  "reason": "User broadened GPU authorization; move own evaluator away from GPU2 contention.",
+  "completed_images_in_last_logged_progress": 900,
+  "model_data_evaluation_config_identical": true,
+  "training_gpu": 2,
+  "previous_evaluation_gpu": 2,
+  "new_evaluation_gpu": 1,
+  "same_model_family": "RTX 3090",
+  "checkpoint_unchanged": true
+}

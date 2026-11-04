@@ -44,7 +44,7 @@ CPU集成只用于正确性，显式改为小图/20query；不能作为GPU吞吐
 
 ## GPU2 工程验证
 
-以下使用物理GPU2，不再额外设置CUDA_VISIBLE_DEVICES或重编号。当前runtime只授权2；忙卡会拒绝启动。
+以下为物理GPU2上的既有工程验证命令，不再额外设置CUDA_VISIBLE_DEVICES或重编号。最新授权已扩展到物理GPU0–3；优先选择空闲卡，原生训练入口会拒绝忙卡。scripts/evaluate_available_gpu.py可为评价自动选择连续三次利用率≤5%、可用显存≥6GiB的授权卡，并记录实际物理卡与采样；不停止显存驻留的其他作业。
 
 ```bash
 python scripts/run.py smoke --runtime configs/runtime.local.json --gpus 2 --phase task1 --steps 8 --warmup 0 --verify --work-dir outputs/smoke_task1

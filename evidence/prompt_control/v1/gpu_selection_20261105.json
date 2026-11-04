@@ -1,0 +1,101 @@
+{
+  "client_date": "2026-11-05",
+  "authorized_physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "samples": [
+    [
+      [
+        0,
+        18167,
+        24576,
+        51
+      ],
+      [
+        1,
+        16711,
+        24576,
+        0
+      ],
+      [
+        2,
+        19044,
+        24576,
+        100
+      ],
+      [
+        3,
+        18167,
+        24576,
+        63
+      ]
+    ],
+    [
+      [
+        0,
+        18167,
+        24576,
+        60
+      ],
+      [
+        1,
+        16711,
+        24576,
+        0
+      ],
+      [
+        2,
+        19044,
+        24576,
+        100
+      ],
+      [
+        3,
+        18167,
+        24576,
+        51
+      ]
+    ],
+    [
+      [
+        0,
+        18167,
+        24576,
+        86
+      ],
+      [
+        1,
+        16711,
+        24576,
+        0
+      ],
+      [
+        2,
+        19044,
+        24576,
+        100
+      ],
+      [
+        3,
+        18167,
+        24576,
+        80
+      ]
+    ]
+  ],
+  "columns": [
+    "index",
+    "used_MiB",
+    "total_MiB",
+    "utilization_percent"
+  ],
+  "inference_candidates": [
+    1
+  ],
+  "minimum_free_MiB": 6144,
+  "maximum_utilization_percent": 5,
+  "note": "Memory-resident processes remain untouched; only low-utilization GPUs with enough free VRAM qualify for inference."
+}
