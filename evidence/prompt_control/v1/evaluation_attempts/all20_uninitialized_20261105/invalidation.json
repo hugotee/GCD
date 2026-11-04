@@ -1,0 +1,8 @@
+{
+  "invalid": true,
+  "not_used_for_AP": true,
+  "reason": "Custom evaluation launcher omitted runner._init_model_weights(); declared checkpoint was not loaded into the model.",
+  "actual_used_launcher_git_commit": "d26e025",
+  "source_path": "scripts/evaluate_available_gpu.py",
+  "resolution": "Explicit initialization plus exact full checkpoint-state comparison before any prediction; rerun evaluation only."
+}

@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "engineering_only": true,
+  "full_resolution": true,
+  "num_queries": 900,
+  "images": [
+    {
+      "image_id": 24,
+      "detections": 300,
+      "max_score": 0.7280497550964355
+    },
+    {
+      "image_id": 34,
+      "detections": 300,
+      "max_score": 0.8881184458732605
+    },
+    {
+      "image_id": 39,
+      "detections": 300,
+      "max_score": 0.8156270384788513
+    },
+    {
+      "image_id": 41,
+      "detections": 300,
+      "max_score": 0.8557218909263611
+    }
+  ],
+  "note": "Train-side engineering preflight, not AP."
+}
