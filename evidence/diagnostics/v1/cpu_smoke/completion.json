@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "diagnostic_only": true,
+  "engineering_only": true,
+  "training_performed": false,
+  "physical_gpu": null,
+  "cuda_initialized": false,
+  "images": 2,
+  "forwards": 15,
+  "num_queries": 20,
+  "checkpoint_provenance": {
+    "B0": {
+      "checkpoint_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3"
+    },
+    "B1": {
+      "checkpoint_sha256": "af92d30f638a4d74634185c50129320257d1616462bb87966dba27ea0d0f471e"
+    },
+    "B2": {
+      "checkpoint_sha256": "ec615c38f9f05b882957182a93011428dce94afc9728f240dfc79258f63e1839"
+    }
+  },
+  "repeat_checks": {
+    "B0": {
+      "logit_max_abs_difference": 0.0,
+      "box_max_abs_difference": 0.0
+    },
+    "B1": {
+      "logit_max_abs_difference": 0.0,
+      "box_max_abs_difference": 0.0
+    },
+    "B2": {
+      "logit_max_abs_difference": 0.0,
+      "box_max_abs_difference": 0.0
+    }
+  },
+  "adapter_parameters_unchanged": true,
+  "frozen_parameters_unchanged": true,
+  "text_feature_sha256": "70a833a2380dee8763ceb2f7ef8bf1e3728c8b8c04966f73e6c4bae388bbd823",
+  "object_scores_sha256": "3177f3abd63852d9d2d61bff942e48d384ce7148d3e44fa5fc8e394d7fed24d2",
+  "selection_sha256": "33fa45500704b1c3b0eda7deb2ce69a89298bb54d15da651949ab81f1c2d82b1",
+  "peak_allocated_gib": null,
+  "elapsed_seconds": 28.287416916922666,
+  "note": "Small-input CPU smoke with 20 queries; validates hooks only, not mechanism evidence."
+}

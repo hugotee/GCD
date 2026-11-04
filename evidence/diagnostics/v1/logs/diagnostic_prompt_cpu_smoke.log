@@ -1,0 +1,15 @@
+11/04 20:26:10 - mmengine - WARNING - No pre-trained weights for SwinTransformer, training start from scratch
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+Traceback (most recent call last):
+  File "/home/data/dq/gcd-ciod-20261104/scripts/probe_prompts.py", line 209, in <module>
+    main()
+  File "/home/data/dq/gcd-ciod-20261104/scripts/probe_prompts.py", line 142, in main
+    samples[0].text = classes
+  File "/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/structures/base_data_element.py", line 398, in __setattr__
+    self.set_field(
+  File "/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/structures/base_data_element.py", line 474, in set_field
+    raise AttributeError(
+AttributeError: Cannot set text to be a field of data because text is already a metainfo field

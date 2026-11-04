@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "verified_at_utc": "2026-11-04T12:56:49.801245+00:00",
+  "project_root": "/home/data/dq/gcd-ciod-20261104",
+  "baseline_commit": "433c2ce",
+  "diagnostic_source_files": 9,
+  "source_manifest_sha256": "f7cd9f354490dc465ad1bf3e7ca5d03faa7ce9f1cc5b355f332fc3362ee49825",
+  "baseline_source_files_unchanged": 25,
+  "test_count": 21,
+  "test_log": "evidence/diagnostics/v1/logs/diagnostic_unit_tests_deployed.log",
+  "test_log_sha256": "5a2d55635d87ce20c6a41977716baa3f8f184425652ddd57b2c32d5f469a6771",
+  "full_GPU_probe_completed": true,
+  "registered_selection_matches": true,
+  "physical_gpu": 2,
+  "new_training_started": false,
+  "full_probe_output": "/home/data/dq/gcd-ciod-20261104/outputs/prompt_probe_v1",
+  "full_probe_completion_sha256": "3c756864bf86e19851ae63b5013c6f996276207abf335f3e9ef665701d5c63c8",
+  "full_probe_raw_text_features": {
+    "path": "/home/data/dq/gcd-ciod-20261104/outputs/prompt_probe_v1/text_features.npz",
+    "bytes": 11164872,
+    "sha256": "9f82dad0301a1cee0c5bf3c8470178aa0abfb9a6df24a7b75425dc68ec88024d"
+  },
+  "GPU2_after_completion_memory_utilization_csv": "2, 12, 0"
+}

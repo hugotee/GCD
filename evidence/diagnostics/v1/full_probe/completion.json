@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "diagnostic_only": true,
+  "engineering_only": false,
+  "training_performed": false,
+  "physical_gpu": 2,
+  "cuda_initialized": true,
+  "images": 128,
+  "forwards": 771,
+  "num_queries": 900,
+  "checkpoint_provenance": {
+    "B0": {
+      "checkpoint_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3"
+    },
+    "B1": {
+      "checkpoint_sha256": "af92d30f638a4d74634185c50129320257d1616462bb87966dba27ea0d0f471e"
+    },
+    "B2": {
+      "checkpoint_sha256": "ec615c38f9f05b882957182a93011428dce94afc9728f240dfc79258f63e1839"
+    }
+  },
+  "repeat_checks": {
+    "B0": {
+      "logit_max_abs_difference": 0.0,
+      "box_max_abs_difference": 0.0
+    },
+    "B1": {
+      "logit_max_abs_difference": 0.0,
+      "box_max_abs_difference": 0.0
+    },
+    "B2": {
+      "logit_max_abs_difference": 0.0,
+      "box_max_abs_difference": 0.0
+    }
+  },
+  "adapter_parameters_unchanged": true,
+  "frozen_parameters_unchanged": true,
+  "text_feature_sha256": "9f82dad0301a1cee0c5bf3c8470178aa0abfb9a6df24a7b75425dc68ec88024d",
+  "object_scores_sha256": "91ae9718ccd43a8ed53d63006424a12abcc7a198ebae650e8ac21a728a8ed235",
+  "selection_sha256": "fb8c3d593aa39990a3d54475b353a8bfddb4fe1d1d010dd0e4f7244e1569f736",
+  "peak_allocated_gib": 1.4616332054138184,
+  "elapsed_seconds": 186.6646257439861,
+  "note": "Train-side paired diagnostic; full raw900 queries and shared old15 score columns; not full-test AP."
+}

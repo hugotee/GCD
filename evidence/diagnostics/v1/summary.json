@@ -1,0 +1,523 @@
+{
+  "passed": true,
+  "diagnostic_only": true,
+  "training_performed": false,
+  "source_test_sha256": "feb1194d4c92ae27b55b6d72d5d5d2919c4232641c7e13d39db934b735bf469b",
+  "test_images": 4952,
+  "score_thresholds": [
+    0.0,
+    0.05,
+    0.3,
+    0.5
+  ],
+  "iou_strict_greater_than": 0.5,
+  "strata": {
+    "old_only": 3972,
+    "new_only": 566,
+    "old_and_new": 414
+  },
+  "models": {
+    "B0": {
+      "source_prediction_sha256": "ec406e513fbec4987870ed96a692d98f6ee0e12581a540f2494b94328c9de4e9",
+      "prediction_count": 1485600,
+      "prediction_bins_at_score03": {
+        "old:true_positive": 9648,
+        "old:background": 8645,
+        "new:true_positive": 1227,
+        "new:wrong_class": 651,
+        "old:localization": 1303,
+        "old:other_overlap": 958,
+        "old:duplicate": 687,
+        "old:ignored_difficult": 2112,
+        "new:background": 804,
+        "old:wrong_class": 475,
+        "new:other_overlap": 358,
+        "new:ignored_difficult": 266,
+        "new:duplicate": 47,
+        "new:localization": 91
+      },
+      "old_gt_candidate_bins_at_score03": {
+        "same_class_localized": 9681,
+        "other_class_localized": 382,
+        "same_class_partial_overlap": 199,
+        "no_candidate_overlap": 106,
+        "other_partial_overlap": 113
+      },
+      "old_gt_candidate_bins_by_class": {
+        "dog": {
+          "same_class_localized": 479,
+          "same_class_partial_overlap": 6,
+          "other_class_localized": 4
+        },
+        "person": {
+          "same_class_localized": 4410,
+          "same_class_partial_overlap": 104,
+          "no_candidate_overlap": 8,
+          "other_class_localized": 5,
+          "other_partial_overlap": 1
+        },
+        "chair": {
+          "other_class_localized": 62,
+          "same_class_localized": 678,
+          "same_class_partial_overlap": 7,
+          "no_candidate_overlap": 4,
+          "other_partial_overlap": 5
+        },
+        "car": {
+          "other_class_localized": 167,
+          "same_class_localized": 1003,
+          "same_class_partial_overlap": 15,
+          "no_candidate_overlap": 10,
+          "other_partial_overlap": 6
+        },
+        "diningtable": {
+          "same_class_localized": 69,
+          "other_partial_overlap": 95,
+          "no_candidate_overlap": 35,
+          "other_class_localized": 5,
+          "same_class_partial_overlap": 2
+        },
+        "horse": {
+          "same_class_localized": 339,
+          "other_class_localized": 8,
+          "same_class_partial_overlap": 1
+        },
+        "cat": {
+          "same_class_localized": 343,
+          "other_class_localized": 11,
+          "no_candidate_overlap": 2,
+          "same_class_partial_overlap": 2
+        },
+        "cow": {
+          "same_class_localized": 224,
+          "other_class_localized": 17,
+          "same_class_partial_overlap": 3
+        },
+        "bus": {
+          "same_class_localized": 207,
+          "other_class_localized": 4,
+          "same_class_partial_overlap": 2
+        },
+        "bicycle": {
+          "same_class_localized": 315,
+          "other_class_localized": 13,
+          "same_class_partial_overlap": 7,
+          "other_partial_overlap": 1,
+          "no_candidate_overlap": 1
+        },
+        "motorbike": {
+          "other_class_localized": 4,
+          "same_class_localized": 314,
+          "same_class_partial_overlap": 7
+        },
+        "bird": {
+          "same_class_localized": 418,
+          "same_class_partial_overlap": 19,
+          "other_class_localized": 16,
+          "no_candidate_overlap": 6
+        },
+        "aeroplane": {
+          "same_class_localized": 264,
+          "no_candidate_overlap": 4,
+          "same_class_partial_overlap": 3,
+          "other_class_localized": 14
+        },
+        "boat": {
+          "other_class_localized": 51,
+          "no_candidate_overlap": 31,
+          "same_class_localized": 162,
+          "same_class_partial_overlap": 16,
+          "other_partial_overlap": 3
+        },
+        "bottle": {
+          "same_class_localized": 456,
+          "same_class_partial_overlap": 5,
+          "other_class_localized": 1,
+          "other_partial_overlap": 2,
+          "no_candidate_overlap": 5
+        }
+      },
+      "old_gt_coverage_by_threshold": {
+        "0.0": {
+          "old_gt": 10481,
+          "any_class_iou50": 10469,
+          "same_class_iou50": 10457
+        },
+        "0.05": {
+          "old_gt": 10481,
+          "any_class_iou50": 10467,
+          "same_class_iou50": 10452
+        },
+        "0.3": {
+          "old_gt": 10481,
+          "any_class_iou50": 10063,
+          "same_class_iou50": 9681
+        },
+        "0.5": {
+          "old_gt": 10481,
+          "any_class_iou50": 8040,
+          "same_class_iou50": 7865
+        }
+      },
+      "stratum_ap": {
+        "all": {
+          "images": 4952,
+          "categories_with_positives": 15,
+          "old15_VOC07_AP50": 77.02050578169315
+        },
+        "old_only": {
+          "images": 3972,
+          "categories_with_positives": 15,
+          "old15_VOC07_AP50": 77.64130133280231
+        },
+        "old_and_new": {
+          "images": 414,
+          "categories_with_positives": 14,
+          "old15_VOC07_AP50": 81.46785132966882
+        }
+      }
+    },
+    "B1": {
+      "source_prediction_sha256": "c1465ce0ecb4ca58b95331592c4c128fc7fc77d71b8a9d29239a5b2eb96a6b5d",
+      "prediction_count": 1485600,
+      "prediction_bins_at_score03": {
+        "old:true_positive": 9687,
+        "new:true_positive": 1121,
+        "new:wrong_class": 255,
+        "old:duplicate": 467,
+        "old:ignored_difficult": 657,
+        "old:localization": 324,
+        "new:background": 107,
+        "old:background": 279,
+        "new:ignored_difficult": 87,
+        "old:other_overlap": 82,
+        "new:duplicate": 53,
+        "new:localization": 32,
+        "new:other_overlap": 51,
+        "old:wrong_class": 83
+      },
+      "old_gt_candidate_bins_at_score03": {
+        "same_class_localized": 9721,
+        "other_class_localized": 128,
+        "no_candidate_overlap": 339,
+        "same_class_partial_overlap": 198,
+        "other_partial_overlap": 95
+      },
+      "old_gt_candidate_bins_by_class": {
+        "dog": {
+          "same_class_localized": 470,
+          "no_candidate_overlap": 4,
+          "same_class_partial_overlap": 8,
+          "other_class_localized": 6,
+          "other_partial_overlap": 1
+        },
+        "person": {
+          "same_class_localized": 4300,
+          "same_class_partial_overlap": 87,
+          "no_candidate_overlap": 120,
+          "other_partial_overlap": 12,
+          "other_class_localized": 9
+        },
+        "chair": {
+          "other_class_localized": 46,
+          "same_class_localized": 608,
+          "other_partial_overlap": 37,
+          "no_candidate_overlap": 44,
+          "same_class_partial_overlap": 21
+        },
+        "car": {
+          "same_class_localized": 1120,
+          "no_candidate_overlap": 41,
+          "other_class_localized": 19,
+          "same_class_partial_overlap": 16,
+          "other_partial_overlap": 5
+        },
+        "diningtable": {
+          "same_class_localized": 174,
+          "no_candidate_overlap": 11,
+          "other_partial_overlap": 19,
+          "same_class_partial_overlap": 2
+        },
+        "horse": {
+          "same_class_localized": 337,
+          "other_class_localized": 5,
+          "no_candidate_overlap": 1,
+          "same_class_partial_overlap": 3,
+          "other_partial_overlap": 2
+        },
+        "cat": {
+          "same_class_localized": 337,
+          "no_candidate_overlap": 6,
+          "other_class_localized": 10,
+          "other_partial_overlap": 2,
+          "same_class_partial_overlap": 3
+        },
+        "cow": {
+          "same_class_localized": 221,
+          "same_class_partial_overlap": 5,
+          "other_partial_overlap": 2,
+          "no_candidate_overlap": 7,
+          "other_class_localized": 9
+        },
+        "bus": {
+          "same_class_localized": 195,
+          "other_class_localized": 10,
+          "other_partial_overlap": 2,
+          "same_class_partial_overlap": 3,
+          "no_candidate_overlap": 3
+        },
+        "bicycle": {
+          "same_class_localized": 316,
+          "no_candidate_overlap": 3,
+          "other_partial_overlap": 5,
+          "same_class_partial_overlap": 6,
+          "other_class_localized": 7
+        },
+        "motorbike": {
+          "no_candidate_overlap": 15,
+          "same_class_localized": 299,
+          "same_class_partial_overlap": 7,
+          "other_class_localized": 3,
+          "other_partial_overlap": 1
+        },
+        "bird": {
+          "same_class_localized": 422,
+          "same_class_partial_overlap": 15,
+          "other_class_localized": 3,
+          "no_candidate_overlap": 19
+        },
+        "aeroplane": {
+          "same_class_localized": 274,
+          "no_candidate_overlap": 6,
+          "same_class_partial_overlap": 3,
+          "other_class_localized": 1,
+          "other_partial_overlap": 1
+        },
+        "boat": {
+          "same_class_localized": 232,
+          "same_class_partial_overlap": 12,
+          "no_candidate_overlap": 17,
+          "other_partial_overlap": 2
+        },
+        "bottle": {
+          "same_class_localized": 416,
+          "no_candidate_overlap": 42,
+          "same_class_partial_overlap": 7,
+          "other_partial_overlap": 4
+        }
+      },
+      "old_gt_coverage_by_threshold": {
+        "0.0": {
+          "old_gt": 10481,
+          "any_class_iou50": 10477,
+          "same_class_iou50": 10476
+        },
+        "0.05": {
+          "old_gt": 10481,
+          "any_class_iou50": 10446,
+          "same_class_iou50": 10428
+        },
+        "0.3": {
+          "old_gt": 10481,
+          "any_class_iou50": 9849,
+          "same_class_iou50": 9721
+        },
+        "0.5": {
+          "old_gt": 10481,
+          "any_class_iou50": 8394,
+          "same_class_iou50": 8252
+        }
+      },
+      "stratum_ap": {
+        "all": {
+          "images": 4952,
+          "categories_with_positives": 15,
+          "old15_VOC07_AP50": 90.40497757443455
+        },
+        "old_only": {
+          "images": 3972,
+          "categories_with_positives": 15,
+          "old15_VOC07_AP50": 91.1084885077509
+        },
+        "old_and_new": {
+          "images": 414,
+          "categories_with_positives": 14,
+          "old15_VOC07_AP50": 91.29689582387691
+        }
+      }
+    },
+    "B2": {
+      "source_prediction_sha256": "50e6f750c86e05e47d28556f64cc06d09e281d1937719ba8bf8f19ba9571c938",
+      "prediction_count": 1485600,
+      "prediction_bins_at_score03": {
+        "new:true_positive": 1421,
+        "new:wrong_class": 315,
+        "old:true_positive": 1738,
+        "new:other_overlap": 139,
+        "new:duplicate": 48,
+        "new:ignored_difficult": 181,
+        "new:background": 247,
+        "new:localization": 76,
+        "old:ignored_difficult": 57,
+        "old:localization": 19,
+        "old:wrong_class": 16,
+        "old:duplicate": 15,
+        "old:background": 8,
+        "old:other_overlap": 7
+      },
+      "old_gt_candidate_bins_at_score03": {
+        "no_candidate_overlap": 7623,
+        "other_class_localized": 335,
+        "same_class_localized": 1746,
+        "other_partial_overlap": 709,
+        "same_class_partial_overlap": 68
+      },
+      "old_gt_candidate_bins_by_class": {
+        "dog": {
+          "no_candidate_overlap": 288,
+          "same_class_localized": 84,
+          "other_partial_overlap": 50,
+          "other_class_localized": 61,
+          "same_class_partial_overlap": 6
+        },
+        "person": {
+          "no_candidate_overlap": 3914,
+          "other_partial_overlap": 520,
+          "other_class_localized": 94
+        },
+        "chair": {
+          "other_class_localized": 53,
+          "no_candidate_overlap": 659,
+          "other_partial_overlap": 43,
+          "same_class_localized": 1
+        },
+        "car": {
+          "no_candidate_overlap": 899,
+          "same_class_localized": 212,
+          "other_class_localized": 64,
+          "other_partial_overlap": 16,
+          "same_class_partial_overlap": 10
+        },
+        "diningtable": {
+          "no_candidate_overlap": 193,
+          "other_partial_overlap": 11,
+          "same_class_localized": 1,
+          "other_class_localized": 1
+        },
+        "horse": {
+          "no_candidate_overlap": 261,
+          "same_class_localized": 63,
+          "other_class_localized": 12,
+          "other_partial_overlap": 5,
+          "same_class_partial_overlap": 7
+        },
+        "cat": {
+          "same_class_localized": 82,
+          "no_candidate_overlap": 221,
+          "other_partial_overlap": 42,
+          "other_class_localized": 12,
+          "same_class_partial_overlap": 1
+        },
+        "cow": {
+          "same_class_localized": 171,
+          "no_candidate_overlap": 52,
+          "other_class_localized": 16,
+          "same_class_partial_overlap": 4,
+          "other_partial_overlap": 1
+        },
+        "bus": {
+          "same_class_localized": 183,
+          "other_class_localized": 11,
+          "no_candidate_overlap": 14,
+          "same_class_partial_overlap": 2,
+          "other_partial_overlap": 3
+        },
+        "bicycle": {
+          "no_candidate_overlap": 214,
+          "same_class_localized": 116,
+          "other_partial_overlap": 4,
+          "same_class_partial_overlap": 3
+        },
+        "motorbike": {
+          "no_candidate_overlap": 237,
+          "same_class_localized": 82,
+          "same_class_partial_overlap": 6
+        },
+        "bird": {
+          "same_class_localized": 354,
+          "no_candidate_overlap": 81,
+          "same_class_partial_overlap": 15,
+          "other_class_localized": 3,
+          "other_partial_overlap": 6
+        },
+        "aeroplane": {
+          "same_class_localized": 232,
+          "other_class_localized": 3,
+          "no_candidate_overlap": 47,
+          "same_class_partial_overlap": 3
+        },
+        "boat": {
+          "no_candidate_overlap": 93,
+          "same_class_localized": 159,
+          "same_class_partial_overlap": 11
+        },
+        "bottle": {
+          "no_candidate_overlap": 450,
+          "same_class_localized": 6,
+          "other_partial_overlap": 8,
+          "other_class_localized": 5
+        }
+      },
+      "old_gt_coverage_by_threshold": {
+        "0.0": {
+          "old_gt": 10481,
+          "any_class_iou50": 10246,
+          "same_class_iou50": 9096
+        },
+        "0.05": {
+          "old_gt": 10481,
+          "any_class_iou50": 4244,
+          "same_class_iou50": 3565
+        },
+        "0.3": {
+          "old_gt": 10481,
+          "any_class_iou50": 2081,
+          "same_class_iou50": 1746
+        },
+        "0.5": {
+          "old_gt": 10481,
+          "any_class_iou50": 1494,
+          "same_class_iou50": 1265
+        }
+      },
+      "stratum_ap": {
+        "all": {
+          "images": 4952,
+          "categories_with_positives": 15,
+          "old15_VOC07_AP50": 71.27272888666843
+        },
+        "old_only": {
+          "images": 3972,
+          "categories_with_positives": 15,
+          "old15_VOC07_AP50": 72.34851333876964
+        },
+        "old_and_new": {
+          "images": 414,
+          "categories_with_positives": 14,
+          "old15_VOC07_AP50": 51.97392448039711
+        }
+      }
+    }
+  },
+  "task2_images": 1006,
+  "hidden_old_instances": 1052,
+  "exposure_forgetting_pearson_over_15_classes": 0.7359873392850023,
+  "elapsed_seconds": 154.46895629400387,
+  "caveats": [
+    "Cached top300 box candidates are not all900 raw queries.",
+    "Missing same-class cached scores are null, not zero network probability.",
+    "GT candidate bins can share predictions; they are not official one-to-one recall or TIDE dAP.",
+    "Exposure correlation and strata are descriptive, not causal identification.",
+    "All historical B1/B2 evaluations already used the same 20-class prompt."
+  ]
+}

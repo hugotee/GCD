@@ -1,0 +1,30 @@
+{
+  "diagnostic_only": true,
+  "training_performed": false,
+  "split": "VOC2007 trainval",
+  "seed": 20261104,
+  "selected_image_ids": [
+    6956,
+    7619
+  ],
+  "selected_filenames": [
+    "006956.jpg",
+    "007619.jpg"
+  ],
+  "old_only_images": 1,
+  "old_and_new_images": 1,
+  "prompt_variants": [
+    "old15",
+    "all20"
+  ],
+  "thresholds": [
+    0.05,
+    0.3,
+    0.5
+  ],
+  "engineering_only": true,
+  "num_queries": 20,
+  "short_edge": 96,
+  "max_long_edge": 128,
+  "note": "Selection uses train annotations only and is fixed before any probe inference; not formal AP."
+}

@@ -1,0 +1,9 @@
+11/04 20:36:15 - mmengine - WARNING - No pre-trained weights for SwinTransformer, training start from scratch
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!

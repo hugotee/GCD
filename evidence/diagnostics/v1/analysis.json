@@ -1,0 +1,215 @@
+{
+  "passed": true,
+  "diagnostic_only": true,
+  "common_category_count": 14,
+  "class_matched_strata": {
+    "old_only": {
+      "categories": [
+        "bicycle",
+        "bird",
+        "boat",
+        "bottle",
+        "bus",
+        "car",
+        "cat",
+        "chair",
+        "cow",
+        "diningtable",
+        "dog",
+        "horse",
+        "motorbike",
+        "person"
+      ],
+      "images": 3972,
+      "B1_AP50": 90.92428726254097,
+      "B2_AP50": 70.89077007346526,
+      "drop_AP50": 20.03351718907571
+    },
+    "old_and_new": {
+      "categories": [
+        "bicycle",
+        "bird",
+        "boat",
+        "bottle",
+        "bus",
+        "car",
+        "cat",
+        "chair",
+        "cow",
+        "diningtable",
+        "dog",
+        "horse",
+        "motorbike",
+        "person"
+      ],
+      "images": 414,
+      "B1_AP50": 91.29689582387691,
+      "B2_AP50": 51.97392448039711,
+      "drop_AP50": 39.3229713434798
+    }
+  },
+  "minimum_support_sensitivity": {
+    "10": {
+      "categories": [
+        "bottle",
+        "car",
+        "cat",
+        "chair",
+        "diningtable",
+        "dog",
+        "person"
+      ],
+      "category_count": 7,
+      "drops": {
+        "old_only": 32.42772902336919,
+        "old_and_new": 45.73868227921463
+      }
+    },
+    "20": {
+      "categories": [
+        "bottle",
+        "car",
+        "cat",
+        "chair",
+        "diningtable",
+        "dog",
+        "person"
+      ],
+      "category_count": 7,
+      "drops": {
+        "old_only": 32.42772902336919,
+        "old_and_new": 45.73868227921463
+      }
+    },
+    "50": {
+      "categories": [
+        "chair",
+        "person"
+      ],
+      "category_count": 2,
+      "drops": {
+        "old_only": 61.76395837714349,
+        "old_and_new": 72.17992464294015
+      }
+    }
+  },
+  "coverage_percent": {
+    "B0": {
+      "0.0": {
+        "any_class_iou50_percent": 99.88550710810037,
+        "same_class_iou50_percent": 99.77101421620074
+      },
+      "0.05": {
+        "any_class_iou50_percent": 99.86642495945044,
+        "same_class_iou50_percent": 99.7233088445759
+      },
+      "0.3": {
+        "any_class_iou50_percent": 96.01183093216297,
+        "same_class_iou50_percent": 92.3671405400248
+      },
+      "0.5": {
+        "any_class_iou50_percent": 76.71023757275069,
+        "same_class_iou50_percent": 75.04054956588112
+      }
+    },
+    "B1": {
+      "0.0": {
+        "any_class_iou50_percent": 99.96183570270013,
+        "same_class_iou50_percent": 99.95229462837516
+      },
+      "0.05": {
+        "any_class_iou50_percent": 99.66606239862608,
+        "same_class_iou50_percent": 99.49432306077664
+      },
+      "0.3": {
+        "any_class_iou50_percent": 93.9700410266196,
+        "same_class_iou50_percent": 92.74878351302357
+      },
+      "0.5": {
+        "any_class_iou50_percent": 80.08777788378971,
+        "same_class_iou50_percent": 78.73294532964412
+      }
+    },
+    "B2": {
+      "0.0": {
+        "any_class_iou50_percent": 97.75784753363229,
+        "same_class_iou50_percent": 86.78561205991795
+      },
+      "0.05": {
+        "any_class_iou50_percent": 40.4923194351684,
+        "same_class_iou50_percent": 34.013929968514454
+      },
+      "0.3": {
+        "any_class_iou50_percent": 19.854975670260472,
+        "same_class_iou50_percent": 16.65871577139586
+      },
+      "0.5": {
+        "any_class_iou50_percent": 14.254365041503673,
+        "same_class_iou50_percent": 12.069459021085775
+      }
+    }
+  },
+  "paired_cached_scores": {
+    "old_gt_pairs": 9095,
+    "B1_median": 0.8223403096199036,
+    "B2_median": 0.015488145872950554,
+    "B2_score_lower_fraction": 0.9318306761957119,
+    "caveat": "Conditional on same-class IoU>0.5 candidates present in both cached top300 lists."
+  },
+  "worst_classes": [
+    {
+      "category": "person",
+      "category_id": "15",
+      "trainval_instances": "4690",
+      "hidden_old_instances_in_task2": "516",
+      "task2_images_containing_old_class": "266",
+      "hidden_fraction_of_trainval_instances": "0.11002132196162047",
+      "B1_minus_B2_VOC07_AP50": "74.16510194278293"
+    },
+    {
+      "category": "chair",
+      "category_id": "9",
+      "trainval_instances": "798",
+      "hidden_old_instances_in_task2": "290",
+      "task2_images_containing_old_class": "164",
+      "hidden_fraction_of_trainval_instances": "0.3634085213032581",
+      "B1_minus_B2_VOC07_AP50": "54.39221314471871"
+    },
+    {
+      "category": "diningtable",
+      "category_id": "11",
+      "trainval_instances": "215",
+      "hidden_old_instances_in_task2": "43",
+      "task2_images_containing_old_class": "43",
+      "hidden_fraction_of_trainval_instances": "0.2",
+      "B1_minus_B2_VOC07_AP50": "42.410917451235626"
+    },
+    {
+      "category": "bottle",
+      "category_id": "5",
+      "trainval_instances": "505",
+      "hidden_old_instances_in_task2": "65",
+      "task2_images_containing_old_class": "36",
+      "hidden_fraction_of_trainval_instances": "0.12871287128712872",
+      "B1_minus_B2_VOC07_AP50": "24.68595995826739"
+    },
+    {
+      "category": "motorbike",
+      "category_id": "14",
+      "trainval_instances": "339",
+      "hidden_old_instances_in_task2": "2",
+      "task2_images_containing_old_class": "2",
+      "hidden_fraction_of_trainval_instances": "0.0058997050147492625",
+      "B1_minus_B2_VOC07_AP50": "20.38495062665295"
+    }
+  ],
+  "artifact_hashes": {
+    "summary.json": "cabdf3e32e94588893e0ac7e944bb73e2e27023f683f94c03c34911ce93490e0",
+    "per_class_stratum_ap.csv": "72ebab4222ec50b09164b17619bef3678fc6dccaa1fdd36984798ce95d09068c",
+    "task2_hidden_old_exposure.csv": "4037253b156eaac38a57557304b98b0f810e7eecc679c9800a745ad0e67828f1",
+    "object_trajectories.csv": "6f690af42327a9d9b164bf20aa7602fb508f126c870b64987cc7b5582270ff76",
+    "confusions_score03.csv": "49900b67352ec23a41f470d1d1a53ee74d7fbe416ed9c3283c74d939ff0a4e54"
+  },
+  "GPU_full_probe_completed": true,
+  "interpretation": "Confidence-scale and cached-candidate changes are observed; pure monotone class score scaling alone cannot explain AP loss."
+}

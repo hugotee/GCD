@@ -10,6 +10,10 @@
 - evidence/reference：此前 GDINO-CIOD 的真实B0/B1/B2结果与来源hash；不是本次重新训练。
 - evidence/current：当前独立实现的测试、数据/资产复核、B0重算和GPU工程验证证据。
 
+## 最新诊断
+
+[首轮机制诊断](docs/experiments/MECHANISM_DIAGNOSTICS_V1.md)已完成缓存预测分析；已在GPU2完成128图完整raw900-query/文本特征配对探针，无新增训练或后台排队。诊断输入与状态见 evidence/diagnostics/v1。
+
 ## 环境
 
 已在Linux服务器复用依赖完成验证；Mac本机没有CUDA/PyTorch，不作为训练环境。推荐新建Python3.10环境：

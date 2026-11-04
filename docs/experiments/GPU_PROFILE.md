@@ -27,3 +27,7 @@ GPU利用率另用只读nvidia-smi每2秒采样，共147次，均值35.5%、最�
 旧GDINO-CIOD曾测量其他授权下的单卡和GPU1/2 DDP，记录在evidence/reference/evidence/profile_summary.json。其双卡12epoch训练估算2.35小时，正式历史流水线实耗约3.18小时；其中B1约2.21小时、B2约0.51小时，余量含评价等。它不是本轮新实现的双卡实测；当前仅GPU2获使用范围，不自动启动DDP。
 
 两张24GiB卡不能作为共享48GiB使用。若将来加入teacher/KD、改变插入位置或扩充COCO数据，须重新测完整路径，不能沿用本表承诺显存和时间。COCO70+10/40+40尚无本轮实际预算。
+
+## 后续机制探针实测（同日）
+
+GPU2空闲后已完成128训练图、6条件、900query配对前向，共771次前向（含3次数值重复）。计时区间186.66秒，初次模型构建另计；峰值allocated 1.462GiB。无训练/optimizer，冻结参数与LoRA均未变。该推理显存不能替代前述训练显存预算；结果不是完整test AP，详见MECHANISM_DIAGNOSTICS_V1.md与evidence/diagnostics/v1/full_probe。
