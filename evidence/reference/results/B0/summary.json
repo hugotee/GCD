@@ -1,0 +1,60 @@
+{
+  "model": "B0",
+  "groups": {
+    "old15": {
+      "VOC07_AP50": 77.02050578169315,
+      "COCO_AP50": 81.01301790433119,
+      "COCO_AP": 66.02999675833702
+    },
+    "new5": {
+      "VOC07_AP50": 70.2854072752742,
+      "COCO_AP50": 72.47854795037206,
+      "COCO_AP": 59.740081707162304
+    },
+    "all20": {
+      "VOC07_AP50": 75.33673115508842,
+      "COCO_AP50": 78.8794004158414,
+      "COCO_AP": 64.45751799554334
+    }
+  },
+  "engineering_only": false,
+  "prediction_sha256": "ec406e513fbec4987870ed96a692d98f6ee0e12581a540f2494b94328c9de4e9",
+  "provenance": {
+    "mode": "eval",
+    "engineering_only": false,
+    "ann_sha256": "f3e9670e90cc241cf2b12fe589bd15a71bb1f84bc80ed0f9854dea26eb225942",
+    "initial_checkpoint_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+    "classes": [
+      "aeroplane",
+      "bicycle",
+      "bird",
+      "boat",
+      "bottle",
+      "bus",
+      "car",
+      "cat",
+      "chair",
+      "cow",
+      "diningtable",
+      "dog",
+      "horse",
+      "motorbike",
+      "person",
+      "pottedplant",
+      "sheep",
+      "sofa",
+      "train",
+      "tvmonitor"
+    ],
+    "evaluation_ann_sha256": "f3e9670e90cc241cf2b12fe589bd15a71bb1f84bc80ed0f9854dea26eb225942",
+    "seed": 20261101,
+    "batch": 2,
+    "accum": 2,
+    "steps": 3000,
+    "physical_gpu": 0,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "dn": false
+  },
+  "metric_note": "VOC2007 11-point AP50; COCO AP50 and AP50:95 separately. Difficult ignored via original VOC flag retained in source JSON."
+}

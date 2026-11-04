@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "source_files_verified": 25,
+  "source_package_sha256": "55231b6080eb13eab9f113fcd73bb8ee89dd69175ae0b3b78aba092dc8fb923d",
+  "physical_gpu_authorization": [
+    2
+  ],
+  "new_formal_training_started": false,
+  "final_dry_config_generated": true,
+  "unit_test_log": "-----------------------------------------------\nRan 13 tests in 0.658s\n\nOK\n",
+  "final_gpu2_inventory": "2, NVIDIA GeForce RTX 3090, 12 MiB, 1 %\n"
+}

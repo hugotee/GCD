@@ -1,0 +1,887 @@
+{
+  "samples": [
+    {
+      "at_utc": "2026-11-04T11:57:34.342960+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 14
+    },
+    {
+      "at_utc": "2026-11-04T11:57:36.388957+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 979
+    },
+    {
+      "at_utc": "2026-11-04T11:57:38.447609+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 979
+    },
+    {
+      "at_utc": "2026-11-04T11:57:40.500184+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 2,
+      "memory_mib": 1021
+    },
+    {
+      "at_utc": "2026-11-04T11:57:42.541745+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 2,
+      "memory_mib": 1021
+    },
+    {
+      "at_utc": "2026-11-04T11:57:44.584286+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 41,
+      "memory_mib": 5703
+    },
+    {
+      "at_utc": "2026-11-04T11:57:46.663843+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 78,
+      "memory_mib": 6823
+    },
+    {
+      "at_utc": "2026-11-04T11:57:48.778644+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 49,
+      "memory_mib": 6825
+    },
+    {
+      "at_utc": "2026-11-04T11:57:50.824313+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 85,
+      "memory_mib": 8627
+    },
+    {
+      "at_utc": "2026-11-04T11:57:52.871002+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 64,
+      "memory_mib": 8627
+    },
+    {
+      "at_utc": "2026-11-04T11:57:54.897674+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 78,
+      "memory_mib": 8627
+    },
+    {
+      "at_utc": "2026-11-04T11:57:56.947377+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 55,
+      "memory_mib": 8627
+    },
+    {
+      "at_utc": "2026-11-04T11:57:59.000971+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 63,
+      "memory_mib": 8627
+    },
+    {
+      "at_utc": "2026-11-04T11:58:01.052273+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 36,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:03.096431+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 49,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:05.139990+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 64,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:07.187140+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 68,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:09.236291+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 58,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:11.279759+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 61,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:13.319112+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 45,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:15.344900+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 51,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:17.379791+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 73,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:19.425817+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 98,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:21.476224+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 68,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:23.520307+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 49,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:25.552578+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 60,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:27.581117+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 61,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:29.631622+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 68,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:31.677819+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 73,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:33.724962+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 59,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:35.774415+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 50,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:37.820649+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 66,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:39.867999+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 100,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:41.910568+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 38,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:43.961413+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 34,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:46.008084+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 54,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:48.056601+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 57,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:50.136251+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 67,
+      "memory_mib": 10571
+    },
+    {
+      "at_utc": "2026-11-04T11:58:52.177872+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 71,
+      "memory_mib": 12587
+    },
+    {
+      "at_utc": "2026-11-04T11:58:54.230720+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 59,
+      "memory_mib": 12587
+    },
+    {
+      "at_utc": "2026-11-04T11:58:56.259160+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 65,
+      "memory_mib": 12587
+    },
+    {
+      "at_utc": "2026-11-04T11:58:58.302612+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 46,
+      "memory_mib": 12587
+    },
+    {
+      "at_utc": "2026-11-04T11:59:00.351102+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 40,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:02.395298+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 76,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:04.440433+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 89,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:06.482370+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 50,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:08.529243+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 81,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:10.570748+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 73,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:12.625548+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 52,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:14.674735+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 62,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:16.723501+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 64,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:18.769598+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 93,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:20.820405+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 100,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:22.861164+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 41,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:24.890344+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 62,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:26.915476+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 40,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:28.958927+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:31.004837+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 2,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:33.052972+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 2,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:35.229625+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 14675
+    },
+    {
+      "at_utc": "2026-11-04T11:59:37.279201+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:39.323377+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:41.367730+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:43.410163+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:45.456977+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:47.501678+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:49.551404+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:51.592338+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:53.653624+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:55.689994+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:57.739072+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T11:59:59.786446+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:01.830803+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:03.898163+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:06.007032+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:08.056985+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:10.108351+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:12.164099+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:14.215092+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:16.260520+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:18.290736+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:20.339401+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:22.385291+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:24.433467+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:26.477160+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:28.524902+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:30.571123+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:32.619846+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:34.671351+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:36.724117+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:38.768172+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:40.816404+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:42.867687+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:44.945927+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:47.015026+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:49.081597+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:51.133879+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:53.187619+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:55.246773+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:57.303507+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 12
+    },
+    {
+      "at_utc": "2026-11-04T12:00:59.370875+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 14
+    },
+    {
+      "at_utc": "2026-11-04T12:01:01.425134+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 14
+    },
+    {
+      "at_utc": "2026-11-04T12:01:03.455613+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 14
+    },
+    {
+      "at_utc": "2026-11-04T12:01:05.486486+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 14
+    },
+    {
+      "at_utc": "2026-11-04T12:01:07.533657+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 14
+    },
+    {
+      "at_utc": "2026-11-04T12:01:09.589880+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 2,
+      "memory_mib": 321
+    },
+    {
+      "at_utc": "2026-11-04T12:01:11.653352+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 0,
+      "memory_mib": 979
+    },
+    {
+      "at_utc": "2026-11-04T12:01:13.721689+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 2,
+      "memory_mib": 1021
+    },
+    {
+      "at_utc": "2026-11-04T12:01:15.769637+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 2,
+      "memory_mib": 1021
+    },
+    {
+      "at_utc": "2026-11-04T12:01:17.800489+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 34,
+      "memory_mib": 5525
+    },
+    {
+      "at_utc": "2026-11-04T12:01:19.849840+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 69,
+      "memory_mib": 7071
+    },
+    {
+      "at_utc": "2026-11-04T12:01:21.900579+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 74,
+      "memory_mib": 7071
+    },
+    {
+      "at_utc": "2026-11-04T12:01:23.948053+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 73,
+      "memory_mib": 7071
+    },
+    {
+      "at_utc": "2026-11-04T12:01:25.991504+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 38,
+      "memory_mib": 8691
+    },
+    {
+      "at_utc": "2026-11-04T12:01:28.042270+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 34,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:30.117248+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 57,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:32.165102+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 71,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:34.213743+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 62,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:36.257490+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 41,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:38.302493+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 40,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:40.354055+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 44,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:42.407058+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 64,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:44.455125+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 34,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:46.499085+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 32,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:48.545930+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 29,
+      "memory_mib": 8693
+    },
+    {
+      "at_utc": "2026-11-04T12:01:50.601696+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 40,
+      "memory_mib": 8695
+    },
+    {
+      "at_utc": "2026-11-04T12:01:52.666065+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 69,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:01:54.710231+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 64,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:01:56.757013+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 54,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:01:58.825365+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 65,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:02:00.881992+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 67,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:02:02.942384+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 36,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:02:05.004190+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 52,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:02:07.064342+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 33,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:02:09.122589+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 88,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:02:11.169786+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 36,
+      "memory_mib": 10423
+    },
+    {
+      "at_utc": "2026-11-04T12:02:13.249098+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 49,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:15.320862+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 87,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:17.380573+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 52,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:19.431129+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 53,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:21.476002+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 22,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:23.531272+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 30,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:25.576401+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 52,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:27.603715+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 43,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:29.651761+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 57,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:31.703504+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 76,
+      "memory_mib": 12313
+    },
+    {
+      "at_utc": "2026-11-04T12:02:33.753462+00:00",
+      "physical_gpu": 2,
+      "utilization_percent": 100,
+      "memory_mib": 13717
+    }
+  ],
+  "completed": false
+}

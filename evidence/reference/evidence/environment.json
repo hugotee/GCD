@@ -1,0 +1,11 @@
+{
+  "python": "3.10.14",
+  "torch": "2.1.2+cu121",
+  "mmcv": "2.1.0",
+  "mmengine": "0.10.7",
+  "mmdet": "3.2.0",
+  "cuda": "12.1",
+  "source_commit": "630d7c2843fbee20d1709d7586a7d820278f6be8",
+  "cuda_initialized_in_CPU_audit": false,
+  "gpu_inventory": "1, NVIDIA GeForce RTX 3090, 24576, 10637, 44\n2, NVIDIA GeForce RTX 3090, 24576, 9787, 74\n"
+}

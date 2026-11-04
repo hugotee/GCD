@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Preserve original evidence bytes (including CSV CRLF) and raw logger whitespace.
+evidence/** -text -whitespace

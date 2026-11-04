@@ -1,0 +1,506 @@
+# 科研项目启动：Grounding DINO + PEFT + Class-Incremental Object Detection
+
+## 一、项目背景与目标
+
+我目前是计算机视觉方向的研究生，研究领域为 Continual Learning + Object Detection。
+
+经过前期文献阅读、DGS 论文复现和实验分析，我已经决定调整科研主线：
+
+**Pretrained Vision-Language Models for Class-Incremental Object Detection（VLM-based CIOD）**
+
+目前确定：
+
+- 基础模型：完整预训练 Grounding DINO-T。
+- 训练方式：PEFT，优先采用 LoRA。
+- 研究任务：Class-Incremental Object Detection（CIOD）。
+- 数据集：Pascal VOC2007 + MS COCO2017。
+- 初期实验：VOC 15+5。
+- 后续正式验证：COCO 70+10、40+40。
+- 算力条件：日常可使用两张 RTX 3090，但应首先核实具体 GPU 使用权限。
+- 最终目标：寻找 VLM 类别增量学习中尚未充分解决的具体问题，形成具有独立创新性的研究方法。
+
+**我已经新建了一个 GitHub 仓库，作为新的独立科研项目。**
+
+此前的 DGS 项目主要用于复现 CVPR 2026 论文，不再作为本项目的主体。
+
+允许参考、复用经过审计且符合许可证要求的 DGS 工程模块，但新项目必须独立，不能继承其动态分组、任务路由、参数合并等核心方法。
+
+首先识别当前 Git 仓库根目录，不要默认新项目仍位于旧 DGS 路径。
+
+---
+
+## 二、研究参考文献
+
+目前准备以五篇论文为核心参考：
+
+### 1. GCD（AAAI 2025）
+
+Advancing Vision-Language Models for Incremental Object Detection via Global Alignment and Correspondence Distillation
+
+https://ojs.aaai.org/index.php/AAAI/article/view/32864
+
+重点关注：
+
+- Global Alignment（GA）。
+- Semantic Correspondence Mechanism（SCM）。
+- Correspondence Response Distillation（CRD）。
+- Correspondence Topology Distillation（CTD）。
+- Semantic Structure Collapse。
+- Teacher/Student Query 对应问题。
+- 旧类别语义结构保持与跨模态遗忘。
+
+### 2. C²Path（2026 arXiv 预印本）
+
+Class-Conditional Pathway Decoupling for Vision-Language Incremental Object Detection
+
+https://arxiv.org/abs/2608.21937
+
+重点关注：
+
+- Class-Conditional Pathway Decoupling。
+- 类别相关的参数更新。
+- ClassLoRA。
+- 不同类别在共享适配路径中的潜在干扰。
+- 类别级参数隔离与共享机制。
+- 与 GCD、普通 LoRA 的区别。
+
+### 3. DitHub（NeurIPS 2025）
+
+请从官方论文页面核实完整标题、方法、代码及实验设置。
+
+重点关注：
+
+- 模块化持续学习。
+- 轻量化专家或适配模块。
+- 不同任务知识如何组合、隔离或融合。
+- 参数效率与知识干扰。
+- 原始任务是否属于 CIOD、IVLOD 或其他设置。
+
+### 4. ZiRa（NeurIPS 2024）
+
+Zero-shot Generalizable Incremental Learning for Vision-Language Object Detection
+
+https://proceedings.neurips.cc/paper_files/paper/2024/hash/f6f4b34d255c2c6c2391af975bed0428-Abstract-Conference.html
+
+重点关注：
+
+- 预训练 Grounding DINO 的持续适应。
+- 轻量化适配机制。
+- Zero-Interference Loss。
+- 如何保持预训练模型的 Zero-shot 能力。
+- 旧类、新类与未见类知识之间的关系。
+
+### 5. MR-GDINO（2024 arXiv 预印本）
+
+MR-GDINO: Efficient Open-World Continual Object Detection
+
+https://arxiv.org/abs/2412.15979
+
+重点关注：
+
+- Memory / Retrieval 相关机制。
+- Open-world Continual Detection。
+- 已学习类别与未见类别的检测能力。
+- 预训练知识保持。
+- 推理阶段的知识检索、融合或选择。
+
+以上是研究参考，而不是要求完整复现五篇论文。
+
+**必须依据论文原文与官方代码核实内容。不得仅根据我的研究描述推断具体实现。**
+
+---
+
+## 三、任务一：建立论文对比与研究问题分析
+
+先完成系统性的文献对比。
+
+在项目中创建：
+
+`docs/research/literature_matrix.md`
+
+要求整理五篇论文的：
+
+1. 完整标题、作者、年份、发表会议或预印本状态。
+2. 原论文提出的核心研究问题。
+3. 原论文认为现有方法有什么不足。
+4. 使用的基础检测器。
+5. 是否加载完整预训练检测器。
+6. 是否使用 LoRA、Adapter、Prompt 或全量微调。
+7. 哪些参数参与训练。
+8. 是否使用旧数据回放或存储样本。
+9. 是否需要 Task ID。
+10. 使用的数据集、类别增量设置和评估指标。
+11. 如何保持旧类知识。
+12. 如何适应新类别。
+13. 是否考虑 Zero-shot / Open-vocabulary 能力。
+14. 核心创新模块及消融结果。
+15. 论文自身承认的局限。
+16. 与我们当前项目的关联程度。
+17. 是否存在官方代码及可复用实现。
+
+请特别区分：
+
+- CIOD：类别增量。
+- DIOD：领域增量。
+- CDIOD / DuIOD：类别与领域共同变化。
+- IVLOD：增量视觉语言检测。
+- Open-world / Open-vocabulary Continual Detection。
+
+不能把不同实验设定直接视为同一个 benchmark。
+
+完成矩阵后，创建：
+
+`docs/research/research_questions.md`
+
+从五篇论文的交集和差异中提出 2–3 个候选研究问题。
+
+优先围绕：
+
+**方向 A：跨模态知识保持**
+
+视觉语言检测器在类别增量过程中，哪些视觉—语言语义关系发生了有害变化？现有蒸馏或语义保持机制在哪些条件下存在不足？
+
+**方向 B：类别之间的参数更新干扰**
+
+不同类别共享 LoRA 或其他适配参数时，是否存在可测量的更新冲突？现有的类别级隔离与参数组合方法还有什么局限？
+
+**方向 C：预训练开放词汇能力保持**
+
+持续学习已标注类别时，模型原有的 Zero-shot / Open-vocabulary 检测能力如何变化？已有方法能否同时保持旧类、新类和未见类性能？
+
+对每个候选问题说明：
+
+- 已有论文解决到什么程度。
+- 是否存在明确的研究空白，或只是尚未验证的假设。
+- 最小验证实验是什么。
+- 两张 RTX 3090 是否可承担。
+- 可能的简单对照及否定条件。
+- 是否值得进一步研究。
+
+不要为了凑两个创新点而组合现有模块，也不要未经查新就宣称问题具有新颖性。
+
+---
+
+## 四、任务二：建立独立 Grounding DINO + PEFT 项目
+
+### 1. 审计当前仓库
+
+检查：
+
+- Git 仓库状态。
+- Python、PyTorch、CUDA 环境。
+- GPU 型号及权限。
+- 已有模型权重。
+- 数据集。
+- 训练、评估和配置代码。
+- 已有的依赖与可复用模块。
+
+如果这是空仓库，先建立规范工程结构。
+
+推荐目录：
+
+```text
+project/
+├── configs/
+│   ├── model/
+│   ├── datasets/
+│   └── experiments/
+├── src/
+│   ├── models/
+│   ├── peft/
+│   ├── datasets/
+│   ├── training/
+│   ├── evaluation/
+│   └── utils/
+├── scripts/
+├── tests/
+├── docs/
+│   ├── research/
+│   └── experiments/
+├── outputs/
+├── README.md
+└── requirements.txt
+```
+
+可以根据实际框架调整，不必机械采用此结构。
+
+要求模块职责清晰，不要为了目录完整而创建大量无用文件。
+
+### 2. 基础模型
+
+使用完整预训练 Grounding DINO-T。
+
+优先参考 Grounding DINO 官方实现，或从之前 DGS 项目中复用可靠的模型与 LoRA 相关代码。
+
+但要确保：
+
+- 不使用 DGS 的动态分组。
+- 不使用任务分布路由。
+- 不使用专家池。
+- 不使用 DGS 参数合并机制。
+- 不默认加载 DGS 增量训练后的检查点。
+
+建立简单、独立的 Single LoRA baseline。
+
+详细记录：
+
+- 预训练权重来源与校验信息。
+- 模型结构。
+- LoRA 插入位置。
+- Rank、Alpha、Dropout。
+- 冻结参数量。
+- 可训练参数量。
+- 哪些检测头或辅助参数参与更新。
+
+确保仅依照配置更新指定参数。
+
+### 3. 训练与评估接口
+
+需要实现或复用：
+
+- 冻结模型评估。
+- Single LoRA 微调。
+- 顺序类别增量训练。
+- 模型保存与恢复。
+- 完整训练日志。
+- 检测 AP 评估。
+- 逐类别 AP。
+- 训练效率统计。
+
+保持模型、数据、训练、评估代码解耦。
+
+当前不实现 GCD、C²Path、DitHub、ZiRa、MR-GDINO 的完整方法。
+
+---
+
+## 五、任务三：建立 VOC2007 15+5 实验协议
+
+优先使用标准 Pascal VOC2007。
+
+第一阶段：
+
+Task 1：旧 15 类。
+
+第二阶段：
+
+Task 2：新增 5 类。
+
+评估：
+
+统一 VOC test，统计全部 20 类。
+
+必须先核实常用论文中的 15+5 类别顺序，尽可能采用具有明确出处的协议。
+
+特别检查：
+
+- 数据来源及训练/测试划分。
+- 类别 ID 映射。
+- 阶段图像筛选规则。
+- 阶段标注筛选规则。
+- 新阶段图像中的旧类别未标注问题。
+- 是否允许回放。
+- 是否采用任务不可知推理。
+- 测试时如何提供 20 类文本 Prompt。
+- 模型是否已经在预训练中见过这些类别。
+- AP50 与 AP@[0.50:0.95] 的评估区别。
+
+采用无旧样本回放设置作为初始方案。
+
+不要把已有 DGS 数据划分直接当作标准 VOC CIOD。
+
+首先生成：
+
+`docs/experiments/VOC15_5_PROTOCOL.md`
+
+协议核实之前不要进行正式训练。
+
+---
+
+## 六、任务四：第一组基线实验
+
+第一阶段只需要三个模型状态。
+
+### B0：Frozen Grounding DINO-T
+
+加载完整预训练模型，不进行训练。
+
+在 VOC2007 test 上评估全部 20 类。
+
+记录：
+
+- 旧 15 类 AP。
+- 新 5 类 AP。
+- 全部 20 类 AP。
+- 逐类别 AP。
+
+目的：建立预训练模型的初始检测能力参考。
+
+### B1：Task 1 Single LoRA
+
+从 B0 的预训练权重出发。
+
+冻结主体参数，通过 Single LoRA 学习旧 15 类。
+
+训练后保存 checkpoint。
+
+评估全部 20 类。
+
+目的：观察在旧 15 类监督下，模型的类别检测能力发生什么变化。
+
+### B2：Task 2 Sequential LoRA
+
+从 B1 的 checkpoint 出发。
+
+继续使用同一个 LoRA，学习新增 5 类。
+
+第二阶段不使用旧数据回放、不加入知识蒸馏、不添加新模块。
+
+保存最终 checkpoint。
+
+再次评估全部 20 类。
+
+输出：
+
+| Model | Old 15 AP | New 5 AP | All 20 AP |
+|---|---|---|---|
+| B0 Frozen | | | |
+| B1 Task 1 | | | |
+| B2 Task 2 | | | |
+
+同时输出：
+
+- AP50。
+- AP@[0.50:0.95]。
+- Per-class AP。
+- 旧类别遗忘程度。
+- 新类别适应收益。
+- 与初始预训练模型性能的差异。
+
+不得虚构 AP 或将 smoke test 结果当作正式结果。
+
+---
+
+## 七、任务五：计算资源评估
+
+由于日常仅有两张 RTX 3090，所有实验必须考虑计算成本。
+
+开始正式训练之前，使用完整 Grounding DINO + LoRA 训练路径进行 GPU smoke test 和性能测量。
+
+先核实 GPU 使用权限。此前实验曾明确要求仅使用 GPU0；未经新的授权，不得擅自使用 GPU1/2/3。
+
+测试内容：
+
+- 完整模型前向。
+- 检测损失。
+- LoRA 梯度反向传播。
+- 参数更新。
+- 模型保存与加载。
+- 评估流程。
+
+完成 100–300 step 的稳定吞吐测量，记录：
+
+- 峰值显存。
+- Batch Size。
+- 图像输入尺寸。
+- Detection Query 数。
+- 每 step 耗时。
+- Images/s。
+- GPU 利用率。
+- 实际训练图像数。
+- 完整 B1/B2 的预计训练时间。
+
+优先进行正确性和资源测试，不直接启动可能持续数十小时的训练。
+
+只有在实验协议、数据和运行成本明确之后，才启动正式训练。
+
+不得为了加速而无记录地改变图像分辨率、训练数据比例或类别顺序。
+
+---
+
+## 八、任务六：准备后续机制诊断
+
+完成 B0/B1/B2 后，再确定具体诊断实验。
+
+可能的研究方向包括：
+
+1. 分析 Grounding DINO 中视觉、语言与跨模态交互层的表示变化。
+2. 分析共享 LoRA 在不同类别上的更新干扰。
+3. 分析旧类别和新增类别的检测分数及 Query 变化。
+4. 分析冻结模型与增量模型的 Zero-shot / Open-vocabulary 能力差异。
+5. 对比基础知识蒸馏与不蒸馏的性能。
+
+但是当前**不直接实现复杂创新模块**。
+
+尤其不要在没有明确实验现象的情况下，同时加入：
+
+- GCD 语义蒸馏；
+- C²Path ClassLoRA；
+- DitHub 专家组合；
+- ZiRa Zero-Interference Loss；
+- MR-GDINO Memory/Retrieval。
+
+这些工作应该首先作为机制与 baseline 参考，而不是直接拼装。
+
+---
+
+## 九、执行顺序与实际交付
+
+请按以下顺序工作：
+
+**阶段 A：文献与工程审计**
+
+1. 检查新 GitHub 仓库。
+2. 整理五篇论文的核心机制与实验协议。
+3. 检查当前模型、数据、代码和服务器资源。
+4. 明确哪些部分可复用，哪些需要重新实现。
+
+**阶段 B：实际搭建基线**
+
+5. 建立独立的 Grounding DINO-T + Single LoRA 框架。
+6. 构建或核实 VOC 15+5 数据。
+7. 实现训练与评估入口。
+8. 添加必要的单元测试及端到端 smoke test。
+9. 测量 GPU 计算成本。
+
+**阶段 C：开始第一批实验**
+
+10. 条件满足时执行 B0 预训练模型评估。
+11. 准备 B1/B2 正式配置、命令和耗时预算。
+12. 如果尚需运行数十小时的训练，先报告资源占用与风险，不自动启动。
+13. 完成训练后，分析旧类、新类和全类别表现。
+
+---
+
+## 十、交付要求
+
+至少交付：
+
+1. `docs/research/literature_matrix.md`：五篇论文的横向对比。
+2. `docs/research/research_questions.md`：候选研究问题与验证思路。
+3. `docs/experiments/VOC15_5_PROTOCOL.md`：固定实验协议。
+4. `docs/experiments/BASELINE_STATUS.md`：基线建设状态。
+5. `docs/experiments/GPU_PROFILE.md`：实际算力测试。
+6. 可运行的模型、LoRA、训练和评估代码。
+7. 已通过的测试及对应日志。
+8. B0 的真实评估结果（如数据与环境允许）。
+9. B1/B2 的训练命令及预计成本。
+
+所有代码修改应保留版本记录；必要时进行本地 Git commit，但不要未经授权自动推送远端或覆盖历史内容。
+
+若执行中遇到缺少数据、下载失败、GPU 不可用或依赖冲突，先解决可以解决的部分，明确报告无法完成的部分，不要虚构成功。
+
+**本次不只是写计划。请实际开展文献核查、项目搭建、代码实现、测试与条件允许的评估。**
+
+最终请用中文给出：
+
+- 已完成的实际工作。
+- 修改或新增的文件。
+- 测试与评估结果。
+- 发现的工程问题。
+- 计算成本。
+- 文献对比得到的初步研究线索。
+- 下一步最值得执行的具体任务。
+
+当前第一阶段目标是：**建立一套独立、可靠、可扩展的 Grounding DINO-T + LoRA + VOC 15+5 CIOD 实验基础，同时通过五篇论文的横向分析寻找具体研究问题。**
+
+不要现在就确定创新点，也不要重新开始完整 DGS 复现。

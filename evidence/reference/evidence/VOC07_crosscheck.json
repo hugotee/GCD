@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "native_mmdet_VOC07_AP50": 75.33673048019409,
+  "independent_VOC07_AP50": 75.33673115508842,
+  "absolute_difference": 6.748943235379556e-07,
+  "coordinate": "zero-based inclusive endpoints; use_legacy_coordinate=True",
+  "uses_gpu": false
+}

@@ -1,0 +1,140 @@
+{
+  "engineering_only": true,
+  "formal_training_not_started": true,
+  "epochs_proposed_not_approved": 12,
+  "estimate_excludes_model_load_evaluation_save": true,
+  "rows": [
+    {
+      "layout": "single",
+      "phase": "task1",
+      "gpus": 1,
+      "images": 4473,
+      "iterations_per_rank": 200,
+      "warmup": 20,
+      "batch_per_rank": 2,
+      "accumulation": 2,
+      "effective_batch": 4,
+      "seconds_per_microstep": 0.476664140557922,
+      "global_images_per_second": 4.195826431707357,
+      "loader_microsteps_per_epoch": 2237,
+      "estimated_wall_minutes_per_epoch": 17.77162804046786,
+      "estimated_gpu_hours_per_epoch": 0.2961938006744643,
+      "proposed_12epoch_wall_hours": 3.554325608093572,
+      "proposed_12epoch_gpu_hours": 3.554325608093572,
+      "peak_allocated_GiB_per_rank": [
+        6.8840155601501465
+      ],
+      "peak_reserved_GiB_per_rank": [
+        14.734375
+      ],
+      "actual_optimizer_steps_per_rank": [
+        100
+      ],
+      "amp_skips_per_rank": [
+        0
+      ],
+      "launcher_seconds": 118.0161964893341
+    },
+    {
+      "layout": "single",
+      "phase": "task2",
+      "gpus": 1,
+      "images": 1006,
+      "iterations_per_rank": 200,
+      "warmup": 20,
+      "batch_per_rank": 2,
+      "accumulation": 2,
+      "effective_batch": 4,
+      "seconds_per_microstep": 0.48473054507566204,
+      "global_images_per_second": 4.126003653612995,
+      "loader_microsteps_per_epoch": 503,
+      "estimated_wall_minutes_per_epoch": 4.063657736217634,
+      "estimated_gpu_hours_per_epoch": 0.06772762893696056,
+      "proposed_12epoch_wall_hours": 0.8127315472435268,
+      "proposed_12epoch_gpu_hours": 0.8127315472435268,
+      "peak_allocated_GiB_per_rank": [
+        7.291547775268555
+      ],
+      "peak_reserved_GiB_per_rank": [
+        14.9765625
+      ],
+      "actual_optimizer_steps_per_rank": [
+        100
+      ],
+      "amp_skips_per_rank": [
+        0
+      ],
+      "launcher_seconds": 119.71045017242432
+    },
+    {
+      "layout": "ddp",
+      "phase": "task1",
+      "gpus": 2,
+      "images": 4473,
+      "iterations_per_rank": 100,
+      "warmup": 10,
+      "batch_per_rank": 2,
+      "accumulation": 1,
+      "effective_batch": 4,
+      "seconds_per_microstep": 0.5112719812469246,
+      "global_images_per_second": 7.823624502646379,
+      "loader_microsteps_per_epoch": 1119,
+      "estimated_wall_minutes_per_epoch": 9.535222450255144,
+      "estimated_gpu_hours_per_epoch": 0.3178407483418382,
+      "proposed_12epoch_wall_hours": 1.907044490051029,
+      "proposed_12epoch_gpu_hours": 3.814088980102058,
+      "peak_allocated_GiB_per_rank": [
+        7.245370864868164,
+        6.367041110992432
+      ],
+      "peak_reserved_GiB_per_rank": [
+        13.533203125,
+        9.109375
+      ],
+      "actual_optimizer_steps_per_rank": [
+        100,
+        100
+      ],
+      "amp_skips_per_rank": [
+        0,
+        0
+      ],
+      "launcher_seconds": 82.11893725395203
+    },
+    {
+      "layout": "ddp",
+      "phase": "task2",
+      "gpus": 2,
+      "images": 1006,
+      "iterations_per_rank": 100,
+      "warmup": 10,
+      "batch_per_rank": 2,
+      "accumulation": 1,
+      "effective_batch": 4,
+      "seconds_per_microstep": 0.5232941667355286,
+      "global_images_per_second": 7.643884175039139,
+      "loader_microsteps_per_epoch": 252,
+      "estimated_wall_minutes_per_epoch": 2.1978355002892203,
+      "estimated_gpu_hours_per_epoch": 0.073261183342974,
+      "proposed_12epoch_wall_hours": 0.43956710005784405,
+      "proposed_12epoch_gpu_hours": 0.8791342001156881,
+      "peak_allocated_GiB_per_rank": [
+        7.974855899810791,
+        6.711786270141602
+      ],
+      "peak_reserved_GiB_per_rank": [
+        14.7265625,
+        9.125
+      ],
+      "actual_optimizer_steps_per_rank": [
+        100,
+        100
+      ],
+      "amp_skips_per_rank": [
+        0,
+        0
+      ],
+      "launcher_seconds": 82.00662231445312
+    }
+  ]
+}

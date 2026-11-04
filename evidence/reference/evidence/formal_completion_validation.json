@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-04T11:12:01.713052+00:00",
+  "pipeline_completed_at_utc": "2026-11-04T04:08:48.016221+00:00",
+  "pipeline_wall_seconds": 11463.384503,
+  "per_stage": {
+    "B1": {
+      "training_seconds": 7971.961875168025,
+      "optimizer_steps_per_rank": 13423,
+      "amp_skips_per_rank": 5,
+      "max_allocated_gib": 8.304922103881836,
+      "max_reserved_gib": 22.9765625
+    },
+    "B2": {
+      "training_seconds": 1822.9317047439981,
+      "optimizer_steps_per_rank": 3022,
+      "amp_skips_per_rank": 2,
+      "max_allocated_gib": 8.779011249542236,
+      "max_reserved_gib": 17.29296875
+    }
+  },
+  "B2_init_matches_B1_evaluated_checkpoint": true,
+  "eval_prompt_and_test_hash_equal": true,
+  "B2_minus_B0": {
+    "Old15_VOC07_AP50": -5.747776895024728,
+    "New5_VOC07_AP50": 11.926680605283337,
+    "All20_VOC07_AP50": -1.3291625199477153,
+    "All20_COCO_AP": -0.0299445286782003
+  },
+  "largest_old_class_drops_VOC07_AP50": [
+    [
+      "person",
+      74.16510194278293
+    ],
+    [
+      "chair",
+      54.39221314471871
+    ],
+    [
+      "diningtable",
+      42.41091745123564
+    ],
+    [
+      "bottle",
+      24.68595995826739
+    ],
+    [
+      "motorbike",
+      20.384950626652923
+    ]
+  ],
+  "monitor_deleted": true
+}

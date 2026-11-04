@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "unit_tests": 13,
+  "cpu_full_model_correctness": true,
+  "gpu2_smoke_phases": 2,
+  "gpu2_profile_steps_per_phase": 200,
+  "gpu2_profile_phases": 2,
+  "b0_full_test_recomputed_images": 4952,
+  "historical_B1_B2_reused_after_hash_verification": true,
+  "new_formal_training_started": false,
+  "github_push_performed": false,
+  "source_files_verified": 25,
+  "documents": 5,
+  "limitations": [
+    "CPU integration uses reduced image/query settings, separate from full GPU tests",
+    "B1/B2 formal AP from previously completed GDINO-CIOD run, not new code retraining",
+    "COCO protocol and data availability not yet frozen"
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "protocol_frozen": true,
+  "protocol": "VOC07_alphabetical15+5_current_positive_v1",
+  "engineering_only": false,
+  "classes": [
+    "aeroplane",
+    "bicycle",
+    "bird",
+    "boat",
+    "bottle",
+    "bus",
+    "car",
+    "cat",
+    "chair",
+    "cow",
+    "diningtable",
+    "dog",
+    "horse",
+    "motorbike",
+    "person",
+    "pottedplant",
+    "sheep",
+    "sofa",
+    "train",
+    "tvmonitor"
+  ],
+  "replay_buffer": false,
+  "image_disjoint": false,
+  "stage_image_overlap": 468,
+  "phases": {
+    "task1": {
+      "train_ann": "/home/data/dq/gcd-ciod-20261104/data/voc15_5/task1_train.json",
+      "train_sha256": "b537e8538cc7df0160371458b2b054e8edb307edd78a71772015ee2dc12f0689",
+      "images": 4473,
+      "annotations": 10968,
+      "image_root": "/home/data/dq/dgs-experiments/gdino_domain_kd_diagnostic_20261101/data/VOCdevkit/VOC2007/JPEGImages",
+      "classes": [
+        "aeroplane",
+        "bicycle",
+        "bird",
+        "boat",
+        "bottle",
+        "bus",
+        "car",
+        "cat",
+        "chair",
+        "cow",
+        "diningtable",
+        "dog",
+        "horse",
+        "motorbike",
+        "person"
+      ],
+      "expected_coco_dataset_label_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "smoke_eval_ann": "/home/data/dq/gcd-ciod-20261104/data/voc15_5/task1_smoke_eval.json"
+    },
+    "task2": {
+      "train_ann": "/home/data/dq/gcd-ciod-20261104/data/voc15_5/task2_train.json",
+      "train_sha256": "0a8742f26550b26ca6ce2e3b8f119bc1103d79a2c608b4b15d391f07f5b5d51d",
+      "images": 1006,
+      "annotations": 1640,
+      "image_root": "/home/data/dq/dgs-experiments/gdino_domain_kd_diagnostic_20261101/data/VOCdevkit/VOC2007/JPEGImages",
+      "classes": [
+        "aeroplane",
+        "bicycle",
+        "bird",
+        "boat",
+        "bottle",
+        "bus",
+        "car",
+        "cat",
+        "chair",
+        "cow",
+        "diningtable",
+        "dog",
+        "horse",
+        "motorbike",
+        "person",
+        "pottedplant",
+        "sheep",
+        "sofa",
+        "train",
+        "tvmonitor"
+      ],
+      "expected_coco_dataset_label_ids": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "smoke_eval_ann": "/home/data/dq/gcd-ciod-20261104/data/voc15_5/task2_smoke_eval.json"
+    }
+  },
+  "voc_root": "/home/data/dq/dgs-experiments/gdino_domain_kd_diagnostic_20261101/data/VOCdevkit/VOC2007",
+  "source_split_hashes": {
+    "trainval": "15a0c17dd13dd526194ed09fe773fd3000e951570a041c509078c634a63761e0",
+    "test": "46f3424f5769b4b9032673364380b6652346ab4d2fa66390cb75adf9d0f95afa"
+  },
+  "test": {
+    "ann": "/home/data/dq/gcd-ciod-20261104/data/voc15_5/test_full20.json",
+    "sha256": "feb1194d4c92ae27b55b6d72d5d5d2919c4232641c7e13d39db934b735bf469b",
+    "image_root": "/home/data/dq/dgs-experiments/gdino_domain_kd_diagnostic_20261101/data/VOCdevkit/VOC2007/JPEGImages",
+    "images": 4952
+  }
+}

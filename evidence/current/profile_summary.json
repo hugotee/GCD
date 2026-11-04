@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "engineering_only": true,
+  "physical_gpu": 2,
+  "batch_per_gpu": 2,
+  "accumulation": 2,
+  "effective_batch": 4,
+  "formal_num_queries": 900,
+  "train_short_edges": [
+    640,
+    672,
+    704,
+    736,
+    768,
+    800
+  ],
+  "max_long_edge": 1333,
+  "stages": {
+    "task1": {
+      "microsteps": 200,
+      "warmup": 20,
+      "optimizer_updates": 100,
+      "amp_skips": 0,
+      "images_exposed": 400,
+      "steady_images": 360,
+      "steady_seconds": 94.58995358122047,
+      "seconds_per_microstep": 0.5254997421178915,
+      "images_per_second": 3.8059010113677973,
+      "peak_allocated_gib": 6.884942531585693,
+      "peak_reserved_gib": 13.982421875,
+      "actual_profile_seconds_including_hash_and_checkpoint": 112.39624425093643,
+      "loader_microsteps_per_epoch": 2237,
+      "estimated_12epoch_training_hours": 3.9184764103924117,
+      "caveat": "Training estimate excludes loading, checkpointing, evaluation and server load changes."
+    },
+    "task2": {
+      "microsteps": 200,
+      "warmup": 20,
+      "optimizer_updates": 100,
+      "amp_skips": 0,
+      "images_exposed": 400,
+      "steady_images": 360,
+      "steady_seconds": 97.99286632414442,
+      "seconds_per_microstep": 0.5444048129119134,
+      "images_per_second": 3.67373680864869,
+      "peak_allocated_gib": 7.291334629058838,
+      "peak_reserved_gib": 13.734375,
+      "actual_profile_seconds_including_hash_and_checkpoint": 116.34893354098313,
+      "loader_microsteps_per_epoch": 503,
+      "estimated_12epoch_training_hours": 0.9127854029823081,
+      "caveat": "Training estimate excludes loading, checkpointing, evaluation and server load changes."
+    }
+  },
+  "estimated_total_12epoch_training_hours": 4.83126181337472,
+  "sampled_gpu_utilization": {
+    "samples": 147,
+    "mean_percent": 35.50340136054422,
+    "max_percent": 100,
+    "note": "Read-only nvidia-smi samples include load/save/transition idle time; not a steady-state-only mean."
+  },
+  "new_formal_training_started": false
+}

@@ -1,0 +1,42 @@
+{
+  "mode": "train",
+  "engineering_only": false,
+  "config_only": true,
+  "phase": "task1",
+  "physical_gpus": [
+    2
+  ],
+  "classes": [
+    "aeroplane",
+    "bicycle",
+    "bird",
+    "boat",
+    "bottle",
+    "bus",
+    "car",
+    "cat",
+    "chair",
+    "cow",
+    "diningtable",
+    "dog",
+    "horse",
+    "motorbike",
+    "person"
+  ],
+  "initial_checkpoint": "/home/data/dq/cdiod-dgs/weights/groundingdino_swint_ogc_mmdet-822d7e9d.pth",
+  "initial_checkpoint_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+  "pretrained_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+  "experiment_sha256": "0d098d2576973867ab5e9f864e92479be3d876f854313622eddb65113b5527fb",
+  "evaluation_ann_sha256": "feb1194d4c92ae27b55b6d72d5d5d2919c4232641c7e13d39db934b735bf469b",
+  "num_queries": 900,
+  "mmdet_version": "3.3.0",
+  "mmdet_source": "/home/data/dq/gcd-ciod-20261104/external/mmdetection/mmdet/__init__.py",
+  "seed": 20261103,
+  "resumed_from": null,
+  "model_config_sha256": "6eaff18a1f20f214e48cc4d4a0fc22c83170680995dd2350703b6b598ef5891d",
+  "manifest_sha256": "4fb73dd7c880556343030a41dd91efc9690a0acbc0a8a17e0752a5f1d8906aa4",
+  "model_code_sha256": "fd7ad70a30ebe3bffd591f18c20ca3e2b6bae7adacb60f4aa325d9f48ada81fb",
+  "peft_code_sha256": "d37748789aa9901cb99075618dcca843fd30d31f8af63dad2dc18ecf4080ac86",
+  "hooks_code_sha256": "bbd01305f67c8091b9fe2dc56bfd3d4ceb0d63838b08f05e5356deb0f5dc7db1",
+  "run_identity_sha256": "824c2f3430f1bf44ed5f0a4264a2c1ddb5d311c421dda019d1816bbdef511a3a"
+}

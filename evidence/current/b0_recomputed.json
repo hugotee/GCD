@@ -1,0 +1,189 @@
+{
+  "groups": {
+    "old15": {
+      "VOC07_AP50": 77.02050578169315,
+      "COCO_AP50": 81.01301790433119,
+      "COCO_AP": 66.02999675833702
+    },
+    "new5": {
+      "VOC07_AP50": 70.2854072752742,
+      "COCO_AP50": 72.47854795037206,
+      "COCO_AP": 59.740081707162304
+    },
+    "all20": {
+      "VOC07_AP50": 75.33673115508842,
+      "COCO_AP50": 78.8794004158414,
+      "COCO_AP": 64.45751799554334
+    }
+  },
+  "per_class": [
+    {
+      "category_id": 1,
+      "category": "aeroplane",
+      "group": "old15",
+      "VOC07_AP50": 81.01310799976615,
+      "COCO_AP": 69.89799183580924,
+      "COCO_AP50": 84.41807048831318
+    },
+    {
+      "category_id": 2,
+      "category": "bicycle",
+      "group": "old15",
+      "VOC07_AP50": 87.49325442054833,
+      "COCO_AP": 74.29199725126566,
+      "COCO_AP50": 91.74273064189735
+    },
+    {
+      "category_id": 3,
+      "category": "bird",
+      "group": "old15",
+      "VOC07_AP50": 82.48550814228321,
+      "COCO_AP": 68.28337288474103,
+      "COCO_AP50": 86.5984824111751
+    },
+    {
+      "category_id": 4,
+      "category": "boat",
+      "group": "old15",
+      "VOC07_AP50": 53.86255946782767,
+      "COCO_AP": 36.74188199586467,
+      "COCO_AP50": 55.375538595920325
+    },
+    {
+      "category_id": 5,
+      "category": "bottle",
+      "group": "old15",
+      "VOC07_AP50": 75.64945325116844,
+      "COCO_AP": 58.03026843294856,
+      "COCO_AP50": 78.28483458279327
+    },
+    {
+      "category_id": 6,
+      "category": "bus",
+      "group": "old15",
+      "VOC07_AP50": 89.73395427602442,
+      "COCO_AP": 86.46579161696225,
+      "COCO_AP50": 95.07388051503969
+    },
+    {
+      "category_id": 7,
+      "category": "car",
+      "group": "old15",
+      "VOC07_AP50": 71.85385259693302,
+      "COCO_AP": 58.50948354098998,
+      "COCO_AP50": 74.52429981163723
+    },
+    {
+      "category_id": 8,
+      "category": "cat",
+      "group": "old15",
+      "VOC07_AP50": 89.65298228236374,
+      "COCO_AP": 85.73191493136882,
+      "COCO_AP50": 95.8491994975954
+    },
+    {
+      "category_id": 9,
+      "category": "chair",
+      "group": "old15",
+      "VOC07_AP50": 66.34698693575108,
+      "COCO_AP": 54.45202818437367,
+      "COCO_AP50": 68.05564258688204
+    },
+    {
+      "category_id": 10,
+      "category": "cow",
+      "group": "old15",
+      "VOC07_AP50": 87.61400650732762,
+      "COCO_AP": 73.3543469572304,
+      "COCO_AP50": 92.07438688036362
+    },
+    {
+      "category_id": 11,
+      "category": "diningtable",
+      "group": "old15",
+      "VOC07_AP50": 17.585706359533404,
+      "COCO_AP": 15.201619897903642,
+      "COCO_AP50": 18.032106558788225
+    },
+    {
+      "category_id": 12,
+      "category": "dog",
+      "group": "old15",
+      "VOC07_AP50": 89.30847962135643,
+      "COCO_AP": 84.94340421293492,
+      "COCO_AP50": 95.37337026799915
+    },
+    {
+      "category_id": 13,
+      "category": "horse",
+      "group": "old15",
+      "VOC07_AP50": 90.22902587119019,
+      "COCO_AP": 83.36832726459836,
+      "COCO_AP50": 96.51106849125581
+    },
+    {
+      "category_id": 14,
+      "category": "motorbike",
+      "group": "old15",
+      "VOC07_AP50": 86.88725276160156,
+      "COCO_AP": 71.54960228540025,
+      "COCO_AP50": 92.42900121105663
+    },
+    {
+      "category_id": 15,
+      "category": "person",
+      "group": "old15",
+      "VOC07_AP50": 85.59145623172192,
+      "COCO_AP": 69.62792008266368,
+      "COCO_AP50": 90.8526560242507
+    },
+    {
+      "category_id": 16,
+      "category": "pottedplant",
+      "group": "new5",
+      "VOC07_AP50": 62.884104463242444,
+      "COCO_AP": 43.85972985777103,
+      "COCO_AP50": 64.12800985169068
+    },
+    {
+      "category_id": 17,
+      "category": "sheep",
+      "group": "new5",
+      "VOC07_AP50": 88.75260242505465,
+      "COCO_AP": 74.40503690146875,
+      "COCO_AP50": 92.99922324474049
+    },
+    {
+      "category_id": 18,
+      "category": "sofa",
+      "group": "new5",
+      "VOC07_AP50": 80.6742435472729,
+      "COCO_AP": 77.2185593831099,
+      "COCO_AP50": 84.1671254378858
+    },
+    {
+      "category_id": 19,
+      "category": "train",
+      "group": "new5",
+      "VOC07_AP50": 87.77581697682459,
+      "COCO_AP": 79.47651094462263,
+      "COCO_AP50": 92.70500349740563
+    },
+    {
+      "category_id": 20,
+      "category": "tvmonitor",
+      "group": "new5",
+      "VOC07_AP50": 31.34026896397643,
+      "COCO_AP": 23.74057144883921,
+      "COCO_AP50": 28.393377720137746
+    }
+  ],
+  "passed": true,
+  "new_gpu_inference": false,
+  "source": "historical full-test B0 predictions",
+  "prediction_sha256": "ec406e513fbec4987870ed96a692d98f6ee0e12581a540f2494b94328c9de4e9",
+  "test_annotation_sha256": "feb1194d4c92ae27b55b6d72d5d5d2919c4232641c7e13d39db934b735bf469b",
+  "numeric_image_ids_remapped_by_filename": true,
+  "images": 4952,
+  "elapsed_seconds": 109.56289638194721
+}

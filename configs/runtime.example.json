@@ -1,0 +1,10 @@
+{
+  "pretrained_checkpoint": "/absolute/path/groundingdino_swint_ogc_mmdet-822d7e9d.pth",
+  "pretrained_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+  "bert_path": "/absolute/path/bert-base-uncased",
+  "mmdet_root": "/absolute/path/GCD/external/mmdetection",
+  "manifest": "/absolute/path/GCD/data/voc15_5/manifest.json",
+  "authorized_gpus": [
+    2
+  ]
+}

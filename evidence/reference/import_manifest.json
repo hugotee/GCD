@@ -1,0 +1,72 @@
+{
+  "source_project": "GDINO-CIOD",
+  "source_commit": "1bc53ea5fe61ee935ffaa42405ce36ea81b992f2",
+  "copied_without_modification": true,
+  "files": [
+    {
+      "source": "results.csv",
+      "sha256": "88afbc5ea0d8d33affba7f49c41411802a007b454f86f9106de3362e183a854a",
+      "destination": "evidence/reference/results.csv"
+    },
+    {
+      "source": "per_class_ap.csv",
+      "sha256": "cae93edf350418d1f05277290425990f84eb14dc5b2278659f51ca2f62095538",
+      "destination": "evidence/reference/per_class_ap.csv"
+    },
+    {
+      "source": "evidence/formal_completion_validation.json",
+      "sha256": "29493e5205d4a94b83d6e444762ea2cb032dcca662d3b35084d1aa09ef7f8510",
+      "destination": "evidence/reference/evidence/formal_completion_validation.json"
+    },
+    {
+      "source": "evidence/VOC07_crosscheck.json",
+      "sha256": "68decd15513ab192c29f49efc9eb14cbcedce2869fb602beb1872aa3e0a177b2",
+      "destination": "evidence/reference/evidence/VOC07_crosscheck.json"
+    },
+    {
+      "source": "evidence/environment.json",
+      "sha256": "a904f2ce17c89d2a1ed166fd3f4153286c41c9cf67807320bbf68b61d0c097f6",
+      "destination": "evidence/reference/evidence/environment.json"
+    },
+    {
+      "source": "evidence/profile_summary.json",
+      "sha256": "531f0d4de44659fc06eca4f9b1c1cb38725abe68084517b291d47b8fb189da44",
+      "destination": "evidence/reference/evidence/profile_summary.json"
+    },
+    {
+      "source": "evidence/formal_code_version.json",
+      "sha256": "af421a5574413f59dc6d7b29571e95844b537ad0db991fc285c70cea6ca888c4",
+      "destination": "evidence/reference/evidence/formal_code_version.json"
+    },
+    {
+      "source": "results/B0/summary.json",
+      "sha256": "c4863c90fab9f5eb42330bbe25a03b23d7bde66749eae51e2c6448af2afc17f6",
+      "destination": "evidence/reference/results/B0/summary.json"
+    },
+    {
+      "source": "results/B0/per_class_ap.csv",
+      "sha256": "fe59fbcfbf66d00d0bbb11fc300a40798ad171564260109460889685f4e07aea",
+      "destination": "evidence/reference/results/B0/per_class_ap.csv"
+    },
+    {
+      "source": "results/B1/summary.json",
+      "sha256": "a1b7596d967a5b2511e820313140965e713100a6a6f60d02348cbc2aaaeb814c",
+      "destination": "evidence/reference/results/B1/summary.json"
+    },
+    {
+      "source": "results/B1/per_class_ap.csv",
+      "sha256": "e5549e12d17aeed22cceb6b1992f61d466a01a5e0bc9ffc0b5fdaec3c9f6ed83",
+      "destination": "evidence/reference/results/B1/per_class_ap.csv"
+    },
+    {
+      "source": "results/B2/summary.json",
+      "sha256": "6c01a61fe298c1feb23a1bd818cf750b934f2ee8f433eab67bd410ce6e6ce651",
+      "destination": "evidence/reference/results/B2/summary.json"
+    },
+    {
+      "source": "results/B2/per_class_ap.csv",
+      "sha256": "189a804f03e7a1b7e06fd319d62177b3cccd20c9013fa6e3a7cbdfae5a94b093",
+      "destination": "evidence/reference/results/B2/per_class_ap.csv"
+    }
+  ]
+}

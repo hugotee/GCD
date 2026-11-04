@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-04T11:51:52.662534+00:00",
+  "new_gpu_jobs_started": false,
+  "authorized_gpus": [
+    0
+  ],
+  "pretrained_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+  "packages": {
+    "torch": "2.1.2+cu121",
+    "torchvision": "0.16.2+cu121",
+    "mmcv": "2.1.0",
+    "mmengine": "0.10.7",
+    "transformers": "4.40.2",
+    "numpy": "1.26.4",
+    "pycocotools": "2.0.11"
+  },
+  "gpu_inventory": "0, NVIDIA GeForce RTX 3090, 18167 MiB, 24576 MiB, 78 %\n1, NVIDIA GeForce RTX 3090, 17013 MiB, 24576 MiB, 100 %\n2, NVIDIA GeForce RTX 3090, 12 MiB, 24576 MiB, 0 %\n3, NVIDIA GeForce RTX 3090, 18167 MiB, 24576 MiB, 32 %\n",
+  "phases": {
+    "task1": {
+      "images": 4473,
+      "annotations": 10968,
+      "semantic_match": true
+    },
+    "task2": {
+      "images": 1006,
+      "annotations": 1640,
+      "semantic_match": true
+    }
+  },
+  "test_semantic_match": true,
+  "test_images": 4952,
+  "note": "Converters use different numeric image IDs; compare/remap by filename before reusing predictions.",
+  "B2_init_equals_B1_evaluated_checkpoint": true,
+  "reference_results": {
+    "B0": {
+      "prediction_sha256": "ec406e513fbec4987870ed96a692d98f6ee0e12581a540f2494b94328c9de4e9",
+      "prediction_bytes": 230936545,
+      "checkpoint_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+      "groups": {
+        "old15": {
+          "VOC07_AP50": 77.02050578169315,
+          "COCO_AP50": 81.01301790433119,
+          "COCO_AP": 66.02999675833702
+        },
+        "new5": {
+          "VOC07_AP50": 70.2854072752742,
+          "COCO_AP50": 72.47854795037206,
+          "COCO_AP": 59.740081707162304
+        },
+        "all20": {
+          "VOC07_AP50": 75.33673115508842,
+          "COCO_AP50": 78.8794004158414,
+          "COCO_AP": 64.45751799554334
+        }
+      },
+      "per_class_groups_recomputed": true
+    },
+    "B1": {
+      "prediction_sha256": "c1465ce0ecb4ca58b95331592c4c128fc7fc77d71b8a9d29239a5b2eb96a6b5d",
+      "prediction_bytes": 232505091,
+      "checkpoint_sha256": "af92d30f638a4d74634185c50129320257d1616462bb87966dba27ea0d0f471e",
+      "groups": {
+        "old15": {
+          "VOC07_AP50": 90.40497757443455,
+          "COCO_AP50": 95.76273166834629,
+          "COCO_AP": 81.57307290860021
+        },
+        "new5": {
+          "VOC07_AP50": 78.93026325743344,
+          "COCO_AP50": 81.81203985681404,
+          "COCO_AP": 68.96945462821535
+        },
+        "all20": {
+          "VOC07_AP50": 87.53629899518428,
+          "COCO_AP50": 92.27505871546323,
+          "COCO_AP": 78.422168338504
+        }
+      },
+      "per_class_groups_recomputed": true
+    },
+    "B2": {
+      "prediction_sha256": "50e6f750c86e05e47d28556f64cc06d09e281d1937719ba8bf8f19ba9571c938",
+      "prediction_bytes": 230443269,
+      "checkpoint_sha256": "ec615c38f9f05b882957182a93011428dce94afc9728f240dfc79258f63e1839",
+      "groups": {
+        "old15": {
+          "VOC07_AP50": 71.27272888666842,
+          "COCO_AP50": 73.65865843892018,
+          "COCO_AP": 61.83285843636125
+        },
+        "new5": {
+          "VOC07_AP50": 82.21208788055753,
+          "COCO_AP50": 86.13478494000708,
+          "COCO_AP": 72.21171855837679
+        },
+        "all20": {
+          "VOC07_AP50": 74.0075686351407,
+          "COCO_AP50": 76.7776900641919,
+          "COCO_AP": 64.42757346686514
+        }
+      },
+      "per_class_groups_recomputed": true
+    }
+  }
+}
+

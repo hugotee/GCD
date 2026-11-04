@@ -1,0 +1,68 @@
+{
+  "model": "B2",
+  "groups": {
+    "old15": {
+      "VOC07_AP50": 71.27272888666842,
+      "COCO_AP50": 73.65865843892018,
+      "COCO_AP": 61.83285843636125
+    },
+    "new5": {
+      "VOC07_AP50": 82.21208788055753,
+      "COCO_AP50": 86.13478494000708,
+      "COCO_AP": 72.21171855837679
+    },
+    "all20": {
+      "VOC07_AP50": 74.0075686351407,
+      "COCO_AP50": 76.7776900641919,
+      "COCO_AP": 64.42757346686514
+    }
+  },
+  "engineering_only": false,
+  "prediction_sha256": "50e6f750c86e05e47d28556f64cc06d09e281d1937719ba8bf8f19ba9571c938",
+  "provenance": {
+    "mode": "eval",
+    "config_only": false,
+    "training_executed": false,
+    "engineering_only": false,
+    "phase": "task2",
+    "physical_gpus": [
+      1,
+      2
+    ],
+    "world_size": 2,
+    "batch_per_rank": 2,
+    "accumulation": 1,
+    "effective_batch": 4,
+    "seed": 20261103,
+    "initial_checkpoint_sha256": "ec615c38f9f05b882957182a93011428dce94afc9728f240dfc79258f63e1839",
+    "initial_checkpoint": "/home/data/dq/dgs-experiments/gdino_ciod_voc15_5/checkpoints/task2_20classes.pth",
+    "checkpoint_exists": true,
+    "manifest_sha256": "dae8b6d803cfcf370ef5c42d23820d466dcf664cab0c680a62cb7ebda4efe674",
+    "classes": [
+      "aeroplane",
+      "bicycle",
+      "bird",
+      "boat",
+      "bottle",
+      "bus",
+      "car",
+      "cat",
+      "chair",
+      "cow",
+      "diningtable",
+      "dog",
+      "horse",
+      "motorbike",
+      "person",
+      "pottedplant",
+      "sheep",
+      "sofa",
+      "train",
+      "tvmonitor"
+    ],
+    "evaluation_ann_sha256": "f3e9670e90cc241cf2b12fe589bd15a71bb1f84bc80ed0f9854dea26eb225942",
+    "epochs": null,
+    "steps": null
+  },
+  "metric_note": "VOC2007 11-point AP50; COCO AP50 and AP50:95 separately. Difficult ignored via original VOC flag retained in source JSON."
+}

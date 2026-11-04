@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/data/dq/gcd-ciod-20261104/scripts/cpu_integration.py", line 109, in <module>
+    main()
+  File "/home/data/dq/gcd-ciod-20261104/scripts/cpu_integration.py", line 46, in main
+    model = MODELS.build(cfg)
+  File "/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/registry/registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/registry/build_functions.py", line 232, in build_model_from_cfg
+    return build_from_cfg(cfg, registry, default_args)
+  File "/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/registry/build_functions.py", line 121, in build_from_cfg
+    obj = obj_cls(**args)  # type: ignore
+  File "/home/data/dq/gcd-ciod-20261104/src/gcd/model.py", line 30, in __init__
+    super().__init__(**kwargs)
+  File "/home/data/dq/gcd-ciod-20261104/external/mmdetection/mmdet/models/detectors/grounding_dino.py", line 58, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/data/dq/gcd-ciod-20261104/external/mmdetection/mmdet/models/detectors/dino.py", line 44, in __init__
+    self.dn_query_generator = CdnQueryGenerator(**dn_cfg)
+TypeError: mmdet.models.layers.transformer.dino_layers.CdnQueryGenerator() argument after ** must be a mapping, not NoneType

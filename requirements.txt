@@ -1,0 +1,10 @@
+# Validated Linux/CUDA stack. Install torch wheels from the cu121 index first.
+torch==2.1.2
+torchvision==0.16.2
+mmengine==0.10.7
+mmcv==2.1.0
+transformers==4.40.2
+numpy==1.26.4
+pycocotools==2.0.11
+# MMDetection is checked out by scripts/bootstrap_mmdet.sh at a fixed commit.
+# Its requirements/runtime.txt supplies scipy, terminaltables, matplotlib, etc.
