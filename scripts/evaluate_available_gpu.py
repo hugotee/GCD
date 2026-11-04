@@ -13,6 +13,18 @@ from gcd.protocol import sha256, write_json
 from gcd.runtime import read_runtime, validate_gpus
 
 
+def initialize_eval_runner(runner, checkpoint):
+    """MMEngine test() does not initialize this project's custom checkpoint."""
+    import torch
+    runner._init_model_weights()
+    model = runner.model.module if hasattr(runner.model, 'module') else runner.model
+    expected = torch.load(checkpoint, map_location='cpu')['state_dict']
+    actual = model.state_dict()
+    if set(actual) != set(expected) or any(not torch.equal(actual[n].detach().cpu(), expected[n]) for n in actual):
+        raise RuntimeError('Loaded evaluation state differs from the requested checkpoint')
+    return dict(passed=True,checkpoint_state_exact=True,state_tensors=len(actual),checkpoint_sha256=sha256(checkpoint))
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--runtime', type=Path, required=True)
@@ -63,8 +75,29 @@ def main():
             note='Existing resident processes untouched; low-utilization inference with VRAM headroom.'))
     write_json(a.work_dir / 'provenance.json', provenance)
     runner = Runner.from_cfg(cfg)
-    runner.test()
+    initialization = initialize_eval_runner(runner, a.init)
+    write_json(a.work_dir / 'initialization_audit.json', initialization)
+    provenance.update(model_initialization_verified=True,loaded_checkpoint_state_exact=True)
+    write_json(a.work_dir / 'provenance.json', provenance)
+    # Four fixed training-side images exercise the complete prediction path.
+    import copy
+    from mmengine.dataset import pseudo_collate
+    from mmdet.registry import DATASETS
     manifest = json.loads(Path(runtime['manifest']).read_text())
+    smoke_cfg = copy.deepcopy(cfg.test_dataloader.dataset)
+    smoke_cfg.ann_file = manifest['phases']['task2']['smoke_eval_ann']
+    smoke_cfg.data_prefix.img = manifest['phases']['task2']['image_root'] + '/'
+    smoke = DATASETS.build(smoke_cfg)
+    runner.model.eval()
+    checks = []
+    with torch.inference_mode():
+        for i in range(len(smoke)):
+            pred = runner.model.test_step(pseudo_collate([smoke[i]]))[0].pred_instances
+            assert len(pred.scores) and torch.isfinite(pred.scores).all() and torch.isfinite(pred.bboxes).all()
+            checks.append(dict(image_id=int(smoke[i]['data_samples'].img_id),detections=len(pred.scores),max_score=float(pred.scores.max())))
+    write_json(a.work_dir / 'prediction_preflight.json',dict(passed=True,engineering_only=True,
+        full_resolution=True,num_queries=900,images=checks,note='Train-side engineering preflight, not AP.'))
+    runner.test()
     gt = json.loads(Path(manifest['test']['ann']).read_text())
     provenance.update(evaluation_completed=True, evaluated_image_ids=[i['id'] for i in gt['images']])
     write_json(a.work_dir / 'provenance.json', provenance)

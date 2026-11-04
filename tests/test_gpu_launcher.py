@@ -3,6 +3,7 @@ import importlib.util
 import os
 from pathlib import Path
 import sys
+import tempfile
 import unittest
 from unittest.mock import patch
 
@@ -17,6 +18,38 @@ class NativeConfigReached(Exception):
 
 
 class GPULauncherTests(unittest.TestCase):
+    def test_evaluation_explicitly_initializes_and_verifies_checkpoint(self):
+        import torch
+        with tempfile.TemporaryDirectory() as folder:
+            checkpoint=Path(folder)/'state.pth'
+            expected=torch.nn.Linear(2,1)
+            torch.nn.init.constant_(expected.weight,3)
+            torch.save(dict(state_dict=expected.state_dict()),checkpoint)
+            class Runner:
+                model=torch.nn.Linear(2,1)
+                called=False
+                def _init_model_weights(self):
+                    self.called=True
+                    self.model.load_state_dict(torch.load(checkpoint)['state_dict'])
+            runner=Runner()
+            result=launcher.initialize_eval_runner(runner,checkpoint)
+            self.assertTrue(runner.called)
+            self.assertTrue(result['checkpoint_state_exact'])
+            self.assertTrue(torch.equal(runner.model.weight,expected.weight))
+
+    def test_missing_or_wrong_initialization_is_rejected(self):
+        import torch
+        with tempfile.TemporaryDirectory() as folder:
+            checkpoint=Path(folder)/'state.pth'
+            expected=torch.nn.Linear(2,1)
+            torch.nn.init.constant_(expected.weight,3)
+            torch.save(dict(state_dict=expected.state_dict()),checkpoint)
+            class Runner:
+                model=torch.nn.Linear(2,1)
+                def _init_model_weights(self): pass
+            with self.assertRaisesRegex(RuntimeError,'differs from the requested checkpoint'):
+                launcher.initialize_eval_runner(Runner(),checkpoint)
+
     def admission(self, samples, authorized, expected_gpu=None):
         argv = ['evaluate_available_gpu.py', '--runtime', 'unused.json', '--init', 'unused.pth',
                 '--work-dir', 'unused_work_dir']

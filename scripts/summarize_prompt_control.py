@@ -40,6 +40,8 @@ for arm in spec['arms']:
     assert ep['classes'] == list(CLASSES) and ep['num_queries'] == 900
     assert len(set(ep['evaluated_image_ids'])) == spec['evaluation_images']
     assert ep['initial_checkpoint_sha256'] == complete['checkpoint_sha256']
+    if 'launcher_code_sha256' in ep:
+        assert ep.get('model_initialization_verified') and ep.get('loaded_checkpoint_state_exact')
     outputs[arm] = dict(groups=evaluation['groups'],
         delta_vs_B1={g: {m: evaluation['groups'][g][m] - reference['groups'][g][m]
                           for m in reference['groups'][g]} for g in reference['groups']})
@@ -61,8 +63,30 @@ for name, groups in [('B1_initial', reference['groups']), *[(k, v['groups']) for
     rows.extend(dict(model=name, group=g, **v) for g, v in groups.items())
 with (a.out / 'group_metrics.csv').open('w') as f:
     writer = csv.DictWriter(f, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+class_sources = {'B1': a.reference_summary.with_name('per_class_ap.csv'),
+                 **{arm: a.root / f'{arm}_results/per_class_ap.csv' for arm in spec['arms']}}
+class_values = {name: {r['category']: r for r in csv.DictReader(path.open())}
+                for name, path in class_sources.items()}
+assert all(set(values) == set(CLASSES) for values in class_values.values())
+perclass = []
+for index, category in enumerate(CLASSES):
+    row = dict(category_id=index + 1, category=category, group='old15' if index < 15 else 'new5')
+    for metric in ['VOC07_AP50', 'COCO_AP50', 'COCO_AP']:
+        for name, values in class_values.items():
+            row[f'{name}_{metric}'] = float(values[category][metric])
+        row[f'new5_minus_all20_{metric}'] = row[f'new5_{metric}'] - row[f'all20_{metric}']
+    perclass.append(row)
+for name, values in class_values.items():
+    groups = reference['groups'] if name == 'B1' else outputs[name]['groups']
+    for group in groups:
+        selected = [r for r in perclass if group == 'all20' or r['group'] == group]
+        for metric, reported in groups[group].items():
+            assert abs(sum(r[f'{name}_{metric}'] for r in selected) / len(selected) - reported) < 1e-6
+with (a.out / 'per_class_comparison.csv').open('w') as f:
+    writer = csv.DictWriter(f, fieldnames=list(perclass[0])); writer.writeheader(); writer.writerows(perclass)
 write_json(a.out / 'summary.json', dict(passed=True, diagnostic_short_training=True,
     formal_12_epoch_baseline=False, plan_sha256=sha256(a.plan), paired_inputs=pair,
+    reference_summary_sha256=sha256(a.reference_summary),
     B1_initial_groups=reference['groups'], arms=outputs, new5_minus_all20=difference,
     audits=audits, provenance=provenance,
     caveats=['Single seed, one complete Task2 epoch, last checkpoint only.',
