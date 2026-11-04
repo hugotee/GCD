@@ -44,8 +44,12 @@
 
 本轮仅完成五篇定向核对与一组2026-11-04主题查新，并非系统综述。检索发现 [Incremental Vision–Language Object Detection via Sparse Frequency Transform](https://signalprocessingsociety.org/publications-resources/ieee-transactions-image-processing/2026/09/incremental-vision-language-object-detection-sparse-frequency-transform) 已讨论频域独立更新和干扰；目前只核对出版方摘要，全文/代码尚未复核，应列为继续查新项，不据此判断优劣。另需覆盖类增量梯度分解、任务不可知提示和表示漂移诊断。不能仅凭这五篇宣称研究空白。
 
-当前最值得执行：基于下方已完成的诊断，从相同B1出发做Task2训练提示new5/all20单变量对照；固定数据、GT、seed、更新预算和LoRA范围，统一all20评价。不重复训练相同B1/B2，不立即实现创新模块。
+Task2训练提示new5/all20短程对照已完成，结果见文末。当前优先固定all20前向，仅控制旧token分类损失并检查归一化；不重复已完成实验，不立即实现复杂创新模块。
 
 ## 首轮诊断补充（2026-11-04）
 
 已完成全test缓存与GPU2的128图raw900-query配对诊断，见[机制诊断报告](../experiments/MECHANISM_DIAGNOSTICS_V1.md)。在固定训练侧样本中，几何候选可用时旧类分数仍大幅降低；pre-encoder文本不变而增强后文本改变。该结果缩小了RQ1的检查位置，并提示先做B2训练prompt new5/all20的单变量对照；仍不构成机制因果或新颖性证明。
+
+## 训练提示对照补充（2026-11-05）
+
+固定同一B1、完整Task2一轮及逐批相同输入，两组统一全test评价完成。new5−all20旧/新类VOC07 AP50差异为+5.3396/+2.0711点，见[完整报告](../experiments/TASK2_PROMPT_CONTROL_V1.md)。该结果应优先用于审查训练提示、负token监督和损失归一化，而不是直接支持新增专家或复杂蒸馏。下一步固定all20前向，仅控制旧token分类损失，并检查新类适应与多seed；新的表示漂移结论须另跑对应checkpoint探针。

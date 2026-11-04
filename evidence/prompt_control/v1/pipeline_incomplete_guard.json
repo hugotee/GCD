@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "expected_rejection": true,
+  "new_job_launched": false,
+  "reason": "Incomplete all20 evaluation rejected by --validate-only."
+}

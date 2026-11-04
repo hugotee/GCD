@@ -1,0 +1,7 @@
+{
+  "interrupted": true,
+  "not_used_for_AP": true,
+  "weights_verified": true,
+  "last_logged_images": 780,
+  "reason": "Auto selector admitted temporarily idle GPU2; persistent low-load GPU1 selected explicitly for the rerun."
+}

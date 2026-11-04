@@ -14,7 +14,7 @@
 
 [首轮机制诊断](docs/experiments/MECHANISM_DIAGNOSTICS_V1.md)已完成缓存预测分析；已在GPU2完成128图完整raw900-query/文本特征配对探针，无新增训练或后台排队。诊断输入与状态见 evidence/diagnostics/v1。
 
-随后已完成[Task2训练提示对照](docs/experiments/TASK2_PROMPT_CONTROL_V1.md)的两组固定1epoch训练与完整输入配对核验；统一all20提示的全test评价进行中。证据见 evidence/prompt_control/v1。
+随后已完成[Task2训练提示对照](docs/experiments/TASK2_PROMPT_CONTROL_V1.md)的两组固定1epoch训练与完整输入配对核验；两组统一all20提示的4952图完整评价、逐类汇总和流水线核验均已完成。证据见 evidence/prompt_control/v1。
 
 ## 环境
 

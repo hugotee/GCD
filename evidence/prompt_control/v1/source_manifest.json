@@ -1,0 +1,19 @@
+{
+  "scripts/train_prompt_control.py": "d0ff881e62ba4bbde44ad000cba11039a2fd81f717b3a7dfd1a3ad128401aed1",
+  "src/gcd/control_hooks.py": "40e608710ae37c97271cb28b2f1d49963c44b72f74813f741867b9a0d30ebc77",
+  "src/gcd/prompt_control.py": "d22d44b3df97864d882a143b81d480acf6104d776ccb615c0e83396c9b296e2d",
+  "src/gcd/cli.py": "fb2f1319ec4774873eb40fda882151659d5e6eca60ba12c61aa105a46988901e",
+  "src/gcd/model.py": "fd7ad70a30ebe3bffd591f18c20ca3e2b6bae7adacb60f4aa325d9f48ada81fb",
+  "src/gcd/hooks.py": "bbd01305f67c8091b9fe2dc56bfd3d4ceb0d63838b08f05e5356deb0f5dc7db1",
+  "src/gcd/peft.py": "d37748789aa9901cb99075618dcca843fd30d31f8af63dad2dc18ecf4080ac86",
+  "configs/experiments/voc15_5.json": "0d098d2576973867ab5e9f864e92479be3d876f854313622eddb65113b5527fb",
+  "configs/model/gdino_t.py": "6eaff18a1f20f214e48cc4d4a0fc22c83170680995dd2350703b6b598ef5891d",
+  "scripts/prepare_prompt_control.py": "a4c5d86de71d6a45883e6409a80dc2b80c8f37fca5ca78c7fc50dad908c4e142",
+  "scripts/summarize_prompt_control.py": "868d299a5f5da2bcb83d75f2da7929e044ad6dda6d131a52053727fe8c8735cf",
+  "scripts/plot_prompt_control.py": "268acc4f4e69f7ee9b692a4a432de3e1f4843a08b4d1b376aadb09f4de0ce613",
+  "scripts/execute_prompt_control.py": "16467225bf38211c802783afd2a3b9c180f8536088098a495f9da9161b943451",
+  "scripts/evaluate_available_gpu.py": "a05f030f65981db5387f7645ea2abc33022a1f9a482a89732e9ca4571d1687be",
+  "tests/test_prompt_control.py": "dd9382e4bccfde22e32b41365e8caa5c053fd8c6e6df3450582ad5592d14b4c0",
+  "tests/test_gpu_launcher.py": "b5d86472993e45ced78b14a9ee46eb81223d45872c3e22959b6ff369eb06c3f4",
+  "configs/experiments/task2_prompt_control_v1.json": "e2162fb801a2d262a5de430c53d44ebca0c2459ed1b29b49fc0dc1aa570804b1"
+}

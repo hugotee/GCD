@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/data/dq/gcd-ciod-20261104/scripts/execute_prompt_control.py", line 95, in <module>
+    main()
+  File "/home/data/dq/gcd-ciod-20261104/scripts/execute_prompt_control.py", line 65, in main
+    run(f'eval_{arm}', work, [sys.executable, str(ROOT / 'scripts/evaluate_available_gpu.py'),
+  File "/home/data/dq/gcd-ciod-20261104/scripts/execute_prompt_control.py", line 36, in run
+    raise RuntimeError(f'Incomplete stage {name}; validation did not launch a job')
+RuntimeError: Incomplete stage eval_all20; validation did not launch a job

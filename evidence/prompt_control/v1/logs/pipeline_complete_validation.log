@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "validation_only": true,
+  "paired_inputs": {
+    "passed": true,
+    "microsteps": 503,
+    "images": 1006,
+    "unique_images": 1006,
+    "paired_input_sha256": "b14a40ae191a3c656418b53be4876a0328ce9b6edea992f8df7a2cfca6069376"
+  }
+}

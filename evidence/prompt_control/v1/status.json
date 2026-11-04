@@ -1,10 +1,26 @@
 {
   "training_completed": true,
   "new5_full_test_evaluation_completed": true,
-  "all20_full_test_evaluation_started": true,
-  "uniform_full_test_evaluation_completed": false,
+  "all20_full_test_evaluation_completed": true,
+  "uniform_full_test_evaluation_completed": true,
+  "analysis_completed": true,
   "new_formal_12_epoch_training": false,
-  "physical_gpu": 2,
+  "training_physical_gpu": 2,
+  "evaluation_physical_gpus": {
+    "new5": [
+      2
+    ],
+    "all20": [
+      1
+    ]
+  },
+  "authorized_physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
   "pre_registered_commit": "d44c865",
-  "test_count": 23
+  "test_count": 28,
+  "project_job_queued_or_running": false
 }

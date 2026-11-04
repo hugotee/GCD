@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "checkpoint_state_exact": true,
+  "state_tensors": 948,
+  "checkpoint_sha256": "51a99afabe2fd8585c66534704bb3db753fa8c2eb401829c2a48a47cfe0fb0b2"
+}

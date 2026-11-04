@@ -1,4 +1,4 @@
-# Task2训练提示单变量对照：预注册
+# Task2训练提示单变量对照：预注册与完整结果
 
 用户授权继续研究、仅使用GPU2，每项任务完成后提交并推送GitHub。已完成的基线与机制诊断提交433c2ce、b5bafce已上传main。本对照在hugo/task2-prompt-control分支保留过程。
 
@@ -64,16 +64,82 @@ python scripts/summarize_prompt_control.py --root outputs/prompt_control_v1 \
 |new5|503 / 252|277.21|6.435|
 |all20|503 / 252|280.69|7.291|
 
-以上计时不含初次模型构建；完整评价另计。全test评价正在执行，此处不填入未完成的AP。详见evidence/prompt_control/v1/paired_training.json及training目录。
+以上计时不含初次模型构建；完整评价另计。完整评价结果见下方已完成汇总。详见evidence/prompt_control/v1/paired_training.json及training目录。
 
 ## new5完整评价核查（2026-11-05）
 
 new5固定1epoch模型已完成4952图test，评价提示统一all20；原始完成日志为11月4日。VOC07 AP50：旧15类90.4654，新5类86.7800，全部20类89.5440。相对初始B1，旧类+0.0604、新类+7.8497点。COCO AP50:95分别81.5624/76.7948/80.3705。
 
-这是已完成的单组结果；all20组训练已完成，完整评价在本次核查后启动。两组比较和机制解释须等待统一评价全部完成。证据见evidence/prompt_control/v1/evaluation/new5；大型原始预测留在服务器，并记录路径与SHA256。
+这是已完成的单组结果；all20组训练已完成，完整评价在本次核查后启动。该单组阶段尚未进行两组比较；后续完整对照见下方。证据见evidence/prompt_control/v1/evaluation/new5；大型原始预测留在服务器，并记录路径与SHA256。
 
 ## 评价初始化修正（2026-11-05）
 
 GPU迁移入口最初漏掉了runner._init_model_weights()。本项目的自定义checkpoint加载位于init_weights，故该次GPU1近零AP不能代表训练checkpoint，已明确作废并保留日志、预测路径、无效指标与当时源码（d26e025）。该结果不进入最终比较，不能解释为模型灾难性崩溃。GPU2此前的900图中断尝试也未计入AP。
 
 修复提交698655c显式初始化，并在任何前向前将全部948个状态张量与请求的checkpoint逐一比较，完全一致后才允许评价。新增回归测试覆盖正常加载和遗漏/错误加载的拒绝，当前28项测试通过。4张固定训练图的完整分辨率/900query预检输出正常，仅作工程验证。两组训练checkpoint保持原样；修正后只重跑all20评价。
+
+## 完整配对结果（2026-11-05）
+
+两组均完成固定1epoch、503微步、252次有效更新与完整4952图评价；统一all20评价提示。B1为同一真实起点，表中的两个新模型不是12epoch历史B2。
+
+### VOC2007 11点AP50
+
+|状态|旧15类|新5类|全部20类|
+|---|---:|---:|---:|
+|B1起点|90.4050|78.9303|87.5363|
+|new5训练提示|90.4654|86.7800|89.5440|
+|all20训练提示|85.1257|84.7089|85.0215|
+
+### COCO风格AP50，仍在VOC测试集
+
+|状态|旧15类|新5类|全部20类|
+|---|---:|---:|---:|
+|B1起点|95.7627|81.8120|92.2751|
+|new5训练提示|95.8389|91.2707|94.6968|
+|all20训练提示|89.7989|88.6706|89.5168|
+
+### COCO风格AP@[0.50:0.95]，仍在VOC测试集
+
+|状态|旧15类|新5类|全部20类|
+|---|---:|---:|---:|
+|B1起点|81.5731|68.9695|78.4222|
+|new5训练提示|81.5624|76.7948|80.3705|
+|all20训练提示|76.2210|74.7986|75.8654|
+
+new5−all20的VOC07 AP50差异：旧类+5.3396、新类+2.0711、全部类+4.5225点。相对相同B1，new5旧/新类变化+0.0604/+7.8497点，all20为-5.2792/+5.7786点。应联合比较保持与适应，不能只报旧类收益。
+
+旧类中绝对差异最大的5类，仅作事后描述；完整20类见CSV：
+
+|类别|B1|new5|all20|new5−all20|
+|---|---:|---:|---:|---:|
+|person|90.0934|89.9609|68.4735|21.4874|
+|diningtable|86.9526|86.5433|65.3106|21.2328|
+|chair|84.5743|84.5762|68.4376|16.1386|
+|dog|94.1370|95.1240|90.2964|4.8275|
+|bottle|87.5925|87.8778|83.4739|4.4038|
+
+![训练提示对照](figures/prompt_control_v1.png)
+
+### 能支持的解释与下一步
+
+本轮测量训练提示选择对保持—适应结果的影响，不认定唯一因果来源或新颖性。两组初始权重、训练图像/增广像素/全局GT、seed、原生损失和更新预算一致；局部标签重编号已核验。首批有效文本token为17/51，原生分类损失按匹配目标数归一化，并未按文本token数归一化，因此提示改变也会改变负项数量和分类/回归相对作用，同时改变文本条件、query选择与匹配。
+
+下一项更清楚的机制对照是保持all20完整前向，只控制旧类token的分类损失，并检查token损失归一化与新类适应；先做短程筛查，再决定是否12epoch和多seed复核。这里没有将新的AP差异归因为融合文本漂移：首轮128图表示探针对象是历史B0/B1/B2，本轮两个新checkpoint尚未重跑同一表示探针。
+
+### 完成与复现校验
+
+28项单元测试通过。all20正式采用的评价逐一核对948个状态张量与checkpoint一致，再完成4图原分辨率/900query工程预检。两组完整test完成日志、原始预测SHA256与checkpoint链均核对；遗漏初始化的一次完整评价以及两次GPU2中断尝试均排除。训练仍是GPU2；new5完整评价为GPU2，最终all20完整评价为显式指定的GPU1，均为RTX3090。新评价入口的CPU线程和准入采样记录在provenance中，不能把硬件负载下的评价时间当成方法效率比较。
+
+完整汇总见[summary.json](../../evidence/prompt_control/v1/analysis/summary.json)、[逐类比较](../../evidence/prompt_control/v1/analysis/per_class_comparison.csv)和[部署核验](../../evidence/prompt_control/v1/deployment.json)。大型checkpoint与预测保留服务器，Git中记录路径和SHA256。
+
+有限流水线入口scripts/execute_prompt_control.py可连续执行各阶段，复用经核对的完成标记，并拒绝覆盖未完成目录。当前已用--validate-only对全部已完成阶段核验，不重复训练或推理；该入口针对已注册的v1训练预算，后续新试验需另建plan。
+
+```bash
+python scripts/execute_prompt_control.py --runtime configs/runtime.local.json \
+  --init /home/data/dq/dgs-experiments/gdino_ciod_voc15_5/checkpoints/task1_15classes.pth \
+  --plan evidence/prompt_control/v1/plan.json \
+  --reference-summary /home/data/dq/dgs-experiments/gdino_ciod_voc15_5/results/B1/summary.json \
+  --out outputs/prompt_control_v1 --validate-only
+```
+
+补充资源记录：一次初始化正确的自动重跑在GPU2短时低利用率时被准入，随后拥塞，在780图进度后中断并保留。最终有效all20评价显式指定--gpu 1，provenance确认物理GPU1，完整4952图均来自这一次运行；没有拼接不同尝试的预测。

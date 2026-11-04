@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "client_completion_date": "2026-11-05",
+  "verified_at_utc": "2026-11-04T19:55:45.370841+00:00",
+  "project_root": "/home/data/dq/gcd-ciod-20261104",
+  "baseline_source_files_unchanged": 25,
+  "registered_training_source_files_verified": 9,
+  "current_source_files_verified": 17,
+  "source_manifest_sha256": "5219754defe9621dc1cab221661fe9c058e838be5fcc4acbb9b0316b761a5876",
+  "test_count": 28,
+  "paired_inputs_verified": true,
+  "training_epochs_per_arm": 1,
+  "full_test_images_per_arm": 4952,
+  "raw_predictions": {
+    "new5": {
+      "path": "/home/data/dq/gcd-ciod-20261104/outputs/prompt_control_v1/new5_eval/predictions.bbox.json",
+      "bytes": 232414854,
+      "sha256": "6aebe8b2339dec7e8f52943dfe68f6c454a3ec6b2fae853c9fa8f29b6bac3380",
+      "checkpoint_sha256": "4e8b36cd71c0603f51ba6591791089afec0b934f67930d866a9f82f86834b04c",
+      "physical_gpus": [
+        2
+      ]
+    },
+    "all20": {
+      "path": "/home/data/dq/gcd-ciod-20261104/outputs/prompt_control_v1/all20_eval/predictions.bbox.json",
+      "bytes": 232703517,
+      "sha256": "8e2f56a99d355d4c58b3f01726f9bc820dc88b0c3ffc7de34f62a11d1a37e201",
+      "checkpoint_sha256": "51a99afabe2fd8585c66534704bb3db753fa8c2eb401829c2a48a47cfe0fb0b2",
+      "physical_gpus": [
+        1
+      ]
+    }
+  },
+  "pipeline_complete_sha256": "691bf372a9d08c0cec5c4dd52d7a7868011e97594b0ff07f9da67fd5d4399023",
+  "excluded_evaluation_attempts": {
+    "interrupted_GPU2": 2,
+    "uninitialized_GPU1": 1
+  },
+  "all_project_training_and_evaluation_completed": true
+}

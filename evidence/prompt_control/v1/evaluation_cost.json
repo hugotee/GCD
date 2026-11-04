@@ -1,0 +1,14 @@
+{
+  "new5": {
+    "log_first": "11/04 21:19:06",
+    "log_last": "11/04 21:41:37",
+    "log_span_seconds": 1351.0,
+    "note": "Logger span includes model setup and native COCO evaluation; separate metric-script CPU time is outside this span."
+  },
+  "all20": {
+    "log_first": "11/05 02:09:22",
+    "log_last": "11/05 02:31:11",
+    "log_span_seconds": 1309.0,
+    "note": "Logger span includes model setup and native COCO evaluation; separate metric-script CPU time is outside this span."
+  }
+}

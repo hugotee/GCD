@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "validation_only": true,
+  "training_physical_gpu": 2,
+  "evaluation_physical_gpus": {
+    "new5": [
+      2
+    ],
+    "all20": [
+      1
+    ]
+  },
+  "all_training_and_evaluation_completed": true,
+  "plan_sha256": "fe5151cc305708e03902ed7f688f44d6cff2c4d2270381dc83eee7136a7c00af",
+  "summary_sha256": "d2fc9be7fd4e84c258593c3415fb4cbfdb62dc8d35cc41c64c38b477759f83b6",
+  "source_script_sha256": "16467225bf38211c802783afd2a3b9c180f8536088098a495f9da9161b943451"
+}
