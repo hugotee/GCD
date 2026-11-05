@@ -16,6 +16,7 @@
 |GPU工程路径|GPU2的完整多尺度/900query smoke与200step profile|实际检查结果和成本见GPU_PROFILE.md及evidence/current|
 |真实基线结果|导入既有独立GDINO-CIOD已完成B0/B1/B2，核对原始预测与checkpoint SHA、逐类均值、B2初始化链|evidence/reference/import_manifest.json、evidence/current/asset_audit.json|
 |B0评价复核|旧冻结模型4952图真实预测按文件名重映射ID，在新XML GT和新评价器上重算一致|evidence/current/b0_recomputed.json；不是新增GPU推理|
+|新VOC/COCO基础验收|VOC新增4952图B0评价一致；COCO完整数据、5000图W0评价、70+10/40+40两阶段训练短测和重载均完成；COCO标准AP48.5462|FOUNDATION_VOC_COCO_V1.md、evidence/foundation/v1|
 
 ## 真实参考结果
 
@@ -63,7 +64,7 @@ VOC07 AP50的旧类遗忘19.1322点，新类适应收益3.2818点；COCO AP对�
 
 - 没有在新仓库代码下重跑完整正式B1/B2；新GPU工程测试与历史结果分开保存，不冒充方法复现。
 - 同阶段完整MMEngine长训练中断恢复尚未进行长程验证；严格state与optimizer下一步数值恢复已由测试覆盖。
-- COCO2017已完成完整数据下载与校验，70+10/40+40均已冻结阶段标注；完整冻结评价和短程训练验收进展见[框架接入](FOUNDATION_VOC_COCO_V1.md)。尚未启动COCO完整B1/B2训练。
+- COCO2017完整数据、完整冻结评价与70+10/40+40短程训练验收已完成，详见[框架接入](FOUNDATION_VOC_COCO_V1.md)。尚未启动COCO完整B1/B2训练；两阶段各12epoch的单卡预算约143/146小时。
 - 未实现五篇完整方法、基础KD或复杂创新模块。
 - 旧类共现/候选分析、固定checkpoint提示/文本探针和new5/all20训练提示短程对照均已完成。用户随后明确当前先完成Grounding DINO+VOC/COCO基础框架；本轮不继续增加损失控制等研究模块，先完成[COCO数据、完整评价与训练路径验收](FOUNDATION_VOC_COCO_V1.md)。
 

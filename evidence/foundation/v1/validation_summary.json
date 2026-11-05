@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "date": "2026-11-05",
+  "fresh_voc_inference_images": 4952,
+  "voc_reference_metrics_exact": true,
+  "coco_train_images": 118287,
+  "coco_eval_images": 5000,
+  "coco_checksum_and_crc_passed": true,
+  "coco_full80_standard_metrics": {
+    "COCO_AP": 48.54619597800163,
+    "COCO_AP50": 64.45909070388356,
+    "COCO_AP75": 52.9684910647454
+  },
+  "coco_standard_max_dets": [
+    1,
+    10,
+    100
+  ],
+  "coco_split_groups_from_same_predictions": {
+    "70+10": {
+      "old70": {
+        "COCO_AP": 49.57626290291285,
+        "COCO_AP50": 65.78372201241615,
+        "COCO_AP75": 54.2318539414606
+      },
+      "new10": {
+        "COCO_AP": 41.33572750362307,
+        "COCO_AP50": 55.186671544155594,
+        "COCO_AP75": 44.12495092773899
+      }
+    },
+    "40+40": {
+      "old40": {
+        "COCO_AP": 54.248245412438834,
+        "COCO_AP50": 72.21363627444634,
+        "COCO_AP75": 59.19684691671282
+      },
+      "new40": {
+        "COCO_AP": 42.84414654356442,
+        "COCO_AP50": 56.70454513332081,
+        "COCO_AP75": 46.740135212777986
+      }
+    }
+  },
+  "training_checks": {
+    "protocols": [
+      "70+10",
+      "40+40"
+    ],
+    "smoke_phases": 4,
+    "profile_phases": 4,
+    "profile_microsteps_per_phase": 200,
+    "profile_optimizer_updates_total": 400,
+    "amp_skips_total": 0,
+    "reload_checks_exact": 4
+  },
+  "all_source_snapshot_hashes_match": true,
+  "new_coco_formal_training_started": false,
+  "physical_gpus_used": [
+    1,
+    2,
+    3
+  ],
+  "project_background_jobs_running": false,
+  "native_metric_note": "Archived native inference uses MMDetection default maxDets [100,300,1000]; official summary and per-class CSV use standard [1,10,100]. Overall AP at maxDets100 agrees. Final CLI explicitly fixes future COCO native metrics to [1,10,100]; its configuration check is stored separately."
+}

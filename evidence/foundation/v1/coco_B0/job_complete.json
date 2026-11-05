@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "dataset": "coco2017",
+  "physical_gpu": 2,
+  "evaluated_images": 5000,
+  "elapsed_seconds": 1704.5114472300047,
+  "result_sha256": "ab3a4fca18b351414b6ddaf9f6798fe0e12ee274841e46060a0585d22595459c"
+}

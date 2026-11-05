@@ -1,6 +1,6 @@
 # Grounding DINO + Single LoRA + CIOD
 
-独立科研基线，连接至 https://github.com/hugotee/GCD 。本项目使用完整预训练 Grounding DINO-T，以同一个 LoRA 顺序学习旧类、新类。VOC2007 15+5已接通，COCO2017正在完成数据、评价与训练路径验证；本轮进展见[VOC与COCO框架接入](docs/experiments/FOUNDATION_VOC_COCO_V1.md)。尚未完整复现参考论文，也没有实现新的抗遗忘方法。
+独立科研基线，连接至 https://github.com/hugotee/GCD 。本项目使用完整预训练 Grounding DINO-T，以同一个 LoRA 顺序学习旧类、新类。VOC2007 15+5已接通，COCO2017完整数据、冻结评价及70+10/40+40短程训练验收也已完成；本轮结果见[VOC与COCO框架接入](docs/experiments/FOUNDATION_VOC_COCO_V1.md)。尚未完整复现参考论文，也没有实现新的抗遗忘方法。
 
 ## 当前可用材料
 

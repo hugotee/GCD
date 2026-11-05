@@ -185,6 +185,10 @@ def main():
         cfg.test_evaluator = (dict(type='DumpDetResults', out_file_path=str(work / 'engineering_predictions.pkl'))
             if a.verify else dict(type='CocoMetric', ann_file=manifest['test']['ann'], metric='bbox',
                 classwise=True, outfile_prefix=str(work / 'predictions')))
+        if not a.verify and manifest.get('dataset') == 'coco2017':
+            # MMDetection otherwise uses (100, 300, 1000), including for AP50
+            # and per-class AP. Match the independent standard COCO evaluator.
+            cfg.test_evaluator['proposal_nums'] = (1, 10, 100)
     provenance = dict(mode=a.mode, engineering_only=engineering, config_only=a.dry_run,
         phase=a.phase, physical_gpus=gpus, classes=manifest['classes'] if a.mode in ['eval', 'frozen'] else phase['classes'],
         initial_checkpoint=str(initial), initial_checkpoint_sha256=sha256(initial),

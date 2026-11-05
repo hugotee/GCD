@@ -1,0 +1,24 @@
+{
+  "dataset": "coco2017",
+  "code_commit": "1926996",
+  "source_sha256": {
+    "src/gcd/cli.py": "d4daaa561797856462f26fc8a15cb52e6090206d1fbed49af532ea067b25cf9c",
+    "src/gcd/runtime.py": "cd0f5a487aed3189a276727733fd772136f73efa600b786d32b559b32e518592",
+    "src/gcd/model.py": "fd7ad70a30ebe3bffd591f18c20ca3e2b6bae7adacb60f4aa325d9f48ada81fb",
+    "src/gcd/peft.py": "d37748789aa9901cb99075618dcca843fd30d31f8af63dad2dc18ecf4080ac86",
+    "src/gcd/initialization.py": "cb32a4b69bed334568d306c179c5e0c6da607b38cfa270c02d8837526e389639",
+    "src/gcd/protocol.py": "3108ee13a22c5e9fe571ee001f301c0e9ab0c4cdb450ceb1796237fe9554df9b",
+    "src/gcd/metrics.py": "fa80190bef2acc1bffa96889467eff13db3f9f852b984a6590993eb4f9a69ada",
+    "src/gcd/coco.py": "c0b12888ca0350e544448f548a915bedc98c03c6e3c52596d17cb8167aef1f9b",
+    "src/gcd/coco_metrics.py": "5b3f3cddc9dfe6e754baf1db2b2cd8b02be8467944da6ba7025316cfe3a769e5",
+    "configs/datasets/coco80_reference.json": "2f2aa666dbd03812b5a44048b68870b24f96dddf054d7ed787a48bd38449eb2f",
+    "scripts/evaluate.py": "274142ceb1f3514bd87722f14815fc053e124f4936af4e3037562a17a9a391d5",
+    "scripts/evaluate_coco.py": "ca120ccba0c0e6e5a58db0d6b61b7840ae45cef4fab79a12d1ab4b8344108d3b",
+    "scripts/run.py": "43406ddd5ad20c7ab9852b12529ed560ceea7f9b5e5b1c580e8b869cb32aadb6",
+    "scripts/run_frozen_baseline.py": "5894902d8fd48aedbfe1054a3135e821cc68bbceaecb3e7788745af4c83490cc",
+    "configs/model/gdino_t.py": "6eaff18a1f20f214e48cc4d4a0fc22c83170680995dd2350703b6b598ef5891d"
+  },
+  "manifest_sha256": "27888c2ad4c84333319fa00619fa506ae09c6840ca4e03bf3bb7bdaf756dcd50",
+  "pretrained_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+  "physical_gpu": 2
+}
