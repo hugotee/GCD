@@ -15,6 +15,7 @@ OBJECTS = {
     'val2017.zip': ('zips/val2017.zip', 815585330),
     'train2017.zip': ('zips/train2017.zip', 19336861798)}
 BASE = 'https://s3.amazonaws.com/images.cocodataset.org/'
+MIRROR = 'https://hf-mirror.com/datasets/pcuenq/coco-2017-mirror/resolve/fbbee70f52f540987cca6936c9f1d7b1ff969ad1/'
 CHECKSUMS = {'train2017.zip':'cced6f7f71b7629ddf16f17bbcfab6b2',
              'val2017.zip':'442b8da7639aecaf257c1dceb8ba8c80',
              'annotations_trainval2017.zip':'f4bbac642086de4f52a3fdda2de5fa2c'}
@@ -36,8 +37,8 @@ def safe_members(archive, names):
     return selected
 
 
-def download(root, name, relative, size, workers):
-    url = BASE + relative
+def download(root, name, relative, size, workers, source):
+    url = BASE + relative if source == 'official' else MIRROR + name
     with urllib.request.urlopen(urllib.request.Request(url, method='HEAD'), timeout=30) as response:
         assert int(response.headers['Content-Length']) == size
         etag = response.headers['ETag']
@@ -118,7 +119,8 @@ def download(root, name, relative, size, workers):
         assert count_files == (2 if folder == 'annotations' else 5000 if folder == 'val2017' else 118287)
     result = dict(identity, sha256=digest.hexdigest(), md5=md5.hexdigest(), published_md5_verified=True,
         checksum_source='https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/ppdet/utils/download.py',zip_crc_passed=True, extracted_files=count_files,
-        source_page='https://cocodataset.org/#download', transport_note='Verified TLS S3 path for the same official images.cocodataset.org bucket.')
+        source_page='https://cocodataset.org/#download', transport=source,
+        transport_note='Official bytes verified against published archive MD5; optional mirror uses a fixed repository revision.')
     write_json(root / '.downloads' / f'{name}.complete.json', result)
     for path in parts.glob('*.part'): path.unlink()
     return result
@@ -128,6 +130,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--workers', type=int, default=8)
+    p.add_argument('--source', choices=['official','hf-mirror'], default='official')
     a = p.parse_args()
     assert 1 <= a.workers <= 16
     a.out.mkdir(parents=True, exist_ok=True)
@@ -135,7 +138,7 @@ def main():
     started = time.perf_counter()
     # Make validation images and annotations usable while the larger train archive downloads.
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
-        pending = {pool.submit(download, a.out, n, relative, size, a.workers if n == 'train2017.zip' else 2): n
+        pending = {pool.submit(download, a.out, n, relative, size, a.workers if n == 'train2017.zip' else 2, a.source): n
                    for n, (relative, size) in OBJECTS.items()}
         results = {}
         for future in concurrent.futures.as_completed(pending):
