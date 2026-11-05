@@ -1,0 +1,680 @@
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+11/05 14:34:23 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.14 (main, Mar 21 2024, 16:24:04) [GCC 11.2.0]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 20261103
+    GPU 0,1,2,3: NVIDIA GeForce RTX 3090
+    CUDA_HOME: /usr
+    NVCC: Cuda compilation tools, release 9.1, V9.1.8
+    GCC: gcc (Ubuntu 9.4.0-1ubuntu1~18.04) 9.4.0
+    PyTorch: 2.1.2+cu121
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 12.1
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.9.2
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.1, CUDNN_VERSION=8.9.2, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.2, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.2+cu121
+    OpenCV: 4.10.0
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 20261103
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: pytorch
+    Distributed training: True
+    GPU number: 4
+------------------------------------------------------------
+
+11/05 14:34:23 - mmengine - INFO - Config:
+custom_hooks = [
+    dict(profile=False, type='BaselineAuditHook', warmup=0),
+]
+default_hooks = dict(
+    checkpoint=dict(
+        by_epoch=True,
+        interval=1,
+        max_keep_ckpts=2,
+        save_last=True,
+        type='CheckpointHook'),
+    logger=dict(interval=20, type='LoggerHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmdet'
+engineering_only = False
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+gcd_experiment_hash = '22a70b577d3d06a1d2bdfb1d6be54e30a0a8a7432bd73f3c36d628980c51833a'
+gcd_phase = 'task2'
+launcher = 'pytorch'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor')
+model = dict(
+    adapter=True,
+    as_two_stage=True,
+    backbone=dict(
+        attn_drop_rate=0.0,
+        convert_weights=False,
+        depths=[
+            2,
+            2,
+            6,
+            2,
+        ],
+        drop_path_rate=0.2,
+        drop_rate=0.0,
+        embed_dims=96,
+        frozen_stages=-1,
+        mlp_ratio=4,
+        num_heads=[
+            3,
+            6,
+            12,
+            24,
+        ],
+        out_indices=(
+            1,
+            2,
+            3,
+        ),
+        patch_norm=True,
+        qk_scale=None,
+        qkv_bias=True,
+        type='SwinTransformer',
+        window_size=7,
+        with_cp=False),
+    bbox_head=dict(
+        contrastive_cfg=dict(bias=None, log_scale=None, max_text_len=256),
+        loss_bbox=dict(loss_weight=5.0, type='L1Loss'),
+        loss_cls=dict(
+            alpha=0.25,
+            gamma=2.0,
+            loss_weight=1.0,
+            type='FocalLoss',
+            use_sigmoid=True),
+        loss_iou=dict(loss_weight=2.0, type='GIoULoss'),
+        num_classes=256,
+        sync_cls_avg_factor=True,
+        type='GroundingDINOHead'),
+    data_preprocessor=dict(
+        bgr_to_rgb=True,
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        pad_mask=False,
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='DetDataPreprocessor'),
+    decoder=dict(
+        layer_cfg=dict(
+            cross_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=8),
+            cross_attn_text_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=8),
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=2048, ffn_drop=0.0),
+            self_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=8)),
+        num_layers=6,
+        post_norm_cfg=None,
+        return_intermediate=True),
+    dn_cfg=None,
+    encoder=dict(
+        fusion_layer_cfg=dict(
+            embed_dim=1024,
+            init_values=0.0001,
+            l_dim=256,
+            num_heads=4,
+            v_dim=256),
+        layer_cfg=dict(
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=2048, ffn_drop=0.0),
+            self_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_levels=4)),
+        num_cp=0,
+        num_layers=6,
+        text_layer_cfg=dict(
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=1024, ffn_drop=0.0),
+            self_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=4))),
+    expected_classes=[
+        'aeroplane',
+        'bicycle',
+        'bird',
+        'boat',
+        'bottle',
+        'bus',
+        'car',
+        'cat',
+        'chair',
+        'cow',
+        'diningtable',
+        'dog',
+        'horse',
+        'motorbike',
+        'person',
+        'pottedplant',
+        'sheep',
+        'sofa',
+        'train',
+        'tvmonitor',
+    ],
+    initial_checkpoint=
+    '/home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/B1/epoch_12.pth',
+    language_model=dict(
+        add_pooling_layer=False,
+        name='/home/data/dq/cdiod-dgs/weights/bert-base-uncased',
+        pad_to_max=False,
+        special_tokens_list=[
+            '[CLS]',
+            '[SEP]',
+            '.',
+            '?',
+        ],
+        type='BertModel',
+        use_sub_sentence_represent=True),
+    lora=dict(alpha=32, dropout=0.0, rank=16),
+    neck=dict(
+        act_cfg=None,
+        bias=True,
+        in_channels=[
+            192,
+            384,
+            768,
+        ],
+        kernel_size=1,
+        norm_cfg=dict(num_groups=32, type='GN'),
+        num_outs=4,
+        out_channels=256,
+        type='ChannelMapper'),
+    num_queries=900,
+    positional_encoding=dict(
+        normalize=True, num_feats=128, offset=0.0, temperature=20),
+    test_cfg=dict(max_per_img=300),
+    train_cfg=dict(
+        assigner=dict(
+            match_costs=[
+                dict(type='BinaryFocalLossCost', weight=2.0),
+                dict(box_format='xywh', type='BBoxL1Cost', weight=5.0),
+                dict(iou_mode='giou', type='IoUCost', weight=2.0),
+            ],
+            type='HungarianAssigner')),
+    train_label_ids=[
+        15,
+        16,
+        17,
+        18,
+        19,
+    ],
+    type='SingleLoRAGroundingDINO',
+    with_box_refine=True)
+model_wrapper_cfg = dict(
+    broadcast_buffers=False,
+    find_unused_parameters=True,
+    type='MMDistributedDataParallel')
+optim_wrapper = dict(
+    accumulative_counts=1,
+    clip_grad=dict(max_norm=0.1, norm_type=2),
+    loss_scale=dict(growth_interval=2000, init_scale=128),
+    optimizer=dict(lr=0.0001, type='AdamW', weight_decay=0.0001),
+    type='AmpOptimWrapper')
+param_scheduler = [
+    dict(by_epoch=True, gamma=0.1, milestones=[
+        10,
+    ], type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=20261103)
+train_cfg = dict(max_epochs=12, type='EpochBasedTrainLoop', val_interval=13)
+train_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file=
+        '/home/data/dq/gcd-ciod-20261104/data/voc15_5/task2_train.json',
+        data_prefix=dict(
+            img=
+            '/home/data/dq/dgs-experiments/gdino_domain_kd_diagnostic_20261101/data/VOCdevkit/VOC2007/JPEGImages/'
+        ),
+        filter_cfg=None,
+        metainfo=dict(
+            classes=(
+                'aeroplane',
+                'bicycle',
+                'bird',
+                'boat',
+                'bottle',
+                'bus',
+                'car',
+                'cat',
+                'chair',
+                'cow',
+                'diningtable',
+                'dog',
+                'horse',
+                'motorbike',
+                'person',
+                'pottedplant',
+                'sheep',
+                'sofa',
+                'train',
+                'tvmonitor',
+            )),
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(prob=0.5, type='RandomFlip'),
+            dict(
+                keep_ratio=True,
+                scales=[
+                    (
+                        640,
+                        1333,
+                    ),
+                    (
+                        672,
+                        1333,
+                    ),
+                    (
+                        704,
+                        1333,
+                    ),
+                    (
+                        736,
+                        1333,
+                    ),
+                    (
+                        768,
+                        1333,
+                    ),
+                    (
+                        800,
+                        1333,
+                    ),
+                ],
+                type='RandomChoiceResize'),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'text',
+                    'custom_entities',
+                    'flip',
+                    'flip_direction',
+                ),
+                type='PackDetInputs'),
+        ],
+        return_classes=True,
+        test_mode=False,
+        type='CocoDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=True, type='DefaultSampler'))
+visualizer = None
+work_dir = '/home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/B2'
+
+11/05 14:34:26 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_save_checkpoint:
+(ABOVE_NORMAL) BaselineAuditHook                  
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Done (t=0.01s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+11/05 14:34:28 - mmengine - WARNING - No pre-trained weights for SwinTransformer, training start from scratch
+11/05 14:34:33 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+11/05 14:34:33 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+11/05 14:34:33 - mmengine - INFO - Checkpoints will be saved to /home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/B2.
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+11/05 14:34:42 - mmengine - INFO - Epoch(train)  [1][ 20/252]  lr: 1.0000e-04  eta: 0:21:02  time: 0.3417  data_time: 0.0034  memory: 3094  grad_norm: 30.3504  loss: 4.3025  loss_cls: 0.3310  loss_bbox: 0.1993  loss_iou: 0.1411  d0.loss_cls: 0.2426  d0.loss_bbox: 0.2002  d0.loss_iou: 0.1464  d1.loss_cls: 0.2494  d1.loss_bbox: 0.1999  d1.loss_iou: 0.1431  d2.loss_cls: 0.2726  d2.loss_bbox: 0.2019  d2.loss_iou: 0.1431  d3.loss_cls: 0.2839  d3.loss_bbox: 0.1992  d3.loss_iou: 0.1415  d4.loss_cls: 0.3356  d4.loss_bbox: 0.1998  d4.loss_iou: 0.1413  enc_loss_cls: 0.1818  enc_loss_bbox: 0.2014  enc_loss_iou: 0.1474
+11/05 14:34:49 - mmengine - INFO - Epoch(train)  [1][ 40/252]  lr: 1.0000e-04  eta: 0:19:03  time: 0.3455  data_time: 0.0033  memory: 3108  grad_norm: 27.4283  loss: 4.8924  loss_cls: 0.3972  loss_bbox: 0.1632  loss_iou: 0.1273  d0.loss_cls: 0.3508  d0.loss_bbox: 0.2165  d0.loss_iou: 0.1580  d1.loss_cls: 0.3823  d1.loss_bbox: 0.1655  d1.loss_iou: 0.1317  d2.loss_cls: 0.3696  d2.loss_bbox: 0.1647  d2.loss_iou: 0.1299  d3.loss_cls: 0.4129  d3.loss_bbox: 0.1652  d3.loss_iou: 0.1289  d4.loss_cls: 0.4016  d4.loss_bbox: 0.1624  d4.loss_iou: 0.1274  enc_loss_cls: 0.3373  enc_loss_bbox: 0.2336  enc_loss_iou: 0.1664
+11/05 14:34:56 - mmengine - INFO - Epoch(train)  [1][ 60/252]  lr: 1.0000e-04  eta: 0:18:41  time: 0.3821  data_time: 0.0034  memory: 3109  grad_norm: 17.4138  loss: 8.2618  loss_cls: 0.5165  loss_bbox: 0.2951  loss_iou: 0.3691  d0.loss_cls: 0.4952  d0.loss_bbox: 0.2721  d0.loss_iou: 0.3841  d1.loss_cls: 0.5185  d1.loss_bbox: 0.2786  d1.loss_iou: 0.3921  d2.loss_cls: 0.5181  d2.loss_bbox: 0.2867  d2.loss_iou: 0.3692  d3.loss_cls: 0.5386  d3.loss_bbox: 0.2796  d3.loss_iou: 0.3638  d4.loss_cls: 0.4995  d4.loss_bbox: 0.2960  d4.loss_iou: 0.3689  enc_loss_cls: 0.5554  enc_loss_bbox: 0.2804  enc_loss_iou: 0.3842
+11/05 14:35:03 - mmengine - INFO - Epoch(train)  [1][ 80/252]  lr: 1.0000e-04  eta: 0:18:22  time: 0.3740  data_time: 0.0039  memory: 2957  grad_norm: 19.1163  loss: 6.1237  loss_cls: 0.3910  loss_bbox: 0.2820  loss_iou: 0.1615  d0.loss_cls: 0.4217  d0.loss_bbox: 0.2996  d0.loss_iou: 0.1734  d1.loss_cls: 0.4323  d1.loss_bbox: 0.2808  d1.loss_iou: 0.1653  d2.loss_cls: 0.4083  d2.loss_bbox: 0.2785  d2.loss_iou: 0.1614  d3.loss_cls: 0.4220  d3.loss_bbox: 0.2797  d3.loss_iou: 0.1597  d4.loss_cls: 0.3989  d4.loss_bbox: 0.2814  d4.loss_iou: 0.1615  enc_loss_cls: 0.3172  enc_loss_bbox: 0.3956  enc_loss_iou: 0.2517
+11/05 14:35:11 - mmengine - INFO - Epoch(train)  [1][100/252]  lr: 1.0000e-04  eta: 0:18:21  time: 0.3987  data_time: 0.0034  memory: 3174  grad_norm: 20.3694  loss: 7.4236  loss_cls: 0.5190  loss_bbox: 0.2356  loss_iou: 0.2760  d0.loss_cls: 0.4250  d0.loss_bbox: 0.2682  d0.loss_iou: 0.3286  d1.loss_cls: 0.4624  d1.loss_bbox: 0.2691  d1.loss_iou: 0.3309  d2.loss_cls: 0.4327  d2.loss_bbox: 0.2781  d2.loss_iou: 0.3362  d3.loss_cls: 0.4039  d3.loss_bbox: 0.3226  d3.loss_iou: 0.3466  d4.loss_cls: 0.4185  d4.loss_bbox: 0.3216  d4.loss_iou: 0.3468  enc_loss_cls: 0.4783  enc_loss_bbox: 0.2802  enc_loss_iou: 0.3433
+11/05 14:35:18 - mmengine - INFO - Epoch(train)  [1][120/252]  lr: 1.0000e-04  eta: 0:18:03  time: 0.3543  data_time: 0.0034  memory: 3111  grad_norm: 13.9997  loss: 3.7220  loss_cls: 0.2272  loss_bbox: 0.1390  loss_iou: 0.1546  d0.loss_cls: 0.2144  d0.loss_bbox: 0.1545  d0.loss_iou: 0.1655  d1.loss_cls: 0.2094  d1.loss_bbox: 0.1630  d1.loss_iou: 0.1707  d2.loss_cls: 0.2209  d2.loss_bbox: 0.1403  d2.loss_iou: 0.1550  d3.loss_cls: 0.2232  d3.loss_bbox: 0.1367  d3.loss_iou: 0.1541  d4.loss_cls: 0.2232  d4.loss_bbox: 0.1394  d4.loss_iou: 0.1540  enc_loss_cls: 0.2474  enc_loss_bbox: 0.1611  enc_loss_iou: 0.1684
+11/05 14:35:25 - mmengine - INFO - Epoch(train)  [1][140/252]  lr: 1.0000e-04  eta: 0:17:56  time: 0.3664  data_time: 0.0034  memory: 2956  grad_norm: 17.0426  loss: 3.2813  loss_cls: 0.1658  loss_bbox: 0.1281  loss_iou: 0.1767  d0.loss_cls: 0.1654  d0.loss_bbox: 0.1366  d0.loss_iou: 0.1811  d1.loss_cls: 0.1621  d1.loss_bbox: 0.1349  d1.loss_iou: 0.1833  d2.loss_cls: 0.1651  d2.loss_bbox: 0.1327  d2.loss_iou: 0.1767  d3.loss_cls: 0.1475  d3.loss_bbox: 0.1286  d3.loss_iou: 0.1763  d4.loss_cls: 0.1505  d4.loss_bbox: 0.1283  d4.loss_iou: 0.1764  enc_loss_cls: 0.1202  enc_loss_bbox: 0.1531  enc_loss_iou: 0.1920
+11/05 14:35:33 - mmengine - INFO - Epoch(train)  [1][160/252]  lr: 1.0000e-04  eta: 0:17:48  time: 0.3813  data_time: 0.0034  memory: 2957  grad_norm: 19.9031  loss: 5.9658  loss_cls: 0.4315  loss_bbox: 0.2272  loss_iou: 0.2018  d0.loss_cls: 0.3570  d0.loss_bbox: 0.2908  d0.loss_iou: 0.2214  d1.loss_cls: 0.4233  d1.loss_bbox: 0.2066  d1.loss_iou: 0.1950  d2.loss_cls: 0.3997  d2.loss_bbox: 0.2269  d2.loss_iou: 0.2020  d3.loss_cls: 0.4122  d3.loss_bbox: 0.2283  d3.loss_iou: 0.2033  d4.loss_cls: 0.4294  d4.loss_bbox: 0.2275  d4.loss_iou: 0.2019  enc_loss_cls: 0.3485  enc_loss_bbox: 0.3000  enc_loss_iou: 0.2316
+11/05 14:35:40 - mmengine - INFO - Epoch(train)  [1][180/252]  lr: 1.0000e-04  eta: 0:17:40  time: 0.3491  data_time: 0.0035  memory: 3105  grad_norm: 13.4532  loss: 4.5744  loss_cls: 0.2502  loss_bbox: 0.1415  loss_iou: 0.2370  d0.loss_cls: 0.2701  d0.loss_bbox: 0.1509  d0.loss_iou: 0.2405  d1.loss_cls: 0.3044  d1.loss_bbox: 0.1431  d1.loss_iou: 0.2388  d2.loss_cls: 0.2405  d2.loss_bbox: 0.1421  d2.loss_iou: 0.2349  d3.loss_cls: 0.2583  d3.loss_bbox: 0.1446  d3.loss_iou: 0.2384  d4.loss_cls: 0.2519  d4.loss_bbox: 0.1425  d4.loss_iou: 0.2385  enc_loss_cls: 0.2736  enc_loss_bbox: 0.1674  enc_loss_iou: 0.2653
+11/05 14:35:48 - mmengine - INFO - Epoch(train)  [1][200/252]  lr: 1.0000e-04  eta: 0:17:28  time: 0.3419  data_time: 0.0033  memory: 2876  grad_norm: 16.9863  loss: 4.1411  loss_cls: 0.2766  loss_bbox: 0.1571  loss_iou: 0.1546  d0.loss_cls: 0.2567  d0.loss_bbox: 0.1532  d0.loss_iou: 0.1440  d1.loss_cls: 0.2973  d1.loss_bbox: 0.1541  d1.loss_iou: 0.1507  d2.loss_cls: 0.2822  d2.loss_bbox: 0.1539  d2.loss_iou: 0.1515  d3.loss_cls: 0.2945  d3.loss_bbox: 0.1575  d3.loss_iou: 0.1555  d4.loss_cls: 0.2877  d4.loss_bbox: 0.1567  d4.loss_iou: 0.1530  enc_loss_cls: 0.2754  enc_loss_bbox: 0.1676  enc_loss_iou: 0.1611
+11/05 14:35:55 - mmengine - INFO - Epoch(train)  [1][220/252]  lr: 1.0000e-04  eta: 0:17:28  time: 0.4019  data_time: 0.0037  memory: 3111  grad_norm: 12.2749  loss: 2.9252  loss_cls: 0.1067  loss_bbox: 0.1285  loss_iou: 0.1865  d0.loss_cls: 0.0973  d0.loss_bbox: 0.1285  d0.loss_iou: 0.1848  d1.loss_cls: 0.1039  d1.loss_bbox: 0.1309  d1.loss_iou: 0.1843  d2.loss_cls: 0.1024  d2.loss_bbox: 0.1278  d2.loss_iou: 0.1847  d3.loss_cls: 0.0968  d3.loss_bbox: 0.1280  d3.loss_iou: 0.1861  d4.loss_cls: 0.1010  d4.loss_bbox: 0.1284  d4.loss_iou: 0.1855  enc_loss_cls: 0.1145  enc_loss_bbox: 0.1340  enc_loss_iou: 0.1845
+11/05 14:36:03 - mmengine - INFO - Epoch(train)  [1][240/252]  lr: 1.0000e-04  eta: 0:17:23  time: 0.3755  data_time: 0.0035  memory: 3111  grad_norm: 17.6976  loss: 2.4680  loss_cls: 0.0727  loss_bbox: 0.1152  loss_iou: 0.1546  d0.loss_cls: 0.0734  d0.loss_bbox: 0.1195  d0.loss_iou: 0.1630  d1.loss_cls: 0.0755  d1.loss_bbox: 0.1161  d1.loss_iou: 0.1547  d2.loss_cls: 0.0836  d2.loss_bbox: 0.1130  d2.loss_iou: 0.1533  d3.loss_cls: 0.0727  d3.loss_bbox: 0.1138  d3.loss_iou: 0.1544  d4.loss_cls: 0.0813  d4.loss_bbox: 0.1148  d4.loss_iou: 0.1543  enc_loss_cls: 0.0820  enc_loss_bbox: 0.1275  enc_loss_iou: 0.1726
+11/05 14:36:08 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:36:08 - mmengine - INFO - Saving checkpoint at 1 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:36:18 - mmengine - INFO - Epoch(train)  [2][ 20/252]  lr: 1.0000e-04  eta: 0:17:11  time: 0.3978  data_time: 0.0035  memory: 3194  grad_norm: 21.4508  loss: 7.9903  loss_cls: 0.4721  loss_bbox: 0.2497  loss_iou: 0.3409  d0.loss_cls: 0.4758  d0.loss_bbox: 0.2944  d0.loss_iou: 0.4083  d1.loss_cls: 0.4039  d1.loss_bbox: 0.3378  d1.loss_iou: 0.4242  d2.loss_cls: 0.4675  d2.loss_bbox: 0.2692  d2.loss_iou: 0.4104  d3.loss_cls: 0.3939  d3.loss_bbox: 0.3360  d3.loss_iou: 0.4207  d4.loss_cls: 0.4738  d4.loss_bbox: 0.2493  d4.loss_iou: 0.3434  enc_loss_cls: 0.4721  enc_loss_bbox: 0.3297  enc_loss_iou: 0.4172
+11/05 14:36:25 - mmengine - INFO - Epoch(train)  [2][ 40/252]  lr: 1.0000e-04  eta: 0:17:02  time: 0.3787  data_time: 0.0036  memory: 2975  grad_norm: 20.0547  loss: 5.9160  loss_cls: 0.4049  loss_bbox: 0.1740  loss_iou: 0.2623  d0.loss_cls: 0.3735  d0.loss_bbox: 0.1501  d0.loss_iou: 0.2585  d1.loss_cls: 0.3987  d1.loss_bbox: 0.1664  d1.loss_iou: 0.2638  d2.loss_cls: 0.3982  d2.loss_bbox: 0.1723  d2.loss_iou: 0.2637  d3.loss_cls: 0.4098  d3.loss_bbox: 0.1727  d3.loss_iou: 0.2588  d4.loss_cls: 0.4283  d4.loss_bbox: 0.1736  d4.loss_iou: 0.2630  enc_loss_cls: 0.4348  enc_loss_bbox: 0.1966  enc_loss_iou: 0.2922
+11/05 14:36:32 - mmengine - INFO - Epoch(train)  [2][ 60/252]  lr: 1.0000e-04  eta: 0:16:50  time: 0.3498  data_time: 0.0036  memory: 3094  grad_norm: 21.3177  loss: 4.1018  loss_cls: 0.2307  loss_bbox: 0.1589  loss_iou: 0.1808  d0.loss_cls: 0.2310  d0.loss_bbox: 0.1634  d0.loss_iou: 0.1824  d1.loss_cls: 0.2364  d1.loss_bbox: 0.1638  d1.loss_iou: 0.1840  d2.loss_cls: 0.2353  d2.loss_bbox: 0.1607  d2.loss_iou: 0.1810  d3.loss_cls: 0.2464  d3.loss_bbox: 0.1594  d3.loss_iou: 0.1801  d4.loss_cls: 0.2180  d4.loss_bbox: 0.1590  d4.loss_iou: 0.1805  enc_loss_cls: 0.3059  enc_loss_bbox: 0.1610  enc_loss_iou: 0.1834
+11/05 14:36:39 - mmengine - INFO - Epoch(train)  [2][ 80/252]  lr: 1.0000e-04  eta: 0:16:41  time: 0.3531  data_time: 0.0035  memory: 3007  grad_norm: 12.9876  loss: 2.9057  loss_cls: 0.1087  loss_bbox: 0.1401  loss_iou: 0.1469  d0.loss_cls: 0.0693  d0.loss_bbox: 0.1971  d0.loss_iou: 0.1619  d1.loss_cls: 0.1165  d1.loss_bbox: 0.1460  d1.loss_iou: 0.1494  d2.loss_cls: 0.0960  d2.loss_bbox: 0.1539  d2.loss_iou: 0.1493  d3.loss_cls: 0.1202  d3.loss_bbox: 0.1430  d3.loss_iou: 0.1503  d4.loss_cls: 0.1142  d4.loss_bbox: 0.1406  d4.loss_iou: 0.1480  enc_loss_cls: 0.1266  enc_loss_bbox: 0.1764  enc_loss_iou: 0.1513
+11/05 14:36:47 - mmengine - INFO - Epoch(train)  [2][100/252]  lr: 1.0000e-04  eta: 0:16:33  time: 0.3609  data_time: 0.0036  memory: 3111  grad_norm: 23.5722  loss: 2.8825  loss_cls: 0.1006  loss_bbox: 0.1739  loss_iou: 0.1212  d0.loss_cls: 0.1411  d0.loss_bbox: 0.1687  d0.loss_iou: 0.1178  d1.loss_cls: 0.1029  d1.loss_bbox: 0.1720  d1.loss_iou: 0.1181  d2.loss_cls: 0.0925  d2.loss_bbox: 0.1727  d2.loss_iou: 0.1208  d3.loss_cls: 0.1073  d3.loss_bbox: 0.1744  d3.loss_iou: 0.1198  d4.loss_cls: 0.0958  d4.loss_bbox: 0.1741  d4.loss_iou: 0.1213  enc_loss_cls: 0.1645  enc_loss_bbox: 0.1840  enc_loss_iou: 0.1389
+11/05 14:36:54 - mmengine - INFO - Epoch(train)  [2][120/252]  lr: 1.0000e-04  eta: 0:16:24  time: 0.3750  data_time: 0.0035  memory: 2891  grad_norm: 22.8627  loss: 4.5307  loss_cls: 0.2137  loss_bbox: 0.1880  loss_iou: 0.1913  d0.loss_cls: 0.2044  d0.loss_bbox: 0.2691  d0.loss_iou: 0.2211  d1.loss_cls: 0.1653  d1.loss_bbox: 0.2637  d1.loss_iou: 0.2197  d2.loss_cls: 0.1739  d2.loss_bbox: 0.2633  d2.loss_iou: 0.2217  d3.loss_cls: 0.2139  d3.loss_bbox: 0.1905  d3.loss_iou: 0.1924  d4.loss_cls: 0.2328  d4.loss_bbox: 0.1885  d4.loss_iou: 0.1913  enc_loss_cls: 0.2600  enc_loss_bbox: 0.2544  enc_loss_iou: 0.2119
+11/05 14:37:01 - mmengine - INFO - Epoch(train)  [2][140/252]  lr: 1.0000e-04  eta: 0:16:17  time: 0.3532  data_time: 0.0034  memory: 2957  grad_norm: 21.9042  loss: 5.2502  loss_cls: 0.2404  loss_bbox: 0.2510  loss_iou: 0.2671  d0.loss_cls: 0.1810  d0.loss_bbox: 0.2699  d0.loss_iou: 0.2673  d1.loss_cls: 0.1830  d1.loss_bbox: 0.2638  d1.loss_iou: 0.2638  d2.loss_cls: 0.2014  d2.loss_bbox: 0.2642  d2.loss_iou: 0.2647  d3.loss_cls: 0.2473  d3.loss_bbox: 0.2619  d3.loss_iou: 0.2611  d4.loss_cls: 0.2369  d4.loss_bbox: 0.2514  d4.loss_iou: 0.2679  enc_loss_cls: 0.2747  enc_loss_bbox: 0.2582  enc_loss_iou: 0.2733
+11/05 14:37:09 - mmengine - INFO - Epoch(train)  [2][160/252]  lr: 1.0000e-04  eta: 0:16:10  time: 0.3740  data_time: 0.0039  memory: 2876  grad_norm: 27.4668  loss: 5.8274  loss_cls: 0.3909  loss_bbox: 0.1888  loss_iou: 0.1704  d0.loss_cls: 0.3534  d0.loss_bbox: 0.2750  d0.loss_iou: 0.2564  d1.loss_cls: 0.3324  d1.loss_bbox: 0.2787  d1.loss_iou: 0.2452  d2.loss_cls: 0.3525  d2.loss_bbox: 0.2742  d2.loss_iou: 0.2444  d3.loss_cls: 0.4100  d3.loss_bbox: 0.1877  d3.loss_iou: 0.1717  d4.loss_cls: 0.3994  d4.loss_bbox: 0.1895  d4.loss_iou: 0.1708  enc_loss_cls: 0.2662  enc_loss_bbox: 0.3319  enc_loss_iou: 0.3378
+11/05 14:37:16 - mmengine - INFO - Epoch(train)  [2][180/252]  lr: 1.0000e-04  eta: 0:16:00  time: 0.3512  data_time: 0.0035  memory: 2940  grad_norm: 15.4567  loss: 1.1417  loss_cls: 0.0333  loss_bbox: 0.0563  loss_iou: 0.0699  d0.loss_cls: 0.0356  d0.loss_bbox: 0.0581  d0.loss_iou: 0.0703  d1.loss_cls: 0.0376  d1.loss_bbox: 0.0555  d1.loss_iou: 0.0702  d2.loss_cls: 0.0356  d2.loss_bbox: 0.0555  d2.loss_iou: 0.0684  d3.loss_cls: 0.0307  d3.loss_bbox: 0.0559  d3.loss_iou: 0.0692  d4.loss_cls: 0.0318  d4.loss_bbox: 0.0561  d4.loss_iou: 0.0699  enc_loss_cls: 0.0521  enc_loss_bbox: 0.0602  enc_loss_iou: 0.0694
+11/05 14:37:23 - mmengine - INFO - Epoch(train)  [2][200/252]  lr: 1.0000e-04  eta: 0:15:51  time: 0.3522  data_time: 0.0034  memory: 2957  grad_norm: 21.3383  loss: 3.9506  loss_cls: 0.2202  loss_bbox: 0.1799  loss_iou: 0.1585  d0.loss_cls: 0.1446  d0.loss_bbox: 0.2249  d0.loss_iou: 0.1944  d1.loss_cls: 0.1380  d1.loss_bbox: 0.2156  d1.loss_iou: 0.1948  d2.loss_cls: 0.1464  d2.loss_bbox: 0.2193  d2.loss_iou: 0.1955  d3.loss_cls: 0.1342  d3.loss_bbox: 0.2204  d3.loss_iou: 0.1989  d4.loss_cls: 0.2297  d4.loss_bbox: 0.1793  d4.loss_iou: 0.1590  enc_loss_cls: 0.1888  enc_loss_bbox: 0.2151  enc_loss_iou: 0.1931
+11/05 14:37:30 - mmengine - INFO - Epoch(train)  [2][220/252]  lr: 1.0000e-04  eta: 0:15:43  time: 0.3572  data_time: 0.0034  memory: 2936  grad_norm: 12.7057  loss: 4.6392  loss_cls: 0.1606  loss_bbox: 0.1942  loss_iou: 0.2974  d0.loss_cls: 0.1458  d0.loss_bbox: 0.2286  d0.loss_iou: 0.3235  d1.loss_cls: 0.1487  d1.loss_bbox: 0.2089  d1.loss_iou: 0.3055  d2.loss_cls: 0.1521  d2.loss_bbox: 0.1829  d2.loss_iou: 0.2918  d3.loss_cls: 0.1522  d3.loss_bbox: 0.1940  d3.loss_iou: 0.2981  d4.loss_cls: 0.1636  d4.loss_bbox: 0.1951  d4.loss_iou: 0.2976  enc_loss_cls: 0.1569  enc_loss_bbox: 0.2275  enc_loss_iou: 0.3142
+11/05 14:37:38 - mmengine - INFO - Epoch(train)  [2][240/252]  lr: 1.0000e-04  eta: 0:15:36  time: 0.3568  data_time: 0.0034  memory: 3083  grad_norm: 15.3961  loss: 3.9970  loss_cls: 0.2158  loss_bbox: 0.1467  loss_iou: 0.1847  d0.loss_cls: 0.2247  d0.loss_bbox: 0.1502  d0.loss_iou: 0.1867  d1.loss_cls: 0.2333  d1.loss_bbox: 0.1483  d1.loss_iou: 0.1861  d2.loss_cls: 0.2313  d2.loss_bbox: 0.1484  d2.loss_iou: 0.1903  d3.loss_cls: 0.2139  d3.loss_bbox: 0.1615  d3.loss_iou: 0.1996  d4.loss_cls: 0.2202  d4.loss_bbox: 0.1463  d4.loss_iou: 0.1859  enc_loss_cls: 0.2337  enc_loss_bbox: 0.1796  enc_loss_iou: 0.2097
+11/05 14:37:42 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:37:42 - mmengine - INFO - Saving checkpoint at 2 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:37:52 - mmengine - INFO - Epoch(train)  [3][ 20/252]  lr: 1.0000e-04  eta: 0:15:25  time: 0.3737  data_time: 0.0036  memory: 3194  grad_norm: 19.1017  loss: 3.9584  loss_cls: 0.0984  loss_bbox: 0.1931  loss_iou: 0.2388  d0.loss_cls: 0.0963  d0.loss_bbox: 0.2314  d0.loss_iou: 0.2794  d1.loss_cls: 0.1120  d1.loss_bbox: 0.1977  d1.loss_iou: 0.2403  d2.loss_cls: 0.0862  d2.loss_bbox: 0.1942  d2.loss_iou: 0.2377  d3.loss_cls: 0.1081  d3.loss_bbox: 0.1935  d3.loss_iou: 0.2399  d4.loss_cls: 0.0990  d4.loss_bbox: 0.1927  d4.loss_iou: 0.2383  enc_loss_cls: 0.1539  enc_loss_bbox: 0.2403  enc_loss_iou: 0.2872
+11/05 14:38:00 - mmengine - INFO - Epoch(train)  [3][ 40/252]  lr: 1.0000e-04  eta: 0:15:17  time: 0.3564  data_time: 0.0035  memory: 3010  grad_norm: 16.6063  loss: 3.0864  loss_cls: 0.0688  loss_bbox: 0.1799  loss_iou: 0.1814  d0.loss_cls: 0.0828  d0.loss_bbox: 0.1773  d0.loss_iou: 0.1742  d1.loss_cls: 0.0607  d1.loss_bbox: 0.1781  d1.loss_iou: 0.1805  d2.loss_cls: 0.1526  d2.loss_bbox: 0.1288  d2.loss_iou: 0.1523  d3.loss_cls: 0.0657  d3.loss_bbox: 0.1797  d3.loss_iou: 0.1828  d4.loss_cls: 0.0674  d4.loss_bbox: 0.1796  d4.loss_iou: 0.1817  enc_loss_cls: 0.0849  enc_loss_bbox: 0.2170  enc_loss_iou: 0.2101
+11/05 14:38:07 - mmengine - INFO - Epoch(train)  [3][ 60/252]  lr: 1.0000e-04  eta: 0:15:10  time: 0.3835  data_time: 0.0037  memory: 2876  grad_norm: 18.5104  loss: 3.8914  loss_cls: 0.0753  loss_bbox: 0.2228  loss_iou: 0.2462  d0.loss_cls: 0.1058  d0.loss_bbox: 0.2230  d0.loss_iou: 0.2447  d1.loss_cls: 0.0914  d1.loss_bbox: 0.2232  d1.loss_iou: 0.2458  d2.loss_cls: 0.0803  d2.loss_bbox: 0.2198  d2.loss_iou: 0.2455  d3.loss_cls: 0.0774  d3.loss_bbox: 0.2198  d3.loss_iou: 0.2479  d4.loss_cls: 0.0797  d4.loss_bbox: 0.2229  d4.loss_iou: 0.2465  enc_loss_cls: 0.1138  enc_loss_bbox: 0.2204  enc_loss_iou: 0.2392
+11/05 14:38:14 - mmengine - INFO - Epoch(train)  [3][ 80/252]  lr: 1.0000e-04  eta: 0:15:02  time: 0.3570  data_time: 0.0035  memory: 3111  grad_norm: 18.7600  loss: 4.9121  loss_cls: 0.2516  loss_bbox: 0.1764  loss_iou: 0.2291  d0.loss_cls: 0.3255  d0.loss_bbox: 0.1824  d0.loss_iou: 0.2228  d1.loss_cls: 0.2877  d1.loss_bbox: 0.2060  d1.loss_iou: 0.2377  d2.loss_cls: 0.2617  d2.loss_bbox: 0.1735  d2.loss_iou: 0.2281  d3.loss_cls: 0.2561  d3.loss_bbox: 0.1853  d3.loss_iou: 0.2324  d4.loss_cls: 0.2448  d4.loss_bbox: 0.1763  d4.loss_iou: 0.2290  enc_loss_cls: 0.3606  enc_loss_bbox: 0.2028  enc_loss_iou: 0.2423
+11/05 14:38:22 - mmengine - INFO - Epoch(train)  [3][100/252]  lr: 1.0000e-04  eta: 0:14:55  time: 0.3850  data_time: 0.0034  memory: 2957  grad_norm: 20.6022  loss: 5.6310  loss_cls: 0.2130  loss_bbox: 0.2533  loss_iou: 0.2989  d0.loss_cls: 0.2326  d0.loss_bbox: 0.2847  d0.loss_iou: 0.3003  d1.loss_cls: 0.2594  d1.loss_bbox: 0.2360  d1.loss_iou: 0.2901  d2.loss_cls: 0.2203  d2.loss_bbox: 0.2532  d2.loss_iou: 0.2973  d3.loss_cls: 0.2449  d3.loss_bbox: 0.2518  d3.loss_iou: 0.2971  d4.loss_cls: 0.2275  d4.loss_bbox: 0.2541  d4.loss_iou: 0.3000  enc_loss_cls: 0.3141  enc_loss_bbox: 0.2926  enc_loss_iou: 0.3097
+11/05 14:38:29 - mmengine - INFO - Epoch(train)  [3][120/252]  lr: 1.0000e-04  eta: 0:14:46  time: 0.3599  data_time: 0.0035  memory: 3194  grad_norm: 19.8886  loss: 2.3061  loss_cls: 0.0765  loss_bbox: 0.1446  loss_iou: 0.0969  d0.loss_cls: 0.0888  d0.loss_bbox: 0.1410  d0.loss_iou: 0.0916  d1.loss_cls: 0.0995  d1.loss_bbox: 0.1432  d1.loss_iou: 0.0959  d2.loss_cls: 0.0966  d2.loss_bbox: 0.1448  d2.loss_iou: 0.0973  d3.loss_cls: 0.0840  d3.loss_bbox: 0.1457  d3.loss_iou: 0.0980  d4.loss_cls: 0.0802  d4.loss_bbox: 0.1451  d4.loss_iou: 0.0974  enc_loss_cls: 0.0786  enc_loss_bbox: 0.1572  enc_loss_iou: 0.1030
+11/05 14:38:36 - mmengine - INFO - Epoch(train)  [3][140/252]  lr: 1.0000e-04  eta: 0:14:39  time: 0.3828  data_time: 0.0034  memory: 3094  grad_norm: 19.0994  loss: 3.0595  loss_cls: 0.0732  loss_bbox: 0.1593  loss_iou: 0.1646  d0.loss_cls: 0.1228  d0.loss_bbox: 0.1798  d0.loss_iou: 0.1783  d1.loss_cls: 0.0809  d1.loss_bbox: 0.1649  d1.loss_iou: 0.1707  d2.loss_cls: 0.0819  d2.loss_bbox: 0.1623  d2.loss_iou: 0.1670  d3.loss_cls: 0.0800  d3.loss_bbox: 0.1594  d3.loss_iou: 0.1648  d4.loss_cls: 0.0779  d4.loss_bbox: 0.1595  d4.loss_iou: 0.1649  enc_loss_cls: 0.0891  enc_loss_bbox: 0.2611  enc_loss_iou: 0.1970
+11/05 14:38:44 - mmengine - INFO - Epoch(train)  [3][160/252]  lr: 1.0000e-04  eta: 0:14:32  time: 0.3674  data_time: 0.0034  memory: 3094  grad_norm: 12.0656  loss: 5.4894  loss_cls: 0.3187  loss_bbox: 0.1854  loss_iou: 0.2478  d0.loss_cls: 0.3584  d0.loss_bbox: 0.2001  d0.loss_iou: 0.2399  d1.loss_cls: 0.3198  d1.loss_bbox: 0.1981  d1.loss_iou: 0.2343  d2.loss_cls: 0.3422  d2.loss_bbox: 0.1845  d2.loss_iou: 0.2452  d3.loss_cls: 0.3306  d3.loss_bbox: 0.1861  d3.loss_iou: 0.2484  d4.loss_cls: 0.3284  d4.loss_bbox: 0.1853  d4.loss_iou: 0.2481  enc_loss_cls: 0.4621  enc_loss_bbox: 0.1844  enc_loss_iou: 0.2416
+11/05 14:38:51 - mmengine - INFO - Epoch(train)  [3][180/252]  lr: 1.0000e-04  eta: 0:14:25  time: 0.3612  data_time: 0.0034  memory: 3216  grad_norm: 17.0333  loss: 3.2423  loss_cls: 0.1802  loss_bbox: 0.1330  loss_iou: 0.1613  d0.loss_cls: 0.1702  d0.loss_bbox: 0.1306  d0.loss_iou: 0.1586  d1.loss_cls: 0.1596  d1.loss_bbox: 0.1319  d1.loss_iou: 0.1602  d2.loss_cls: 0.1996  d2.loss_bbox: 0.1309  d2.loss_iou: 0.1580  d3.loss_cls: 0.1994  d3.loss_bbox: 0.1327  d3.loss_iou: 0.1608  d4.loss_cls: 0.1946  d4.loss_bbox: 0.1328  d4.loss_iou: 0.1602  enc_loss_cls: 0.0902  enc_loss_bbox: 0.1360  enc_loss_iou: 0.1613
+11/05 14:38:58 - mmengine - INFO - Epoch(train)  [3][200/252]  lr: 1.0000e-04  eta: 0:14:17  time: 0.3555  data_time: 0.0038  memory: 2921  grad_norm: 17.2779  loss: 4.8320  loss_cls: 0.3009  loss_bbox: 0.1139  loss_iou: 0.2087  d0.loss_cls: 0.3562  d0.loss_bbox: 0.1458  d0.loss_iou: 0.2475  d1.loss_cls: 0.3714  d1.loss_bbox: 0.1145  d1.loss_iou: 0.2055  d2.loss_cls: 0.2980  d2.loss_bbox: 0.1406  d2.loss_iou: 0.2456  d3.loss_cls: 0.3334  d3.loss_bbox: 0.1123  d3.loss_iou: 0.2054  d4.loss_cls: 0.3144  d4.loss_bbox: 0.1139  d4.loss_iou: 0.2082  enc_loss_cls: 0.3950  enc_loss_bbox: 0.1483  enc_loss_iou: 0.2524
+11/05 14:39:06 - mmengine - INFO - Epoch(train)  [3][220/252]  lr: 1.0000e-04  eta: 0:14:09  time: 0.3594  data_time: 0.0035  memory: 3108  grad_norm: 19.9679  loss: 3.2421  loss_cls: 0.1887  loss_bbox: 0.0821  loss_iou: 0.1525  d0.loss_cls: 0.2513  d0.loss_bbox: 0.0876  d0.loss_iou: 0.1578  d1.loss_cls: 0.2209  d1.loss_bbox: 0.0845  d1.loss_iou: 0.1562  d2.loss_cls: 0.2241  d2.loss_bbox: 0.0833  d2.loss_iou: 0.1540  d3.loss_cls: 0.2323  d3.loss_bbox: 0.0827  d3.loss_iou: 0.1528  d4.loss_cls: 0.2106  d4.loss_bbox: 0.0823  d4.loss_iou: 0.1527  enc_loss_cls: 0.2287  enc_loss_bbox: 0.0933  enc_loss_iou: 0.1638
+11/05 14:39:13 - mmengine - INFO - Epoch(train)  [3][240/252]  lr: 1.0000e-04  eta: 0:14:01  time: 0.3626  data_time: 0.0036  memory: 3195  grad_norm: 11.6903  loss: 1.2455  loss_cls: 0.0149  loss_bbox: 0.0866  loss_iou: 0.0493  d0.loss_cls: 0.0240  d0.loss_bbox: 0.1061  d0.loss_iou: 0.0582  d1.loss_cls: 0.0283  d1.loss_bbox: 0.1004  d1.loss_iou: 0.0583  d2.loss_cls: 0.0221  d2.loss_bbox: 0.1034  d2.loss_iou: 0.0541  d3.loss_cls: 0.0168  d3.loss_bbox: 0.0935  d3.loss_iou: 0.0514  d4.loss_cls: 0.0144  d4.loss_bbox: 0.0856  d4.loss_iou: 0.0498  enc_loss_cls: 0.0366  enc_loss_bbox: 0.1190  enc_loss_iou: 0.0726
+11/05 14:39:17 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:39:17 - mmengine - INFO - Saving checkpoint at 3 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:39:27 - mmengine - INFO - Epoch(train)  [4][ 20/252]  lr: 1.0000e-04  eta: 0:13:48  time: 0.3487  data_time: 0.0036  memory: 3108  grad_norm: 16.5949  loss: 4.7703  loss_cls: 0.1744  loss_bbox: 0.2380  loss_iou: 0.2813  d0.loss_cls: 0.1842  d0.loss_bbox: 0.2230  d0.loss_iou: 0.2967  d1.loss_cls: 0.1834  d1.loss_bbox: 0.2261  d1.loss_iou: 0.2705  d2.loss_cls: 0.1725  d2.loss_bbox: 0.2208  d2.loss_iou: 0.2614  d3.loss_cls: 0.1559  d3.loss_bbox: 0.2341  d3.loss_iou: 0.2800  d4.loss_cls: 0.1758  d4.loss_bbox: 0.2242  d4.loss_iou: 0.2628  enc_loss_cls: 0.2033  enc_loss_bbox: 0.2178  enc_loss_iou: 0.2841
+11/05 14:39:34 - mmengine - INFO - Epoch(train)  [4][ 40/252]  lr: 1.0000e-04  eta: 0:13:40  time: 0.3487  data_time: 0.0035  memory: 2958  grad_norm: 33.8242  loss: 2.6343  loss_cls: 0.0804  loss_bbox: 0.1395  loss_iou: 0.1563  d0.loss_cls: 0.0619  d0.loss_bbox: 0.1422  d0.loss_iou: 0.1580  d1.loss_cls: 0.0739  d1.loss_bbox: 0.1452  d1.loss_iou: 0.1584  d2.loss_cls: 0.0715  d2.loss_bbox: 0.1564  d2.loss_iou: 0.1609  d3.loss_cls: 0.0736  d3.loss_bbox: 0.1447  d3.loss_iou: 0.1579  d4.loss_cls: 0.0752  d4.loss_bbox: 0.1405  d4.loss_iou: 0.1562  enc_loss_cls: 0.0723  enc_loss_bbox: 0.1422  enc_loss_iou: 0.1670
+11/05 14:39:41 - mmengine - INFO - Epoch(train)  [4][ 60/252]  lr: 1.0000e-04  eta: 0:13:31  time: 0.3384  data_time: 0.0035  memory: 3174  grad_norm: 16.4233  loss: 4.4462  loss_cls: 0.2063  loss_bbox: 0.2185  loss_iou: 0.2046  d0.loss_cls: 0.1486  d0.loss_bbox: 0.2556  d0.loss_iou: 0.2329  d1.loss_cls: 0.1393  d1.loss_bbox: 0.2474  d1.loss_iou: 0.2263  d2.loss_cls: 0.1463  d2.loss_bbox: 0.2510  d2.loss_iou: 0.2304  d3.loss_cls: 0.1480  d3.loss_bbox: 0.2480  d3.loss_iou: 0.2274  d4.loss_cls: 0.2086  d4.loss_bbox: 0.2181  d4.loss_iou: 0.2037  enc_loss_cls: 0.2239  enc_loss_bbox: 0.2382  enc_loss_iou: 0.2229
+11/05 14:39:48 - mmengine - INFO - Epoch(train)  [4][ 80/252]  lr: 1.0000e-04  eta: 0:13:23  time: 0.3389  data_time: 0.0035  memory: 3108  grad_norm: 12.7994  loss: 3.0010  loss_cls: 0.1470  loss_bbox: 0.1276  loss_iou: 0.1431  d0.loss_cls: 0.1140  d0.loss_bbox: 0.1487  d0.loss_iou: 0.1568  d1.loss_cls: 0.1429  d1.loss_bbox: 0.1273  d1.loss_iou: 0.1397  d2.loss_cls: 0.1495  d2.loss_bbox: 0.1289  d2.loss_iou: 0.1458  d3.loss_cls: 0.1255  d3.loss_bbox: 0.1267  d3.loss_iou: 0.1443  d4.loss_cls: 0.1494  d4.loss_bbox: 0.1278  d4.loss_iou: 0.1443  enc_loss_cls: 0.1900  enc_loss_bbox: 0.1561  enc_loss_iou: 0.1656
+11/05 14:39:55 - mmengine - INFO - Epoch(train)  [4][100/252]  lr: 1.0000e-04  eta: 0:13:15  time: 0.3479  data_time: 0.0035  memory: 3108  grad_norm: 10.0668  loss: 2.6839  loss_cls: 0.0757  loss_bbox: 0.1550  loss_iou: 0.1564  d0.loss_cls: 0.0741  d0.loss_bbox: 0.1522  d0.loss_iou: 0.1480  d1.loss_cls: 0.0716  d1.loss_bbox: 0.1507  d1.loss_iou: 0.1518  d2.loss_cls: 0.0736  d2.loss_bbox: 0.1559  d2.loss_iou: 0.1561  d3.loss_cls: 0.0700  d3.loss_bbox: 0.1548  d3.loss_iou: 0.1562  d4.loss_cls: 0.0728  d4.loss_bbox: 0.1539  d4.loss_iou: 0.1560  enc_loss_cls: 0.0889  enc_loss_bbox: 0.1565  enc_loss_iou: 0.1538
+11/05 14:40:02 - mmengine - INFO - Epoch(train)  [4][120/252]  lr: 1.0000e-04  eta: 0:13:08  time: 0.3690  data_time: 0.0035  memory: 2958  grad_norm: 11.8564  loss: 2.5718  loss_cls: 0.0271  loss_bbox: 0.1203  loss_iou: 0.2259  d0.loss_cls: 0.0228  d0.loss_bbox: 0.1195  d0.loss_iou: 0.2213  d1.loss_cls: 0.0216  d1.loss_bbox: 0.1194  d1.loss_iou: 0.2254  d2.loss_cls: 0.0220  d2.loss_bbox: 0.1209  d2.loss_iou: 0.2251  d3.loss_cls: 0.0251  d3.loss_bbox: 0.1212  d3.loss_iou: 0.2290  d4.loss_cls: 0.0239  d4.loss_bbox: 0.1201  d4.loss_iou: 0.2252  enc_loss_cls: 0.0260  enc_loss_bbox: 0.1104  enc_loss_iou: 0.2196
+11/05 14:40:10 - mmengine - INFO - Epoch(train)  [4][140/252]  lr: 1.0000e-04  eta: 0:13:00  time: 0.3539  data_time: 0.0034  memory: 2876  grad_norm: 25.7683  loss: 4.5280  loss_cls: 0.3358  loss_bbox: 0.1616  loss_iou: 0.1493  d0.loss_cls: 0.3139  d0.loss_bbox: 0.1760  d0.loss_iou: 0.1623  d1.loss_cls: 0.3575  d1.loss_bbox: 0.1416  d1.loss_iou: 0.1407  d2.loss_cls: 0.3316  d2.loss_bbox: 0.1421  d2.loss_iou: 0.1412  d3.loss_cls: 0.3404  d3.loss_bbox: 0.1497  d3.loss_iou: 0.1440  d4.loss_cls: 0.3539  d4.loss_bbox: 0.1601  d4.loss_iou: 0.1487  enc_loss_cls: 0.3643  enc_loss_bbox: 0.1556  enc_loss_iou: 0.1579
+11/05 14:40:17 - mmengine - INFO - Epoch(train)  [4][160/252]  lr: 1.0000e-04  eta: 0:12:52  time: 0.3486  data_time: 0.0035  memory: 2958  grad_norm: 14.2313  loss: 1.5897  loss_cls: 0.0180  loss_bbox: 0.1056  loss_iou: 0.0915  d0.loss_cls: 0.0250  d0.loss_bbox: 0.1071  d0.loss_iou: 0.0928  d1.loss_cls: 0.0214  d1.loss_bbox: 0.0991  d1.loss_iou: 0.0877  d2.loss_cls: 0.0197  d2.loss_bbox: 0.1032  d2.loss_iou: 0.0910  d3.loss_cls: 0.0185  d3.loss_bbox: 0.1052  d3.loss_iou: 0.0904  d4.loss_cls: 0.0197  d4.loss_bbox: 0.1055  d4.loss_iou: 0.0911  enc_loss_cls: 0.0669  enc_loss_bbox: 0.1237  enc_loss_iou: 0.1067
+11/05 14:40:24 - mmengine - INFO - Epoch(train)  [4][180/252]  lr: 1.0000e-04  eta: 0:12:45  time: 0.3790  data_time: 0.0036  memory: 3108  grad_norm: 24.6963  loss: 3.6467  loss_cls: 0.1094  loss_bbox: 0.2111  loss_iou: 0.1597  d0.loss_cls: 0.1295  d0.loss_bbox: 0.2447  d0.loss_iou: 0.1907  d1.loss_cls: 0.1504  d1.loss_bbox: 0.2219  d1.loss_iou: 0.1648  d2.loss_cls: 0.1227  d2.loss_bbox: 0.2102  d2.loss_iou: 0.1613  d3.loss_cls: 0.1290  d3.loss_bbox: 0.2130  d3.loss_iou: 0.1610  d4.loss_cls: 0.1204  d4.loss_bbox: 0.2123  d4.loss_iou: 0.1605  enc_loss_cls: 0.1569  enc_loss_bbox: 0.2372  enc_loss_iou: 0.1801
+11/05 14:40:31 - mmengine - INFO - Epoch(train)  [4][200/252]  lr: 1.0000e-04  eta: 0:12:36  time: 0.3252  data_time: 0.0034  memory: 3093  grad_norm: 11.6741  loss: 4.5734  loss_cls: 0.1998  loss_bbox: 0.1538  loss_iou: 0.2751  d0.loss_cls: 0.2352  d0.loss_bbox: 0.1538  d0.loss_iou: 0.2778  d1.loss_cls: 0.2549  d1.loss_bbox: 0.1535  d1.loss_iou: 0.2765  d2.loss_cls: 0.2164  d2.loss_bbox: 0.1532  d2.loss_iou: 0.2731  d3.loss_cls: 0.2167  d3.loss_bbox: 0.1548  d3.loss_iou: 0.2732  d4.loss_cls: 0.2057  d4.loss_bbox: 0.1539  d4.loss_iou: 0.2744  enc_loss_cls: 0.2121  enc_loss_bbox: 0.1635  enc_loss_iou: 0.2962
+11/05 14:40:38 - mmengine - INFO - Epoch(train)  [4][220/252]  lr: 1.0000e-04  eta: 0:12:29  time: 0.3579  data_time: 0.0037  memory: 2876  grad_norm: 14.3901  loss: 2.2244  loss_cls: 0.0762  loss_bbox: 0.0997  loss_iou: 0.1179  d0.loss_cls: 0.1106  d0.loss_bbox: 0.1024  d0.loss_iou: 0.1202  d1.loss_cls: 0.1060  d1.loss_bbox: 0.1034  d1.loss_iou: 0.1195  d2.loss_cls: 0.0920  d2.loss_bbox: 0.1013  d2.loss_iou: 0.1166  d3.loss_cls: 0.0908  d3.loss_bbox: 0.1025  d3.loss_iou: 0.1180  d4.loss_cls: 0.0851  d4.loss_bbox: 0.1005  d4.loss_iou: 0.1180  enc_loss_cls: 0.1039  enc_loss_bbox: 0.1125  enc_loss_iou: 0.1273
+11/05 14:40:45 - mmengine - INFO - Epoch(train)  [4][240/252]  lr: 1.0000e-04  eta: 0:12:21  time: 0.3504  data_time: 0.0039  memory: 2876  grad_norm: 16.1476  loss: 2.3528  loss_cls: 0.0388  loss_bbox: 0.1140  loss_iou: 0.1507  d0.loss_cls: 0.0700  d0.loss_bbox: 0.1217  d0.loss_iou: 0.1584  d1.loss_cls: 0.0655  d1.loss_bbox: 0.1214  d1.loss_iou: 0.1592  d2.loss_cls: 0.0488  d2.loss_bbox: 0.1183  d2.loss_iou: 0.1531  d3.loss_cls: 0.0432  d3.loss_bbox: 0.1143  d3.loss_iou: 0.1510  d4.loss_cls: 0.0416  d4.loss_bbox: 0.1141  d4.loss_iou: 0.1509  enc_loss_cls: 0.0659  enc_loss_bbox: 0.1552  enc_loss_iou: 0.1968
+11/05 14:40:46 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:40:49 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:40:49 - mmengine - INFO - Saving checkpoint at 4 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:40:59 - mmengine - INFO - Epoch(train)  [5][ 20/252]  lr: 1.0000e-04  eta: 0:12:10  time: 0.3716  data_time: 0.0038  memory: 3194  grad_norm: 16.5719  loss: 2.2862  loss_cls: 0.1036  loss_bbox: 0.1107  loss_iou: 0.0967  d0.loss_cls: 0.1507  d0.loss_bbox: 0.1167  d0.loss_iou: 0.1072  d1.loss_cls: 0.1033  d1.loss_bbox: 0.1112  d1.loss_iou: 0.1010  d2.loss_cls: 0.0978  d2.loss_bbox: 0.1091  d2.loss_iou: 0.0977  d3.loss_cls: 0.0999  d3.loss_bbox: 0.1101  d3.loss_iou: 0.0953  d4.loss_cls: 0.1120  d4.loss_bbox: 0.1104  d4.loss_iou: 0.0966  enc_loss_cls: 0.0974  enc_loss_bbox: 0.1281  enc_loss_iou: 0.1307
+11/05 14:41:06 - mmengine - INFO - Epoch(train)  [5][ 40/252]  lr: 1.0000e-04  eta: 0:12:02  time: 0.3678  data_time: 0.0035  memory: 3038  grad_norm: 16.5509  loss: 4.7194  loss_cls: 0.2663  loss_bbox: 0.2118  loss_iou: 0.1742  d0.loss_cls: 0.2274  d0.loss_bbox: 0.2279  d0.loss_iou: 0.2033  d1.loss_cls: 0.2338  d1.loss_bbox: 0.2278  d1.loss_iou: 0.2046  d2.loss_cls: 0.2425  d2.loss_bbox: 0.2250  d2.loss_iou: 0.2025  d3.loss_cls: 0.2553  d3.loss_bbox: 0.2269  d3.loss_iou: 0.2031  d4.loss_cls: 0.2677  d4.loss_bbox: 0.2116  d4.loss_iou: 0.1737  enc_loss_cls: 0.2883  enc_loss_bbox: 0.2313  enc_loss_iou: 0.2144
+11/05 14:41:13 - mmengine - INFO - Epoch(train)  [5][ 60/252]  lr: 1.0000e-04  eta: 0:11:54  time: 0.3418  data_time: 0.0035  memory: 3108  grad_norm: 12.3697  loss: 3.6944  loss_cls: 0.1723  loss_bbox: 0.1379  loss_iou: 0.2346  d0.loss_cls: 0.1372  d0.loss_bbox: 0.1369  d0.loss_iou: 0.2307  d1.loss_cls: 0.1227  d1.loss_bbox: 0.1367  d1.loss_iou: 0.2326  d2.loss_cls: 0.1408  d2.loss_bbox: 0.1362  d2.loss_iou: 0.2335  d3.loss_cls: 0.1690  d3.loss_bbox: 0.1360  d3.loss_iou: 0.2340  d4.loss_cls: 0.1914  d4.loss_bbox: 0.1378  d4.loss_iou: 0.2348  enc_loss_cls: 0.1617  enc_loss_bbox: 0.1403  enc_loss_iou: 0.2374
+11/05 14:41:20 - mmengine - INFO - Epoch(train)  [5][ 80/252]  lr: 1.0000e-04  eta: 0:11:46  time: 0.3463  data_time: 0.0034  memory: 2792  grad_norm: 24.2119  loss: 4.9722  loss_cls: 0.4390  loss_bbox: 0.0925  loss_iou: 0.1682  d0.loss_cls: 0.3760  d0.loss_bbox: 0.0989  d0.loss_iou: 0.1751  d1.loss_cls: 0.5169  d1.loss_bbox: 0.0962  d1.loss_iou: 0.1718  d2.loss_cls: 0.4688  d2.loss_bbox: 0.0934  d2.loss_iou: 0.1707  d3.loss_cls: 0.4823  d3.loss_bbox: 0.0924  d3.loss_iou: 0.1679  d4.loss_cls: 0.4224  d4.loss_bbox: 0.0925  d4.loss_iou: 0.1691  enc_loss_cls: 0.3548  enc_loss_bbox: 0.1224  enc_loss_iou: 0.2008
+11/05 14:41:27 - mmengine - INFO - Epoch(train)  [5][100/252]  lr: 1.0000e-04  eta: 0:11:39  time: 0.3580  data_time: 0.0036  memory: 3038  grad_norm: 15.2909  loss: 3.6669  loss_cls: 0.1270  loss_bbox: 0.1846  loss_iou: 0.1961  d0.loss_cls: 0.1130  d0.loss_bbox: 0.1963  d0.loss_iou: 0.2100  d1.loss_cls: 0.1310  d1.loss_bbox: 0.1854  d1.loss_iou: 0.2016  d2.loss_cls: 0.1275  d2.loss_bbox: 0.1873  d2.loss_iou: 0.2019  d3.loss_cls: 0.1281  d3.loss_bbox: 0.1853  d3.loss_iou: 0.1992  d4.loss_cls: 0.1290  d4.loss_bbox: 0.1853  d4.loss_iou: 0.1970  enc_loss_cls: 0.1300  enc_loss_bbox: 0.2155  enc_loss_iou: 0.2359
+11/05 14:41:35 - mmengine - INFO - Epoch(train)  [5][120/252]  lr: 1.0000e-04  eta: 0:11:32  time: 0.3589  data_time: 0.0036  memory: 3108  grad_norm: 33.6990  loss: 4.0900  loss_cls: 0.3155  loss_bbox: 0.1180  loss_iou: 0.1464  d0.loss_cls: 0.2768  d0.loss_bbox: 0.1277  d0.loss_iou: 0.1556  d1.loss_cls: 0.3074  d1.loss_bbox: 0.1205  d1.loss_iou: 0.1473  d2.loss_cls: 0.3179  d2.loss_bbox: 0.1215  d2.loss_iou: 0.1469  d3.loss_cls: 0.3018  d3.loss_bbox: 0.1187  d3.loss_iou: 0.1463  d4.loss_cls: 0.3424  d4.loss_bbox: 0.1183  d4.loss_iou: 0.1462  enc_loss_cls: 0.2975  enc_loss_bbox: 0.1404  enc_loss_iou: 0.1768
+11/05 14:41:42 - mmengine - INFO - Epoch(train)  [5][140/252]  lr: 1.0000e-04  eta: 0:11:24  time: 0.3652  data_time: 0.0036  memory: 3194  grad_norm: 16.8696  loss: 1.8987  loss_cls: 0.0286  loss_bbox: 0.1139  loss_iou: 0.1079  d0.loss_cls: 0.0498  d0.loss_bbox: 0.1201  d0.loss_iou: 0.1129  d1.loss_cls: 0.0330  d1.loss_bbox: 0.1167  d1.loss_iou: 0.1127  d2.loss_cls: 0.0348  d2.loss_bbox: 0.1179  d2.loss_iou: 0.1108  d3.loss_cls: 0.0332  d3.loss_bbox: 0.1147  d3.loss_iou: 0.1092  d4.loss_cls: 0.0286  d4.loss_bbox: 0.1131  d4.loss_iou: 0.1065  enc_loss_cls: 0.1002  enc_loss_bbox: 0.1177  enc_loss_iou: 0.1165
+11/05 14:41:49 - mmengine - INFO - Epoch(train)  [5][160/252]  lr: 1.0000e-04  eta: 0:11:17  time: 0.3761  data_time: 0.0034  memory: 2958  grad_norm: 13.1080  loss: 3.3925  loss_cls: 0.0514  loss_bbox: 0.1944  loss_iou: 0.1773  d0.loss_cls: 0.1132  d0.loss_bbox: 0.2965  d0.loss_iou: 0.2163  d1.loss_cls: 0.0667  d1.loss_bbox: 0.2055  d1.loss_iou: 0.1813  d2.loss_cls: 0.0525  d2.loss_bbox: 0.1984  d2.loss_iou: 0.1776  d3.loss_cls: 0.0497  d3.loss_bbox: 0.1940  d3.loss_iou: 0.1756  d4.loss_cls: 0.0513  d4.loss_bbox: 0.1941  d4.loss_iou: 0.1774  enc_loss_cls: 0.0804  enc_loss_bbox: 0.3101  enc_loss_iou: 0.2290
+11/05 14:41:56 - mmengine - INFO - Epoch(train)  [5][180/252]  lr: 1.0000e-04  eta: 0:11:09  time: 0.3616  data_time: 0.0035  memory: 3093  grad_norm: 15.8732  loss: 2.0463  loss_cls: 0.0324  loss_bbox: 0.1342  loss_iou: 0.1264  d0.loss_cls: 0.0333  d0.loss_bbox: 0.1328  d0.loss_iou: 0.1284  d1.loss_cls: 0.0543  d1.loss_bbox: 0.1107  d1.loss_iou: 0.1141  d2.loss_cls: 0.0493  d2.loss_bbox: 0.1103  d2.loss_iou: 0.1135  d3.loss_cls: 0.0284  d3.loss_bbox: 0.1342  d3.loss_iou: 0.1280  d4.loss_cls: 0.0312  d4.loss_bbox: 0.1346  d4.loss_iou: 0.1274  enc_loss_cls: 0.0547  enc_loss_bbox: 0.1385  enc_loss_iou: 0.1294
+11/05 14:42:04 - mmengine - INFO - Epoch(train)  [5][200/252]  lr: 1.0000e-04  eta: 0:11:02  time: 0.3696  data_time: 0.0034  memory: 2936  grad_norm: 14.1620  loss: 2.8832  loss_cls: 0.2323  loss_bbox: 0.0894  loss_iou: 0.1066  d0.loss_cls: 0.1610  d0.loss_bbox: 0.1039  d0.loss_iou: 0.1205  d1.loss_cls: 0.1905  d1.loss_bbox: 0.1010  d1.loss_iou: 0.1181  d2.loss_cls: 0.1895  d2.loss_bbox: 0.0902  d2.loss_iou: 0.1080  d3.loss_cls: 0.2086  d3.loss_bbox: 0.0913  d3.loss_iou: 0.1079  d4.loss_cls: 0.2352  d4.loss_bbox: 0.0889  d4.loss_iou: 0.1060  enc_loss_cls: 0.1795  enc_loss_bbox: 0.1119  enc_loss_iou: 0.1428
+11/05 14:42:11 - mmengine - INFO - Epoch(train)  [5][220/252]  lr: 1.0000e-04  eta: 0:10:55  time: 0.3905  data_time: 0.0035  memory: 3165  grad_norm: 11.4893  loss: 1.7800  loss_cls: 0.0482  loss_bbox: 0.0768  loss_iou: 0.1218  d0.loss_cls: 0.0643  d0.loss_bbox: 0.0759  d0.loss_iou: 0.1244  d1.loss_cls: 0.0488  d1.loss_bbox: 0.0741  d1.loss_iou: 0.1199  d2.loss_cls: 0.0410  d2.loss_bbox: 0.0732  d2.loss_iou: 0.1180  d3.loss_cls: 0.0491  d3.loss_bbox: 0.0756  d3.loss_iou: 0.1204  d4.loss_cls: 0.0507  d4.loss_bbox: 0.0765  d4.loss_iou: 0.1222  enc_loss_cls: 0.0829  enc_loss_bbox: 0.0863  enc_loss_iou: 0.1300
+11/05 14:42:19 - mmengine - INFO - Epoch(train)  [5][240/252]  lr: 1.0000e-04  eta: 0:10:48  time: 0.3805  data_time: 0.0034  memory: 3108  grad_norm: 30.0090  loss: 3.1908  loss_cls: 0.1213  loss_bbox: 0.1590  loss_iou: 0.1504  d0.loss_cls: 0.1236  d0.loss_bbox: 0.1818  d0.loss_iou: 0.1719  d1.loss_cls: 0.0975  d1.loss_bbox: 0.1840  d1.loss_iou: 0.1712  d2.loss_cls: 0.1073  d2.loss_bbox: 0.1614  d2.loss_iou: 0.1512  d3.loss_cls: 0.1370  d3.loss_bbox: 0.1588  d3.loss_iou: 0.1500  d4.loss_cls: 0.1293  d4.loss_bbox: 0.1596  d4.loss_iou: 0.1494  enc_loss_cls: 0.1375  enc_loss_bbox: 0.2010  enc_loss_iou: 0.1874
+11/05 14:42:23 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:42:23 - mmengine - INFO - Saving checkpoint at 5 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:42:32 - mmengine - INFO - Epoch(train)  [6][ 20/252]  lr: 1.0000e-04  eta: 0:10:36  time: 0.3350  data_time: 0.0035  memory: 3108  grad_norm: 12.5031  loss: 2.4149  loss_cls: 0.0026  loss_bbox: 0.1516  loss_iou: 0.1889  d0.loss_cls: 0.0027  d0.loss_bbox: 0.1551  d0.loss_iou: 0.1889  d1.loss_cls: 0.0021  d1.loss_bbox: 0.1506  d1.loss_iou: 0.1882  d2.loss_cls: 0.0022  d2.loss_bbox: 0.1500  d2.loss_iou: 0.1868  d3.loss_cls: 0.0017  d3.loss_bbox: 0.1511  d3.loss_iou: 0.1884  d4.loss_cls: 0.0028  d4.loss_bbox: 0.1518  d4.loss_iou: 0.1892  enc_loss_cls: 0.0032  enc_loss_bbox: 0.1593  enc_loss_iou: 0.1977
+11/05 14:42:39 - mmengine - INFO - Epoch(train)  [6][ 40/252]  lr: 1.0000e-04  eta: 0:10:28  time: 0.3425  data_time: 0.0035  memory: 3293  grad_norm: 16.3323  loss: 3.1140  loss_cls: 0.1134  loss_bbox: 0.1339  loss_iou: 0.1842  d0.loss_cls: 0.1399  d0.loss_bbox: 0.1360  d0.loss_iou: 0.1967  d1.loss_cls: 0.1343  d1.loss_bbox: 0.1319  d1.loss_iou: 0.1845  d2.loss_cls: 0.1019  d2.loss_bbox: 0.1319  d2.loss_iou: 0.1818  d3.loss_cls: 0.1009  d3.loss_bbox: 0.1332  d3.loss_iou: 0.1827  d4.loss_cls: 0.1319  d4.loss_bbox: 0.1333  d4.loss_iou: 0.1827  enc_loss_cls: 0.1739  enc_loss_bbox: 0.1187  enc_loss_iou: 0.1863
+11/05 14:42:46 - mmengine - INFO - Epoch(train)  [6][ 60/252]  lr: 1.0000e-04  eta: 0:10:20  time: 0.3507  data_time: 0.0034  memory: 3040  grad_norm: 17.1880  loss: 2.6237  loss_cls: 0.0937  loss_bbox: 0.1093  loss_iou: 0.1418  d0.loss_cls: 0.0989  d0.loss_bbox: 0.1333  d0.loss_iou: 0.1701  d1.loss_cls: 0.0997  d1.loss_bbox: 0.1287  d1.loss_iou: 0.1637  d2.loss_cls: 0.0999  d2.loss_bbox: 0.1083  d2.loss_iou: 0.1398  d3.loss_cls: 0.1056  d3.loss_bbox: 0.1098  d3.loss_iou: 0.1423  d4.loss_cls: 0.0939  d4.loss_bbox: 0.1095  d4.loss_iou: 0.1412  enc_loss_cls: 0.1214  enc_loss_bbox: 0.1384  enc_loss_iou: 0.1742
+11/05 14:42:54 - mmengine - INFO - Epoch(train)  [6][ 80/252]  lr: 1.0000e-04  eta: 0:10:13  time: 0.3643  data_time: 0.0035  memory: 3107  grad_norm: 18.0697  loss: 4.3397  loss_cls: 0.0868  loss_bbox: 0.2661  loss_iou: 0.2574  d0.loss_cls: 0.0882  d0.loss_bbox: 0.2629  d0.loss_iou: 0.2609  d1.loss_cls: 0.0756  d1.loss_bbox: 0.2705  d1.loss_iou: 0.2636  d2.loss_cls: 0.0813  d2.loss_bbox: 0.2671  d2.loss_iou: 0.2623  d3.loss_cls: 0.0811  d3.loss_bbox: 0.2687  d3.loss_iou: 0.2616  d4.loss_cls: 0.0883  d4.loss_bbox: 0.2659  d4.loss_iou: 0.2565  enc_loss_cls: 0.1322  enc_loss_bbox: 0.2701  enc_loss_iou: 0.2725
+11/05 14:43:01 - mmengine - INFO - Epoch(train)  [6][100/252]  lr: 1.0000e-04  eta: 0:10:06  time: 0.3701  data_time: 0.0037  memory: 3107  grad_norm: 22.3256  loss: 2.0859  loss_cls: 0.0404  loss_bbox: 0.1263  loss_iou: 0.1157  d0.loss_cls: 0.0644  d0.loss_bbox: 0.1350  d0.loss_iou: 0.1208  d1.loss_cls: 0.0461  d1.loss_bbox: 0.1267  d1.loss_iou: 0.1137  d2.loss_cls: 0.0397  d2.loss_bbox: 0.1296  d2.loss_iou: 0.1163  d3.loss_cls: 0.0326  d3.loss_bbox: 0.1271  d3.loss_iou: 0.1149  d4.loss_cls: 0.0337  d4.loss_bbox: 0.1268  d4.loss_iou: 0.1155  enc_loss_cls: 0.0650  enc_loss_bbox: 0.1617  enc_loss_iou: 0.1341
+11/05 14:43:09 - mmengine - INFO - Epoch(train)  [6][120/252]  lr: 1.0000e-04  eta: 0:09:59  time: 0.3810  data_time: 0.0034  memory: 2958  grad_norm: 17.8443  loss: 1.0569  loss_cls: 0.0086  loss_bbox: 0.0585  loss_iou: 0.0592  d0.loss_cls: 0.0095  d0.loss_bbox: 0.0655  d0.loss_iou: 0.0651  d1.loss_cls: 0.0087  d1.loss_bbox: 0.0589  d1.loss_iou: 0.0621  d2.loss_cls: 0.0074  d2.loss_bbox: 0.0591  d2.loss_iou: 0.0604  d3.loss_cls: 0.0079  d3.loss_bbox: 0.0591  d3.loss_iou: 0.0590  d4.loss_cls: 0.0075  d4.loss_bbox: 0.0585  d4.loss_iou: 0.0605  enc_loss_cls: 0.1178  enc_loss_bbox: 0.0892  enc_loss_iou: 0.0743
+11/05 14:43:16 - mmengine - INFO - Epoch(train)  [6][140/252]  lr: 1.0000e-04  eta: 0:09:52  time: 0.3719  data_time: 0.0036  memory: 3107  grad_norm: 13.7283  loss: 6.4118  loss_cls: 0.2287  loss_bbox: 0.3616  loss_iou: 0.3278  d0.loss_cls: 0.2109  d0.loss_bbox: 0.3535  d0.loss_iou: 0.3304  d1.loss_cls: 0.2357  d1.loss_bbox: 0.3372  d1.loss_iou: 0.3073  d2.loss_cls: 0.2294  d2.loss_bbox: 0.3644  d2.loss_iou: 0.3274  d3.loss_cls: 0.2429  d3.loss_bbox: 0.3620  d3.loss_iou: 0.3273  d4.loss_cls: 0.2261  d4.loss_bbox: 0.3620  d4.loss_iou: 0.3281  enc_loss_cls: 0.2990  enc_loss_bbox: 0.3382  enc_loss_iou: 0.3121
+11/05 14:43:23 - mmengine - INFO - Epoch(train)  [6][160/252]  lr: 1.0000e-04  eta: 0:09:44  time: 0.3684  data_time: 0.0037  memory: 3107  grad_norm: 20.3286  loss: 5.7276  loss_cls: 0.4320  loss_bbox: 0.1652  loss_iou: 0.2470  d0.loss_cls: 0.3238  d0.loss_bbox: 0.1682  d0.loss_iou: 0.2585  d1.loss_cls: 0.3749  d1.loss_bbox: 0.1706  d1.loss_iou: 0.2589  d2.loss_cls: 0.4020  d2.loss_bbox: 0.1623  d2.loss_iou: 0.2476  d3.loss_cls: 0.3751  d3.loss_bbox: 0.1645  d3.loss_iou: 0.2516  d4.loss_cls: 0.4374  d4.loss_bbox: 0.1654  d4.loss_iou: 0.2472  enc_loss_cls: 0.4393  enc_loss_bbox: 0.1743  enc_loss_iou: 0.2617
+11/05 14:43:31 - mmengine - INFO - Epoch(train)  [6][180/252]  lr: 1.0000e-04  eta: 0:09:37  time: 0.3680  data_time: 0.0038  memory: 3107  grad_norm: 39.2835  loss: 3.7363  loss_cls: 0.1129  loss_bbox: 0.1833  loss_iou: 0.2104  d0.loss_cls: 0.1538  d0.loss_bbox: 0.2110  d0.loss_iou: 0.2308  d1.loss_cls: 0.1067  d1.loss_bbox: 0.1845  d1.loss_iou: 0.2121  d2.loss_cls: 0.1092  d2.loss_bbox: 0.1846  d2.loss_iou: 0.2103  d3.loss_cls: 0.1128  d3.loss_bbox: 0.1819  d3.loss_iou: 0.2112  d4.loss_cls: 0.1113  d4.loss_bbox: 0.1829  d4.loss_iou: 0.2123  enc_loss_cls: 0.1797  enc_loss_bbox: 0.2038  enc_loss_iou: 0.2307
+11/05 14:43:37 - mmengine - INFO - Epoch(train)  [6][200/252]  lr: 1.0000e-04  eta: 0:09:29  time: 0.3323  data_time: 0.0039  memory: 3107  grad_norm: 23.1622  loss: 3.5972  loss_cls: 0.2487  loss_bbox: 0.1291  loss_iou: 0.1378  d0.loss_cls: 0.2293  d0.loss_bbox: 0.1304  d0.loss_iou: 0.1389  d1.loss_cls: 0.2401  d1.loss_bbox: 0.1297  d1.loss_iou: 0.1394  d2.loss_cls: 0.2276  d2.loss_bbox: 0.1291  d2.loss_iou: 0.1410  d3.loss_cls: 0.2398  d3.loss_bbox: 0.1290  d3.loss_iou: 0.1380  d4.loss_cls: 0.2397  d4.loss_bbox: 0.1300  d4.loss_iou: 0.1385  enc_loss_cls: 0.2728  enc_loss_bbox: 0.1383  enc_loss_iou: 0.1499
+11/05 14:43:45 - mmengine - INFO - Epoch(train)  [6][220/252]  lr: 1.0000e-04  eta: 0:09:22  time: 0.3608  data_time: 0.0039  memory: 3147  grad_norm: 11.7531  loss: 1.8551  loss_cls: 0.0199  loss_bbox: 0.1186  loss_iou: 0.1030  d0.loss_cls: 0.0322  d0.loss_bbox: 0.1254  d0.loss_iou: 0.1084  d1.loss_cls: 0.0269  d1.loss_bbox: 0.1198  d1.loss_iou: 0.1042  d2.loss_cls: 0.0262  d2.loss_bbox: 0.1182  d2.loss_iou: 0.1047  d3.loss_cls: 0.0202  d3.loss_bbox: 0.1192  d3.loss_iou: 0.1051  d4.loss_cls: 0.0216  d4.loss_bbox: 0.1187  d4.loss_iou: 0.1034  enc_loss_cls: 0.0791  enc_loss_bbox: 0.1559  enc_loss_iou: 0.1244
+11/05 14:43:52 - mmengine - INFO - Epoch(train)  [6][240/252]  lr: 1.0000e-04  eta: 0:09:14  time: 0.3445  data_time: 0.0039  memory: 3107  grad_norm: 22.5646  loss: 4.1885  loss_cls: 0.1626  loss_bbox: 0.1791  loss_iou: 0.2344  d0.loss_cls: 0.1628  d0.loss_bbox: 0.2007  d0.loss_iou: 0.2517  d1.loss_cls: 0.1363  d1.loss_bbox: 0.2071  d1.loss_iou: 0.2603  d2.loss_cls: 0.1754  d2.loss_bbox: 0.1769  d2.loss_iou: 0.2317  d3.loss_cls: 0.1747  d3.loss_bbox: 0.1774  d3.loss_iou: 0.2308  d4.loss_cls: 0.1777  d4.loss_bbox: 0.1789  d4.loss_iou: 0.2340  enc_loss_cls: 0.1203  enc_loss_bbox: 0.2337  enc_loss_iou: 0.2819
+11/05 14:43:56 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:43:56 - mmengine - INFO - Saving checkpoint at 6 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:44:05 - mmengine - INFO - Epoch(train)  [7][ 20/252]  lr: 1.0000e-04  eta: 0:09:03  time: 0.3400  data_time: 0.0038  memory: 3107  grad_norm: 11.7867  loss: 2.5118  loss_cls: 0.0653  loss_bbox: 0.1450  loss_iou: 0.1315  d0.loss_cls: 0.0859  d0.loss_bbox: 0.1356  d0.loss_iou: 0.1285  d1.loss_cls: 0.0657  d1.loss_bbox: 0.1445  d1.loss_iou: 0.1333  d2.loss_cls: 0.0718  d2.loss_bbox: 0.1431  d2.loss_iou: 0.1295  d3.loss_cls: 0.0749  d3.loss_bbox: 0.1460  d3.loss_iou: 0.1320  d4.loss_cls: 0.0643  d4.loss_bbox: 0.1454  d4.loss_iou: 0.1322  enc_loss_cls: 0.0968  enc_loss_bbox: 0.1818  enc_loss_iou: 0.1589
+11/05 14:44:13 - mmengine - INFO - Epoch(train)  [7][ 40/252]  lr: 1.0000e-04  eta: 0:08:56  time: 0.3645  data_time: 0.0046  memory: 2780  grad_norm: 14.8247  loss: 4.5306  loss_cls: 0.1845  loss_bbox: 0.1894  loss_iou: 0.2272  d0.loss_cls: 0.2535  d0.loss_bbox: 0.1859  d0.loss_iou: 0.2344  d1.loss_cls: 0.2622  d1.loss_bbox: 0.1910  d1.loss_iou: 0.2304  d2.loss_cls: 0.2100  d2.loss_bbox: 0.1880  d2.loss_iou: 0.2251  d3.loss_cls: 0.2041  d3.loss_bbox: 0.1887  d3.loss_iou: 0.2245  d4.loss_cls: 0.2001  d4.loss_bbox: 0.1888  d4.loss_iou: 0.2261  enc_loss_cls: 0.2592  enc_loss_bbox: 0.1949  enc_loss_iou: 0.2625
+11/05 14:44:20 - mmengine - INFO - Epoch(train)  [7][ 60/252]  lr: 1.0000e-04  eta: 0:08:48  time: 0.3890  data_time: 0.0041  memory: 3107  grad_norm: 18.9715  loss: 3.0635  loss_cls: 0.1193  loss_bbox: 0.1929  loss_iou: 0.1183  d0.loss_cls: 0.1237  d0.loss_bbox: 0.1872  d0.loss_iou: 0.1105  d1.loss_cls: 0.1022  d1.loss_bbox: 0.1962  d1.loss_iou: 0.1179  d2.loss_cls: 0.1256  d2.loss_bbox: 0.1912  d2.loss_iou: 0.1149  d3.loss_cls: 0.1238  d3.loss_bbox: 0.1921  d3.loss_iou: 0.1182  d4.loss_cls: 0.1197  d4.loss_bbox: 0.1926  d4.loss_iou: 0.1185  enc_loss_cls: 0.1731  enc_loss_bbox: 0.2030  enc_loss_iou: 0.1225
+11/05 14:44:28 - mmengine - INFO - Epoch(train)  [7][ 80/252]  lr: 1.0000e-04  eta: 0:08:42  time: 0.3847  data_time: 0.0038  memory: 3093  grad_norm: 28.9404  loss: 2.4976  loss_cls: 0.0325  loss_bbox: 0.1251  loss_iou: 0.1940  d0.loss_cls: 0.0293  d0.loss_bbox: 0.1312  d0.loss_iou: 0.1919  d1.loss_cls: 0.0276  d1.loss_bbox: 0.1279  d1.loss_iou: 0.1960  d2.loss_cls: 0.0292  d2.loss_bbox: 0.1266  d2.loss_iou: 0.1926  d3.loss_cls: 0.0309  d3.loss_bbox: 0.1263  d3.loss_iou: 0.1960  d4.loss_cls: 0.0328  d4.loss_bbox: 0.1251  d4.loss_iou: 0.1945  enc_loss_cls: 0.0431  enc_loss_bbox: 0.1439  enc_loss_iou: 0.2010
+11/05 14:44:35 - mmengine - INFO - Epoch(train)  [7][100/252]  lr: 1.0000e-04  eta: 0:08:34  time: 0.3519  data_time: 0.0041  memory: 3107  grad_norm: 12.2165  loss: 3.4492  loss_cls: 0.0897  loss_bbox: 0.1821  loss_iou: 0.1580  d0.loss_cls: 0.0524  d0.loss_bbox: 0.2764  d0.loss_iou: 0.2116  d1.loss_cls: 0.0488  d1.loss_bbox: 0.2565  d1.loss_iou: 0.2046  d2.loss_cls: 0.0390  d2.loss_bbox: 0.2518  d2.loss_iou: 0.1993  d3.loss_cls: 0.0889  d3.loss_bbox: 0.1830  d3.loss_iou: 0.1583  d4.loss_cls: 0.0880  d4.loss_bbox: 0.1826  d4.loss_iou: 0.1588  enc_loss_cls: 0.1003  enc_loss_bbox: 0.3007  enc_loss_iou: 0.2186
+11/05 14:44:43 - mmengine - INFO - Epoch(train)  [7][120/252]  lr: 1.0000e-04  eta: 0:08:27  time: 0.4092  data_time: 0.0037  memory: 3107  grad_norm: 24.6168  loss: 2.4750  loss_cls: 0.0983  loss_bbox: 0.1357  loss_iou: 0.1236  d0.loss_cls: 0.0876  d0.loss_bbox: 0.1337  d0.loss_iou: 0.1284  d1.loss_cls: 0.0879  d1.loss_bbox: 0.1338  d1.loss_iou: 0.1251  d2.loss_cls: 0.0823  d2.loss_bbox: 0.1364  d2.loss_iou: 0.1253  d3.loss_cls: 0.1009  d3.loss_bbox: 0.1362  d3.loss_iou: 0.1234  d4.loss_cls: 0.1100  d4.loss_bbox: 0.1364  d4.loss_iou: 0.1236  enc_loss_cls: 0.0864  enc_loss_bbox: 0.1317  enc_loss_iou: 0.1283
+11/05 14:44:51 - mmengine - INFO - Epoch(train)  [7][140/252]  lr: 1.0000e-04  eta: 0:08:20  time: 0.3636  data_time: 0.0039  memory: 3107  grad_norm: 17.6172  loss: 5.3659  loss_cls: 0.1863  loss_bbox: 0.2830  loss_iou: 0.2555  d0.loss_cls: 0.1655  d0.loss_bbox: 0.3313  d0.loss_iou: 0.2993  d1.loss_cls: 0.1675  d1.loss_bbox: 0.3360  d1.loss_iou: 0.2988  d2.loss_cls: 0.1977  d2.loss_bbox: 0.2791  d2.loss_iou: 0.2545  d3.loss_cls: 0.1831  d3.loss_bbox: 0.2809  d3.loss_iou: 0.2533  d4.loss_cls: 0.1869  d4.loss_bbox: 0.2830  d4.loss_iou: 0.2561  enc_loss_cls: 0.2290  enc_loss_bbox: 0.3356  enc_loss_iou: 0.3036
+11/05 14:44:58 - mmengine - INFO - Epoch(train)  [7][160/252]  lr: 1.0000e-04  eta: 0:08:13  time: 0.3760  data_time: 0.0036  memory: 3154  grad_norm: 16.5026  loss: 2.3121  loss_cls: 0.0338  loss_bbox: 0.1647  loss_iou: 0.1302  d0.loss_cls: 0.0217  d0.loss_bbox: 0.1678  d0.loss_iou: 0.1325  d1.loss_cls: 0.0145  d1.loss_bbox: 0.1606  d1.loss_iou: 0.1271  d2.loss_cls: 0.0382  d2.loss_bbox: 0.1642  d2.loss_iou: 0.1300  d3.loss_cls: 0.0415  d3.loss_bbox: 0.1643  d3.loss_iou: 0.1296  d4.loss_cls: 0.0295  d4.loss_bbox: 0.1643  d4.loss_iou: 0.1291  enc_loss_cls: 0.0601  enc_loss_bbox: 0.1707  enc_loss_iou: 0.1378
+11/05 14:45:07 - mmengine - INFO - Epoch(train)  [7][180/252]  lr: 1.0000e-04  eta: 0:08:07  time: 0.4155  data_time: 0.0037  memory: 3107  grad_norm: 31.4049  loss: 1.8472  loss_cls: 0.0256  loss_bbox: 0.1111  loss_iou: 0.1105  d0.loss_cls: 0.0469  d0.loss_bbox: 0.1157  d0.loss_iou: 0.1086  d1.loss_cls: 0.0462  d1.loss_bbox: 0.1131  d1.loss_iou: 0.1121  d2.loss_cls: 0.0322  d2.loss_bbox: 0.1106  d2.loss_iou: 0.1110  d3.loss_cls: 0.0298  d3.loss_bbox: 0.1086  d3.loss_iou: 0.1091  d4.loss_cls: 0.0229  d4.loss_bbox: 0.1114  d4.loss_iou: 0.1117  enc_loss_cls: 0.0682  enc_loss_bbox: 0.1236  enc_loss_iou: 0.1182
+11/05 14:45:14 - mmengine - INFO - Epoch(train)  [7][200/252]  lr: 1.0000e-04  eta: 0:07:59  time: 0.3862  data_time: 0.0035  memory: 2996  grad_norm: 40.5757  loss: 2.2899  loss_cls: 0.0814  loss_bbox: 0.1143  loss_iou: 0.1285  d0.loss_cls: 0.0732  d0.loss_bbox: 0.1056  d0.loss_iou: 0.1290  d1.loss_cls: 0.0705  d1.loss_bbox: 0.1139  d1.loss_iou: 0.1299  d2.loss_cls: 0.0741  d2.loss_bbox: 0.1140  d2.loss_iou: 0.1287  d3.loss_cls: 0.0729  d3.loss_bbox: 0.1141  d3.loss_iou: 0.1290  d4.loss_cls: 0.0752  d4.loss_bbox: 0.1143  d4.loss_iou: 0.1282  enc_loss_cls: 0.1268  enc_loss_bbox: 0.1240  enc_loss_iou: 0.1420
+11/05 14:45:22 - mmengine - INFO - Epoch(train)  [7][220/252]  lr: 1.0000e-04  eta: 0:07:52  time: 0.3870  data_time: 0.0036  memory: 2958  grad_norm: 21.2073  loss: 4.0870  loss_cls: 0.0841  loss_bbox: 0.2433  loss_iou: 0.2345  d0.loss_cls: 0.0995  d0.loss_bbox: 0.2470  d0.loss_iou: 0.2378  d1.loss_cls: 0.1116  d1.loss_bbox: 0.2432  d1.loss_iou: 0.2347  d2.loss_cls: 0.1080  d2.loss_bbox: 0.2415  d2.loss_iou: 0.2325  d3.loss_cls: 0.1038  d3.loss_bbox: 0.2443  d3.loss_iou: 0.2360  d4.loss_cls: 0.0852  d4.loss_bbox: 0.2435  d4.loss_iou: 0.2347  enc_loss_cls: 0.0899  enc_loss_bbox: 0.2725  enc_loss_iou: 0.2594
+11/05 14:45:29 - mmengine - INFO - Epoch(train)  [7][240/252]  lr: 1.0000e-04  eta: 0:07:45  time: 0.3693  data_time: 0.0035  memory: 3107  grad_norm: 19.6790  loss: 2.2106  loss_cls: 0.0179  loss_bbox: 0.1450  loss_iou: 0.1388  d0.loss_cls: 0.0332  d0.loss_bbox: 0.1521  d0.loss_iou: 0.1444  d1.loss_cls: 0.0311  d1.loss_bbox: 0.1503  d1.loss_iou: 0.1424  d2.loss_cls: 0.0274  d2.loss_bbox: 0.1482  d2.loss_iou: 0.1422  d3.loss_cls: 0.0166  d3.loss_bbox: 0.1452  d3.loss_iou: 0.1388  d4.loss_cls: 0.0188  d4.loss_bbox: 0.1450  d4.loss_iou: 0.1389  enc_loss_cls: 0.0265  enc_loss_bbox: 0.1580  enc_loss_iou: 0.1498
+11/05 14:45:34 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:45:34 - mmengine - INFO - Saving checkpoint at 7 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:45:44 - mmengine - INFO - Epoch(train)  [8][ 20/252]  lr: 1.0000e-04  eta: 0:07:34  time: 0.3702  data_time: 0.0037  memory: 3217  grad_norm: 20.1224  loss: 3.1483  loss_cls: 0.1707  loss_bbox: 0.1308  loss_iou: 0.1532  d0.loss_cls: 0.1440  d0.loss_bbox: 0.1441  d0.loss_iou: 0.1600  d1.loss_cls: 0.1395  d1.loss_bbox: 0.1363  d1.loss_iou: 0.1607  d2.loss_cls: 0.1299  d2.loss_bbox: 0.1305  d2.loss_iou: 0.1557  d3.loss_cls: 0.1564  d3.loss_bbox: 0.1294  d3.loss_iou: 0.1524  d4.loss_cls: 0.1644  d4.loss_bbox: 0.1309  d4.loss_iou: 0.1542  enc_loss_cls: 0.1850  enc_loss_bbox: 0.1561  enc_loss_iou: 0.1640
+11/05 14:45:51 - mmengine - INFO - Epoch(train)  [8][ 40/252]  lr: 1.0000e-04  eta: 0:07:27  time: 0.3728  data_time: 0.0035  memory: 3165  grad_norm: 26.2956  loss: 2.6492  loss_cls: 0.1049  loss_bbox: 0.1447  loss_iou: 0.1351  d0.loss_cls: 0.1249  d0.loss_bbox: 0.1359  d0.loss_iou: 0.1319  d1.loss_cls: 0.0714  d1.loss_bbox: 0.1546  d1.loss_iou: 0.1333  d2.loss_cls: 0.0891  d2.loss_bbox: 0.1496  d2.loss_iou: 0.1323  d3.loss_cls: 0.0861  d3.loss_bbox: 0.1461  d3.loss_iou: 0.1347  d4.loss_cls: 0.0990  d4.loss_bbox: 0.1439  d4.loss_iou: 0.1350  enc_loss_cls: 0.1392  enc_loss_bbox: 0.1322  enc_loss_iou: 0.1255
+11/05 14:45:59 - mmengine - INFO - Epoch(train)  [8][ 60/252]  lr: 1.0000e-04  eta: 0:07:19  time: 0.3805  data_time: 0.0035  memory: 2958  grad_norm: 17.9518  loss: 1.6636  loss_cls: 0.0054  loss_bbox: 0.1248  loss_iou: 0.0989  d0.loss_cls: 0.0085  d0.loss_bbox: 0.1353  d0.loss_iou: 0.1070  d1.loss_cls: 0.0073  d1.loss_bbox: 0.1277  d1.loss_iou: 0.1033  d2.loss_cls: 0.0059  d2.loss_bbox: 0.1254  d2.loss_iou: 0.0991  d3.loss_cls: 0.0047  d3.loss_bbox: 0.1262  d3.loss_iou: 0.1009  d4.loss_cls: 0.0043  d4.loss_bbox: 0.1250  d4.loss_iou: 0.0986  enc_loss_cls: 0.0110  enc_loss_bbox: 0.1334  enc_loss_iou: 0.1108
+11/05 14:46:07 - mmengine - INFO - Epoch(train)  [8][ 80/252]  lr: 1.0000e-04  eta: 0:07:13  time: 0.4111  data_time: 0.0034  memory: 3107  grad_norm: 22.4014  loss: 3.8823  loss_cls: 0.0704  loss_bbox: 0.2148  loss_iou: 0.2606  d0.loss_cls: 0.0516  d0.loss_bbox: 0.2087  d0.loss_iou: 0.2598  d1.loss_cls: 0.0738  d1.loss_bbox: 0.2153  d1.loss_iou: 0.2575  d2.loss_cls: 0.0764  d2.loss_bbox: 0.2176  d2.loss_iou: 0.2599  d3.loss_cls: 0.0685  d3.loss_bbox: 0.2149  d3.loss_iou: 0.2595  d4.loss_cls: 0.0628  d4.loss_bbox: 0.2146  d4.loss_iou: 0.2603  enc_loss_cls: 0.1870  enc_loss_bbox: 0.1958  enc_loss_iou: 0.2525
+11/05 14:46:14 - mmengine - INFO - Epoch(train)  [8][100/252]  lr: 1.0000e-04  eta: 0:07:05  time: 0.3908  data_time: 0.0035  memory: 3177  grad_norm: 24.5505  loss: 2.1265  loss_cls: 0.0289  loss_bbox: 0.1432  loss_iou: 0.1217  d0.loss_cls: 0.0364  d0.loss_bbox: 0.1448  d0.loss_iou: 0.1205  d1.loss_cls: 0.0373  d1.loss_bbox: 0.1439  d1.loss_iou: 0.1188  d2.loss_cls: 0.0314  d2.loss_bbox: 0.1441  d2.loss_iou: 0.1206  d3.loss_cls: 0.0263  d3.loss_bbox: 0.1438  d3.loss_iou: 0.1222  d4.loss_cls: 0.0261  d4.loss_bbox: 0.1430  d4.loss_iou: 0.1219  enc_loss_cls: 0.0685  enc_loss_bbox: 0.1541  enc_loss_iou: 0.1290
+11/05 14:46:22 - mmengine - INFO - Epoch(train)  [8][120/252]  lr: 1.0000e-04  eta: 0:06:58  time: 0.3957  data_time: 0.0035  memory: 2958  grad_norm: 36.2248  loss: 2.6477  loss_cls: 0.0453  loss_bbox: 0.1624  loss_iou: 0.1396  d0.loss_cls: 0.0680  d0.loss_bbox: 0.1752  d0.loss_iou: 0.1475  d1.loss_cls: 0.0611  d1.loss_bbox: 0.1664  d1.loss_iou: 0.1420  d2.loss_cls: 0.0479  d2.loss_bbox: 0.1631  d2.loss_iou: 0.1405  d3.loss_cls: 0.0413  d3.loss_bbox: 0.1615  d3.loss_iou: 0.1386  d4.loss_cls: 0.0414  d4.loss_bbox: 0.1612  d4.loss_iou: 0.1386  enc_loss_cls: 0.1552  enc_loss_bbox: 0.1905  enc_loss_iou: 0.1604
+11/05 14:46:30 - mmengine - INFO - Epoch(train)  [8][140/252]  lr: 1.0000e-04  eta: 0:06:51  time: 0.3867  data_time: 0.0034  memory: 3165  grad_norm: 23.8192  loss: 1.7839  loss_cls: 0.0048  loss_bbox: 0.1396  loss_iou: 0.1078  d0.loss_cls: 0.0061  d0.loss_bbox: 0.1358  d0.loss_iou: 0.1069  d1.loss_cls: 0.0039  d1.loss_bbox: 0.1404  d1.loss_iou: 0.1080  d2.loss_cls: 0.0032  d2.loss_bbox: 0.1414  d2.loss_iou: 0.1066  d3.loss_cls: 0.0036  d3.loss_bbox: 0.1422  d3.loss_iou: 0.1081  d4.loss_cls: 0.0039  d4.loss_bbox: 0.1399  d4.loss_iou: 0.1077  enc_loss_cls: 0.0250  enc_loss_bbox: 0.1359  enc_loss_iou: 0.1129
+11/05 14:46:38 - mmengine - INFO - Epoch(train)  [8][160/252]  lr: 1.0000e-04  eta: 0:06:44  time: 0.3891  data_time: 0.0035  memory: 3273  grad_norm: 21.2676  loss: 4.4805  loss_cls: 0.2950  loss_bbox: 0.1492  loss_iou: 0.1825  d0.loss_cls: 0.2952  d0.loss_bbox: 0.1493  d0.loss_iou: 0.1879  d1.loss_cls: 0.2776  d1.loss_bbox: 0.1506  d1.loss_iou: 0.1820  d2.loss_cls: 0.2842  d2.loss_bbox: 0.1480  d2.loss_iou: 0.1836  d3.loss_cls: 0.3283  d3.loss_bbox: 0.1474  d3.loss_iou: 0.1799  d4.loss_cls: 0.3141  d4.loss_bbox: 0.1487  d4.loss_iou: 0.1827  enc_loss_cls: 0.2490  enc_loss_bbox: 0.1606  enc_loss_iou: 0.2845
+11/05 14:46:45 - mmengine - INFO - Epoch(train)  [8][180/252]  lr: 1.0000e-04  eta: 0:06:37  time: 0.3914  data_time: 0.0035  memory: 3107  grad_norm: 16.3992  loss: 4.5454  loss_cls: 0.1963  loss_bbox: 0.1892  loss_iou: 0.2497  d0.loss_cls: 0.1901  d0.loss_bbox: 0.1890  d0.loss_iou: 0.2511  d1.loss_cls: 0.1886  d1.loss_bbox: 0.1905  d1.loss_iou: 0.2512  d2.loss_cls: 0.1959  d2.loss_bbox: 0.1920  d2.loss_iou: 0.2517  d3.loss_cls: 0.1987  d3.loss_bbox: 0.1894  d3.loss_iou: 0.2490  d4.loss_cls: 0.2018  d4.loss_bbox: 0.1901  d4.loss_iou: 0.2496  enc_loss_cls: 0.2223  enc_loss_bbox: 0.2263  enc_loss_iou: 0.2829
+11/05 14:46:53 - mmengine - INFO - Epoch(train)  [8][200/252]  lr: 1.0000e-04  eta: 0:06:30  time: 0.3802  data_time: 0.0035  memory: 2936  grad_norm: 15.3776  loss: 3.6141  loss_cls: 0.0581  loss_bbox: 0.1765  loss_iou: 0.2760  d0.loss_cls: 0.0658  d0.loss_bbox: 0.1888  d0.loss_iou: 0.2792  d1.loss_cls: 0.0480  d1.loss_bbox: 0.1810  d1.loss_iou: 0.2797  d2.loss_cls: 0.0448  d2.loss_bbox: 0.1795  d2.loss_iou: 0.2755  d3.loss_cls: 0.0505  d3.loss_bbox: 0.1766  d3.loss_iou: 0.2758  d4.loss_cls: 0.0632  d4.loss_bbox: 0.1764  d4.loss_iou: 0.2744  enc_loss_cls: 0.1136  enc_loss_bbox: 0.1716  enc_loss_iou: 0.2592
+11/05 14:47:01 - mmengine - INFO - Epoch(train)  [8][220/252]  lr: 1.0000e-04  eta: 0:06:22  time: 0.3638  data_time: 0.0035  memory: 2876  grad_norm: 16.0973  loss: 6.1835  loss_cls: 0.1654  loss_bbox: 0.2682  loss_iou: 0.3531  d0.loss_cls: 0.1862  d0.loss_bbox: 0.3949  d0.loss_iou: 0.4168  d1.loss_cls: 0.1795  d1.loss_bbox: 0.3855  d1.loss_iou: 0.4155  d2.loss_cls: 0.2418  d2.loss_bbox: 0.2690  d2.loss_iou: 0.3525  d3.loss_cls: 0.1682  d3.loss_bbox: 0.2659  d3.loss_iou: 0.3520  d4.loss_cls: 0.1530  d4.loss_bbox: 0.2682  d4.loss_iou: 0.3538  enc_loss_cls: 0.2039  enc_loss_bbox: 0.3762  enc_loss_iou: 0.4137
+11/05 14:47:07 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:47:08 - mmengine - INFO - Epoch(train)  [8][240/252]  lr: 1.0000e-04  eta: 0:06:15  time: 0.4052  data_time: 0.0035  memory: 3107  grad_norm: 10.2887  loss: 3.9617  loss_cls: 0.0730  loss_bbox: 0.2529  loss_iou: 0.2249  d0.loss_cls: 0.0689  d0.loss_bbox: 0.2676  d0.loss_iou: 0.2388  d1.loss_cls: 0.0525  d1.loss_bbox: 0.2571  d1.loss_iou: 0.2333  d2.loss_cls: 0.0613  d2.loss_bbox: 0.2569  d2.loss_iou: 0.2321  d3.loss_cls: 0.0812  d3.loss_bbox: 0.2540  d3.loss_iou: 0.2268  d4.loss_cls: 0.0726  d4.loss_bbox: 0.2533  d4.loss_iou: 0.2255  enc_loss_cls: 0.1863  enc_loss_bbox: 0.2339  enc_loss_iou: 0.2088
+11/05 14:47:13 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:47:13 - mmengine - INFO - Saving checkpoint at 8 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:47:23 - mmengine - INFO - Epoch(train)  [9][ 20/252]  lr: 1.0000e-04  eta: 0:06:04  time: 0.3716  data_time: 0.0035  memory: 2876  grad_norm: 39.1830  loss: 2.7575  loss_cls: 0.0439  loss_bbox: 0.1177  loss_iou: 0.1998  d0.loss_cls: 0.0637  d0.loss_bbox: 0.1305  d0.loss_iou: 0.2140  d1.loss_cls: 0.0418  d1.loss_bbox: 0.1159  d1.loss_iou: 0.2048  d2.loss_cls: 0.0594  d2.loss_bbox: 0.1186  d2.loss_iou: 0.2000  d3.loss_cls: 0.0521  d3.loss_bbox: 0.1194  d3.loss_iou: 0.2017  d4.loss_cls: 0.0506  d4.loss_bbox: 0.1177  d4.loss_iou: 0.1986  enc_loss_cls: 0.1172  enc_loss_bbox: 0.1508  enc_loss_iou: 0.2392
+11/05 14:47:30 - mmengine - INFO - Epoch(train)  [9][ 40/252]  lr: 1.0000e-04  eta: 0:05:56  time: 0.3679  data_time: 0.0035  memory: 3083  grad_norm: 19.6675  loss: 1.7030  loss_cls: 0.0020  loss_bbox: 0.1245  loss_iou: 0.0966  d0.loss_cls: 0.0142  d0.loss_bbox: 0.1601  d0.loss_iou: 0.1036  d1.loss_cls: 0.0217  d1.loss_bbox: 0.1264  d1.loss_iou: 0.0983  d2.loss_cls: 0.0049  d2.loss_bbox: 0.1258  d2.loss_iou: 0.0979  d3.loss_cls: 0.0016  d3.loss_bbox: 0.1271  d3.loss_iou: 0.0974  d4.loss_cls: 0.0015  d4.loss_bbox: 0.1244  d4.loss_iou: 0.0960  enc_loss_cls: 0.0485  enc_loss_bbox: 0.1306  enc_loss_iou: 0.1000
+11/05 14:47:38 - mmengine - INFO - Epoch(train)  [9][ 60/252]  lr: 1.0000e-04  eta: 0:05:49  time: 0.3734  data_time: 0.0034  memory: 2876  grad_norm: 18.8655  loss: 3.5210  loss_cls: 0.0409  loss_bbox: 0.1891  loss_iou: 0.2723  d0.loss_cls: 0.0319  d0.loss_bbox: 0.1891  d0.loss_iou: 0.2752  d1.loss_cls: 0.0378  d1.loss_bbox: 0.1869  d1.loss_iou: 0.2720  d2.loss_cls: 0.0336  d2.loss_bbox: 0.1888  d2.loss_iou: 0.2726  d3.loss_cls: 0.0345  d3.loss_bbox: 0.1887  d3.loss_iou: 0.2733  d4.loss_cls: 0.0402  d4.loss_bbox: 0.1887  d4.loss_iou: 0.2722  enc_loss_cls: 0.0367  enc_loss_bbox: 0.1989  enc_loss_iou: 0.2975
+11/05 14:47:46 - mmengine - INFO - Epoch(train)  [9][ 80/252]  lr: 1.0000e-04  eta: 0:05:42  time: 0.3900  data_time: 0.0035  memory: 3147  grad_norm: 18.9393  loss: 3.2222  loss_cls: 0.0793  loss_bbox: 0.1945  loss_iou: 0.1683  d0.loss_cls: 0.0753  d0.loss_bbox: 0.2021  d0.loss_iou: 0.1751  d1.loss_cls: 0.0564  d1.loss_bbox: 0.2121  d1.loss_iou: 0.1778  d2.loss_cls: 0.0619  d2.loss_bbox: 0.2123  d2.loss_iou: 0.1775  d3.loss_cls: 0.0874  d3.loss_bbox: 0.1998  d3.loss_iou: 0.1713  d4.loss_cls: 0.0870  d4.loss_bbox: 0.1956  d4.loss_iou: 0.1707  enc_loss_cls: 0.1038  enc_loss_bbox: 0.2197  enc_loss_iou: 0.1944
+11/05 14:47:54 - mmengine - INFO - Epoch(train)  [9][100/252]  lr: 1.0000e-04  eta: 0:05:35  time: 0.3899  data_time: 0.0035  memory: 2958  grad_norm: 18.0509  loss: 3.5844  loss_cls: 0.0535  loss_bbox: 0.2053  loss_iou: 0.2512  d0.loss_cls: 0.0368  d0.loss_bbox: 0.2154  d0.loss_iou: 0.2598  d1.loss_cls: 0.0334  d1.loss_bbox: 0.2149  d1.loss_iou: 0.2576  d2.loss_cls: 0.0346  d2.loss_bbox: 0.2056  d2.loss_iou: 0.2527  d3.loss_cls: 0.0487  d3.loss_bbox: 0.2051  d3.loss_iou: 0.2523  d4.loss_cls: 0.0637  d4.loss_bbox: 0.1993  d4.loss_iou: 0.2453  enc_loss_cls: 0.0858  enc_loss_bbox: 0.2094  enc_loss_iou: 0.2540
+11/05 14:48:01 - mmengine - INFO - Epoch(train)  [9][120/252]  lr: 1.0000e-04  eta: 0:05:27  time: 0.3664  data_time: 0.0036  memory: 2958  grad_norm: 20.1060  loss: 3.2495  loss_cls: 0.0280  loss_bbox: 0.2113  loss_iou: 0.2231  d0.loss_cls: 0.0321  d0.loss_bbox: 0.2063  d0.loss_iou: 0.2207  d1.loss_cls: 0.0385  d1.loss_bbox: 0.2120  d1.loss_iou: 0.2214  d2.loss_cls: 0.0289  d2.loss_bbox: 0.2095  d2.loss_iou: 0.2208  d3.loss_cls: 0.0294  d3.loss_bbox: 0.2115  d3.loss_iou: 0.2228  d4.loss_cls: 0.0305  d4.loss_bbox: 0.2116  d4.loss_iou: 0.2251  enc_loss_cls: 0.0307  enc_loss_bbox: 0.2088  enc_loss_iou: 0.2265
+11/05 14:48:09 - mmengine - INFO - Epoch(train)  [9][140/252]  lr: 1.0000e-04  eta: 0:05:20  time: 0.3690  data_time: 0.0035  memory: 2958  grad_norm: 21.6678  loss: 1.9443  loss_cls: 0.1028  loss_bbox: 0.0833  loss_iou: 0.0811  d0.loss_cls: 0.1306  d0.loss_bbox: 0.0873  d0.loss_iou: 0.0820  d1.loss_cls: 0.1245  d1.loss_bbox: 0.0824  d1.loss_iou: 0.0786  d2.loss_cls: 0.1176  d2.loss_bbox: 0.0851  d2.loss_iou: 0.0794  d3.loss_cls: 0.0889  d3.loss_bbox: 0.0843  d3.loss_iou: 0.0818  d4.loss_cls: 0.1037  d4.loss_bbox: 0.0835  d4.loss_iou: 0.0812  enc_loss_cls: 0.1153  enc_loss_bbox: 0.0880  enc_loss_iou: 0.0831
+11/05 14:48:16 - mmengine - INFO - Epoch(train)  [9][160/252]  lr: 1.0000e-04  eta: 0:05:13  time: 0.3701  data_time: 0.0035  memory: 2876  grad_norm: 18.7444  loss: 2.2079  loss_cls: 0.0349  loss_bbox: 0.1110  loss_iou: 0.1645  d0.loss_cls: 0.0339  d0.loss_bbox: 0.1099  d0.loss_iou: 0.1699  d1.loss_cls: 0.0369  d1.loss_bbox: 0.1114  d1.loss_iou: 0.1688  d2.loss_cls: 0.0310  d2.loss_bbox: 0.1114  d2.loss_iou: 0.1666  d3.loss_cls: 0.0340  d3.loss_bbox: 0.1120  d3.loss_iou: 0.1660  d4.loss_cls: 0.0353  d4.loss_bbox: 0.1115  d4.loss_iou: 0.1643  enc_loss_cls: 0.0356  enc_loss_bbox: 0.1200  enc_loss_iou: 0.1791
+11/05 14:48:24 - mmengine - INFO - Epoch(train)  [9][180/252]  lr: 1.0000e-04  eta: 0:05:06  time: 0.3824  data_time: 0.0034  memory: 2936  grad_norm: 15.1087  loss: 5.8036  loss_cls: 0.0548  loss_bbox: 0.3686  loss_iou: 0.4131  d0.loss_cls: 0.0435  d0.loss_bbox: 0.3612  d0.loss_iou: 0.4120  d1.loss_cls: 0.0410  d1.loss_bbox: 0.3624  d1.loss_iou: 0.4127  d2.loss_cls: 0.0560  d2.loss_bbox: 0.3669  d2.loss_iou: 0.4140  d3.loss_cls: 0.0446  d3.loss_bbox: 0.3705  d3.loss_iou: 0.4136  d4.loss_cls: 0.0500  d4.loss_bbox: 0.3686  d4.loss_iou: 0.4133  enc_loss_cls: 0.0730  enc_loss_bbox: 0.3565  enc_loss_iou: 0.4073
+11/05 14:48:31 - mmengine - INFO - Epoch(train)  [9][200/252]  lr: 1.0000e-04  eta: 0:04:58  time: 0.3356  data_time: 0.0035  memory: 3107  grad_norm: 34.6535  loss: 4.6404  loss_cls: 0.2847  loss_bbox: 0.1449  loss_iou: 0.1854  d0.loss_cls: 0.3330  d0.loss_bbox: 0.1554  d0.loss_iou: 0.1900  d1.loss_cls: 0.4359  d1.loss_bbox: 0.1492  d1.loss_iou: 0.1883  d2.loss_cls: 0.3837  d2.loss_bbox: 0.1456  d2.loss_iou: 0.1877  d3.loss_cls: 0.3331  d3.loss_bbox: 0.1456  d3.loss_iou: 0.1870  d4.loss_cls: 0.3342  d4.loss_bbox: 0.1457  d4.loss_iou: 0.1871  enc_loss_cls: 0.1914  enc_loss_bbox: 0.1455  enc_loss_iou: 0.1872
+11/05 14:48:38 - mmengine - INFO - Epoch(train)  [9][220/252]  lr: 1.0000e-04  eta: 0:04:51  time: 0.3703  data_time: 0.0035  memory: 2876  grad_norm: 22.0637  loss: 2.1907  loss_cls: 0.0280  loss_bbox: 0.1572  loss_iou: 0.1113  d0.loss_cls: 0.0378  d0.loss_bbox: 0.1614  d0.loss_iou: 0.1165  d1.loss_cls: 0.0401  d1.loss_bbox: 0.1585  d1.loss_iou: 0.1145  d2.loss_cls: 0.0425  d2.loss_bbox: 0.1580  d2.loss_iou: 0.1106  d3.loss_cls: 0.0414  d3.loss_bbox: 0.1582  d3.loss_iou: 0.1117  d4.loss_cls: 0.0305  d4.loss_bbox: 0.1574  d4.loss_iou: 0.1109  enc_loss_cls: 0.0791  enc_loss_bbox: 0.1506  enc_loss_iou: 0.1146
+11/05 14:48:45 - mmengine - INFO - Epoch(train)  [9][240/252]  lr: 1.0000e-04  eta: 0:04:43  time: 0.3596  data_time: 0.0035  memory: 3093  grad_norm: 27.9602  loss: 4.1825  loss_cls: 0.1515  loss_bbox: 0.1692  loss_iou: 0.2476  d0.loss_cls: 0.1032  d0.loss_bbox: 0.2627  d0.loss_iou: 0.2998  d1.loss_cls: 0.2147  d1.loss_bbox: 0.1718  d1.loss_iou: 0.2512  d2.loss_cls: 0.1364  d2.loss_bbox: 0.1741  d2.loss_iou: 0.2541  d3.loss_cls: 0.1225  d3.loss_bbox: 0.1734  d3.loss_iou: 0.2499  d4.loss_cls: 0.1506  d4.loss_bbox: 0.1699  d4.loss_iou: 0.2492  enc_loss_cls: 0.1064  enc_loss_bbox: 0.2281  enc_loss_iou: 0.2963
+11/05 14:48:50 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:48:50 - mmengine - INFO - Saving checkpoint at 9 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:48:59 - mmengine - INFO - Epoch(train) [10][ 20/252]  lr: 1.0000e-04  eta: 0:04:31  time: 0.3341  data_time: 0.0034  memory: 3093  grad_norm: 10.9716  loss: 2.5119  loss_cls: 0.0638  loss_bbox: 0.1436  loss_iou: 0.1480  d0.loss_cls: 0.0548  d0.loss_bbox: 0.1439  d0.loss_iou: 0.1506  d1.loss_cls: 0.0779  d1.loss_bbox: 0.1448  d1.loss_iou: 0.1512  d2.loss_cls: 0.0624  d2.loss_bbox: 0.1435  d2.loss_iou: 0.1501  d3.loss_cls: 0.0649  d3.loss_bbox: 0.1442  d3.loss_iou: 0.1501  d4.loss_cls: 0.0619  d4.loss_bbox: 0.1433  d4.loss_iou: 0.1484  enc_loss_cls: 0.0733  enc_loss_bbox: 0.1436  enc_loss_iou: 0.1477
+11/05 14:49:06 - mmengine - INFO - Epoch(train) [10][ 40/252]  lr: 1.0000e-04  eta: 0:04:24  time: 0.3244  data_time: 0.0034  memory: 3093  grad_norm: 42.4461  loss: 3.0852  loss_cls: 0.0434  loss_bbox: 0.1878  loss_iou: 0.1584  d0.loss_cls: 0.0601  d0.loss_bbox: 0.1980  d0.loss_iou: 0.1624  d1.loss_cls: 0.0325  d1.loss_bbox: 0.1870  d1.loss_iou: 0.1523  d2.loss_cls: 0.0398  d2.loss_bbox: 0.1853  d2.loss_iou: 0.1552  d3.loss_cls: 0.0460  d3.loss_bbox: 0.1894  d3.loss_iou: 0.1593  d4.loss_cls: 0.0428  d4.loss_bbox: 0.1878  d4.loss_iou: 0.1594  enc_loss_cls: 0.3377  enc_loss_bbox: 0.2259  enc_loss_iou: 0.1746
+11/05 14:49:13 - mmengine - INFO - Epoch(train) [10][ 60/252]  lr: 1.0000e-04  eta: 0:04:16  time: 0.3463  data_time: 0.0034  memory: 3058  grad_norm: 23.5367  loss: 3.9816  loss_cls: 0.1306  loss_bbox: 0.1295  loss_iou: 0.2622  d0.loss_cls: 0.1659  d0.loss_bbox: 0.1332  d0.loss_iou: 0.2677  d1.loss_cls: 0.1660  d1.loss_bbox: 0.1336  d1.loss_iou: 0.2692  d2.loss_cls: 0.1730  d2.loss_bbox: 0.1288  d2.loss_iou: 0.2642  d3.loss_cls: 0.1405  d3.loss_bbox: 0.1299  d3.loss_iou: 0.2634  d4.loss_cls: 0.1296  d4.loss_bbox: 0.1307  d4.loss_iou: 0.2660  enc_loss_cls: 0.2780  enc_loss_bbox: 0.1459  enc_loss_iou: 0.2735
+11/05 14:49:20 - mmengine - INFO - Epoch(train) [10][ 80/252]  lr: 1.0000e-04  eta: 0:04:09  time: 0.3820  data_time: 0.0035  memory: 3107  grad_norm: 25.3856  loss: 2.4019  loss_cls: 0.0603  loss_bbox: 0.1522  loss_iou: 0.1314  d0.loss_cls: 0.0531  d0.loss_bbox: 0.1593  d0.loss_iou: 0.1363  d1.loss_cls: 0.0439  d1.loss_bbox: 0.1569  d1.loss_iou: 0.1316  d2.loss_cls: 0.0544  d2.loss_bbox: 0.1511  d2.loss_iou: 0.1281  d3.loss_cls: 0.0530  d3.loss_bbox: 0.1536  d3.loss_iou: 0.1339  d4.loss_cls: 0.0547  d4.loss_bbox: 0.1527  d4.loss_iou: 0.1320  enc_loss_cls: 0.0852  enc_loss_bbox: 0.1503  enc_loss_iou: 0.1279
+11/05 14:49:27 - mmengine - INFO - Epoch(train) [10][100/252]  lr: 1.0000e-04  eta: 0:04:01  time: 0.3668  data_time: 0.0034  memory: 3107  grad_norm: 15.1120  loss: 1.6621  loss_cls: 0.0106  loss_bbox: 0.1277  loss_iou: 0.1032  d0.loss_cls: 0.0174  d0.loss_bbox: 0.1098  d0.loss_iou: 0.0981  d1.loss_cls: 0.0143  d1.loss_bbox: 0.1242  d1.loss_iou: 0.1021  d2.loss_cls: 0.0145  d2.loss_bbox: 0.1278  d2.loss_iou: 0.1043  d3.loss_cls: 0.0101  d3.loss_bbox: 0.1272  d3.loss_iou: 0.1031  d4.loss_cls: 0.0110  d4.loss_bbox: 0.1277  d4.loss_iou: 0.1029  enc_loss_cls: 0.0197  enc_loss_bbox: 0.1078  enc_loss_iou: 0.0985
+11/05 14:49:34 - mmengine - INFO - Epoch(train) [10][120/252]  lr: 1.0000e-04  eta: 0:03:54  time: 0.3469  data_time: 0.0035  memory: 3107  grad_norm: 24.5483  loss: 4.1446  loss_cls: 0.1236  loss_bbox: 0.1925  loss_iou: 0.2859  d0.loss_cls: 0.0923  d0.loss_bbox: 0.1897  d0.loss_iou: 0.3008  d1.loss_cls: 0.0917  d1.loss_bbox: 0.1901  d1.loss_iou: 0.2891  d2.loss_cls: 0.1052  d2.loss_bbox: 0.1875  d2.loss_iou: 0.2818  d3.loss_cls: 0.1233  d3.loss_bbox: 0.1898  d3.loss_iou: 0.2850  d4.loss_cls: 0.1169  d4.loss_bbox: 0.1925  d4.loss_iou: 0.2859  enc_loss_cls: 0.1386  enc_loss_bbox: 0.1842  enc_loss_iou: 0.2982
+11/05 14:49:41 - mmengine - INFO - Epoch(train) [10][140/252]  lr: 1.0000e-04  eta: 0:03:46  time: 0.3441  data_time: 0.0035  memory: 3093  grad_norm: 18.3804  loss: 3.2588  loss_cls: 0.0885  loss_bbox: 0.2000  loss_iou: 0.1779  d0.loss_cls: 0.0794  d0.loss_bbox: 0.1932  d0.loss_iou: 0.1758  d1.loss_cls: 0.0739  d1.loss_bbox: 0.1988  d1.loss_iou: 0.1770  d2.loss_cls: 0.0747  d2.loss_bbox: 0.1994  d2.loss_iou: 0.1775  d3.loss_cls: 0.0767  d3.loss_bbox: 0.2003  d3.loss_iou: 0.1778  d4.loss_cls: 0.0837  d4.loss_bbox: 0.2001  d4.loss_iou: 0.1774  enc_loss_cls: 0.1516  enc_loss_bbox: 0.1977  enc_loss_iou: 0.1772
+11/05 14:49:48 - mmengine - INFO - Epoch(train) [10][160/252]  lr: 1.0000e-04  eta: 0:03:39  time: 0.3425  data_time: 0.0036  memory: 2975  grad_norm: 19.9165  loss: 1.4093  loss_cls: 0.0306  loss_bbox: 0.0714  loss_iou: 0.0752  d0.loss_cls: 0.0270  d0.loss_bbox: 0.1143  d0.loss_iou: 0.0888  d1.loss_cls: 0.0175  d1.loss_bbox: 0.0892  d1.loss_iou: 0.0829  d2.loss_cls: 0.0169  d2.loss_bbox: 0.0806  d2.loss_iou: 0.0782  d3.loss_cls: 0.0268  d3.loss_bbox: 0.0738  d3.loss_iou: 0.0769  d4.loss_cls: 0.0340  d4.loss_bbox: 0.0709  d4.loss_iou: 0.0737  enc_loss_cls: 0.0891  enc_loss_bbox: 0.0971  enc_loss_iou: 0.0942
+11/05 14:49:55 - mmengine - INFO - Epoch(train) [10][180/252]  lr: 1.0000e-04  eta: 0:03:31  time: 0.3570  data_time: 0.0037  memory: 3217  grad_norm: 10.6772  loss: 2.4666  loss_cls: 0.0209  loss_bbox: 0.1568  loss_iou: 0.1566  d0.loss_cls: 0.0233  d0.loss_bbox: 0.1658  d0.loss_iou: 0.1625  d1.loss_cls: 0.0113  d1.loss_bbox: 0.1619  d1.loss_iou: 0.1618  d2.loss_cls: 0.0191  d2.loss_bbox: 0.1609  d2.loss_iou: 0.1602  d3.loss_cls: 0.0201  d3.loss_bbox: 0.1582  d3.loss_iou: 0.1583  d4.loss_cls: 0.0167  d4.loss_bbox: 0.1575  d4.loss_iou: 0.1574  enc_loss_cls: 0.0911  enc_loss_bbox: 0.1716  enc_loss_iou: 0.1744
+11/05 14:50:02 - mmengine - INFO - Epoch(train) [10][200/252]  lr: 1.0000e-04  eta: 0:03:24  time: 0.3495  data_time: 0.0036  memory: 2876  grad_norm: 37.9566  loss: 3.0366  loss_cls: 0.0746  loss_bbox: 0.1590  loss_iou: 0.1784  d0.loss_cls: 0.0539  d0.loss_bbox: 0.1757  d0.loss_iou: 0.1999  d1.loss_cls: 0.0581  d1.loss_bbox: 0.1729  d1.loss_iou: 0.1957  d2.loss_cls: 0.0707  d2.loss_bbox: 0.1582  d2.loss_iou: 0.1769  d3.loss_cls: 0.0769  d3.loss_bbox: 0.1598  d3.loss_iou: 0.1791  d4.loss_cls: 0.0666  d4.loss_bbox: 0.1583  d4.loss_iou: 0.1773  enc_loss_cls: 0.1447  enc_loss_bbox: 0.1860  enc_loss_iou: 0.2139
+11/05 14:50:09 - mmengine - INFO - Epoch(train) [10][220/252]  lr: 1.0000e-04  eta: 0:03:16  time: 0.3360  data_time: 0.0037  memory: 2958  grad_norm: 38.1149  loss: 2.9896  loss_cls: 0.0536  loss_bbox: 0.2025  loss_iou: 0.1756  d0.loss_cls: 0.0429  d0.loss_bbox: 0.1989  d0.loss_iou: 0.1708  d1.loss_cls: 0.0290  d1.loss_bbox: 0.2069  d1.loss_iou: 0.1738  d2.loss_cls: 0.0497  d2.loss_bbox: 0.2071  d2.loss_iou: 0.1769  d3.loss_cls: 0.0453  d3.loss_bbox: 0.2046  d3.loss_iou: 0.1778  d4.loss_cls: 0.0640  d4.loss_bbox: 0.2030  d4.loss_iou: 0.1759  enc_loss_cls: 0.0645  enc_loss_bbox: 0.1922  enc_loss_iou: 0.1746
+11/05 14:50:16 - mmengine - INFO - Epoch(train) [10][240/252]  lr: 1.0000e-04  eta: 0:03:09  time: 0.3383  data_time: 0.0037  memory: 3107  grad_norm: 32.0674  loss: 2.3143  loss_cls: 0.0148  loss_bbox: 0.1585  loss_iou: 0.1571  d0.loss_cls: 0.0107  d0.loss_bbox: 0.1579  d0.loss_iou: 0.1563  d1.loss_cls: 0.0081  d1.loss_bbox: 0.1562  d1.loss_iou: 0.1549  d2.loss_cls: 0.0085  d2.loss_bbox: 0.1557  d2.loss_iou: 0.1558  d3.loss_cls: 0.0118  d3.loss_bbox: 0.1576  d3.loss_iou: 0.1572  d4.loss_cls: 0.0163  d4.loss_bbox: 0.1587  d4.loss_iou: 0.1580  enc_loss_cls: 0.0218  enc_loss_bbox: 0.1715  enc_loss_iou: 0.1668
+11/05 14:50:21 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:50:21 - mmengine - INFO - Saving checkpoint at 10 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:50:30 - mmengine - INFO - Epoch(train) [11][ 20/252]  lr: 1.0000e-05  eta: 0:02:57  time: 0.3356  data_time: 0.0035  memory: 3107  grad_norm: 26.4010  loss: 1.7167  loss_cls: 0.0143  loss_bbox: 0.1257  loss_iou: 0.1077  d0.loss_cls: 0.0077  d0.loss_bbox: 0.1207  d0.loss_iou: 0.1043  d1.loss_cls: 0.0071  d1.loss_bbox: 0.1245  d1.loss_iou: 0.1062  d2.loss_cls: 0.0060  d2.loss_bbox: 0.1256  d2.loss_iou: 0.1065  d3.loss_cls: 0.0119  d3.loss_bbox: 0.1255  d3.loss_iou: 0.1094  d4.loss_cls: 0.0113  d4.loss_bbox: 0.1263  d4.loss_iou: 0.1070  enc_loss_cls: 0.0304  enc_loss_bbox: 0.1273  enc_loss_iou: 0.1113
+11/05 14:50:37 - mmengine - INFO - Epoch(train) [11][ 40/252]  lr: 1.0000e-05  eta: 0:02:50  time: 0.3436  data_time: 0.0035  memory: 3037  grad_norm: 20.7828  loss: 3.6775  loss_cls: 0.0360  loss_bbox: 0.2213  loss_iou: 0.2530  d0.loss_cls: 0.0440  d0.loss_bbox: 0.2182  d0.loss_iou: 0.2515  d1.loss_cls: 0.0397  d1.loss_bbox: 0.2242  d1.loss_iou: 0.2543  d2.loss_cls: 0.0277  d2.loss_bbox: 0.2237  d2.loss_iou: 0.2538  d3.loss_cls: 0.0169  d3.loss_bbox: 0.2220  d3.loss_iou: 0.2535  d4.loss_cls: 0.0284  d4.loss_bbox: 0.2224  d4.loss_iou: 0.2536  enc_loss_cls: 0.1397  enc_loss_bbox: 0.2329  enc_loss_iou: 0.2607
+11/05 14:50:44 - mmengine - INFO - Epoch(train) [11][ 60/252]  lr: 1.0000e-05  eta: 0:02:42  time: 0.3508  data_time: 0.0036  memory: 3107  grad_norm: 24.3276  loss: 3.4106  loss_cls: 0.1192  loss_bbox: 0.1034  loss_iou: 0.2149  d0.loss_cls: 0.2117  d0.loss_bbox: 0.1095  d0.loss_iou: 0.2254  d1.loss_cls: 0.1858  d1.loss_bbox: 0.1043  d1.loss_iou: 0.2208  d2.loss_cls: 0.1522  d2.loss_bbox: 0.1037  d2.loss_iou: 0.2223  d3.loss_cls: 0.1109  d3.loss_bbox: 0.1020  d3.loss_iou: 0.2137  d4.loss_cls: 0.1242  d4.loss_bbox: 0.1032  d4.loss_iou: 0.2146  enc_loss_cls: 0.2364  enc_loss_bbox: 0.1081  enc_loss_iou: 0.2242
+11/05 14:50:51 - mmengine - INFO - Epoch(train) [11][ 80/252]  lr: 1.0000e-05  eta: 0:02:35  time: 0.3502  data_time: 0.0035  memory: 3193  grad_norm: 34.9466  loss: 2.4150  loss_cls: 0.0070  loss_bbox: 0.1538  loss_iou: 0.1638  d0.loss_cls: 0.0123  d0.loss_bbox: 0.1706  d0.loss_iou: 0.1773  d1.loss_cls: 0.0059  d1.loss_bbox: 0.1585  d1.loss_iou: 0.1651  d2.loss_cls: 0.0062  d2.loss_bbox: 0.1510  d2.loss_iou: 0.1621  d3.loss_cls: 0.0067  d3.loss_bbox: 0.1525  d3.loss_iou: 0.1611  d4.loss_cls: 0.0077  d4.loss_bbox: 0.1540  d4.loss_iou: 0.1640  enc_loss_cls: 0.0634  enc_loss_bbox: 0.1851  enc_loss_iou: 0.1869
+11/05 14:50:58 - mmengine - INFO - Epoch(train) [11][100/252]  lr: 1.0000e-05  eta: 0:02:28  time: 0.3541  data_time: 0.0037  memory: 2876  grad_norm: 16.9920  loss: 3.0753  loss_cls: 0.1166  loss_bbox: 0.1611  loss_iou: 0.1263  d0.loss_cls: 0.0105  d0.loss_bbox: 0.2860  d0.loss_iou: 0.1640  d1.loss_cls: 0.0048  d1.loss_bbox: 0.2962  d1.loss_iou: 0.1694  d2.loss_cls: 0.1217  d2.loss_bbox: 0.1656  d2.loss_iou: 0.1283  d3.loss_cls: 0.1119  d3.loss_bbox: 0.1663  d3.loss_iou: 0.1274  d4.loss_cls: 0.1243  d4.loss_bbox: 0.1617  d4.loss_iou: 0.1283  enc_loss_cls: 0.2485  enc_loss_bbox: 0.1380  enc_loss_iou: 0.1184
+11/05 14:51:05 - mmengine - INFO - Epoch(train) [11][120/252]  lr: 1.0000e-05  eta: 0:02:20  time: 0.3533  data_time: 0.0036  memory: 2876  grad_norm: 18.2783  loss: 1.9148  loss_cls: 0.0202  loss_bbox: 0.0946  loss_iou: 0.1030  d0.loss_cls: 0.0396  d0.loss_bbox: 0.1146  d0.loss_iou: 0.1128  d1.loss_cls: 0.0414  d1.loss_bbox: 0.1010  d1.loss_iou: 0.1059  d2.loss_cls: 0.0236  d2.loss_bbox: 0.0982  d2.loss_iou: 0.1011  d3.loss_cls: 0.0219  d3.loss_bbox: 0.0945  d3.loss_iou: 0.1011  d4.loss_cls: 0.0183  d4.loss_bbox: 0.0944  d4.loss_iou: 0.1027  enc_loss_cls: 0.2875  enc_loss_bbox: 0.1163  enc_loss_iou: 0.1220
+11/05 14:51:12 - mmengine - INFO - Epoch(train) [11][140/252]  lr: 1.0000e-05  eta: 0:02:13  time: 0.3627  data_time: 0.0036  memory: 2876  grad_norm: 33.2103  loss: 2.2531  loss_cls: 0.0158  loss_bbox: 0.1482  loss_iou: 0.1580  d0.loss_cls: 0.0165  d0.loss_bbox: 0.1437  d0.loss_iou: 0.1548  d1.loss_cls: 0.0166  d1.loss_bbox: 0.1477  d1.loss_iou: 0.1546  d2.loss_cls: 0.0096  d2.loss_bbox: 0.1472  d2.loss_iou: 0.1563  d3.loss_cls: 0.0105  d3.loss_bbox: 0.1474  d3.loss_iou: 0.1568  d4.loss_cls: 0.0153  d4.loss_bbox: 0.1481  d4.loss_iou: 0.1579  enc_loss_cls: 0.0444  enc_loss_bbox: 0.1460  enc_loss_iou: 0.1578
+11/05 14:51:19 - mmengine - INFO - Epoch(train) [11][160/252]  lr: 1.0000e-05  eta: 0:02:06  time: 0.3643  data_time: 0.0035  memory: 3154  grad_norm: 28.0676  loss: 4.8822  loss_cls: 0.2088  loss_bbox: 0.2020  loss_iou: 0.2989  d0.loss_cls: 0.2242  d0.loss_bbox: 0.2029  d0.loss_iou: 0.3238  d1.loss_cls: 0.1883  d1.loss_bbox: 0.2003  d1.loss_iou: 0.2978  d2.loss_cls: 0.2092  d2.loss_bbox: 0.1998  d2.loss_iou: 0.2982  d3.loss_cls: 0.2259  d3.loss_bbox: 0.2012  d3.loss_iou: 0.2983  d4.loss_cls: 0.1993  d4.loss_bbox: 0.2023  d4.loss_iou: 0.2991  enc_loss_cls: 0.1135  enc_loss_bbox: 0.1910  enc_loss_iou: 0.2973
+11/05 14:51:27 - mmengine - INFO - Epoch(train) [11][180/252]  lr: 1.0000e-05  eta: 0:01:58  time: 0.3990  data_time: 0.0035  memory: 2958  grad_norm: 29.4170  loss: 2.0170  loss_cls: 0.0182  loss_bbox: 0.1357  loss_iou: 0.1147  d0.loss_cls: 0.0227  d0.loss_bbox: 0.1450  d0.loss_iou: 0.1168  d1.loss_cls: 0.0155  d1.loss_bbox: 0.1380  d1.loss_iou: 0.1139  d2.loss_cls: 0.0197  d2.loss_bbox: 0.1348  d2.loss_iou: 0.1135  d3.loss_cls: 0.0175  d3.loss_bbox: 0.1362  d3.loss_iou: 0.1151  d4.loss_cls: 0.0146  d4.loss_bbox: 0.1354  d4.loss_iou: 0.1140  enc_loss_cls: 0.0884  enc_loss_bbox: 0.1746  enc_loss_iou: 0.1326
+11/05 14:51:34 - mmengine - INFO - Epoch(train) [11][200/252]  lr: 1.0000e-05  eta: 0:01:51  time: 0.3695  data_time: 0.0035  memory: 3107  grad_norm: 20.0062  loss: 2.9886  loss_cls: 0.0697  loss_bbox: 0.1260  loss_iou: 0.1829  d0.loss_cls: 0.1184  d0.loss_bbox: 0.1400  d0.loss_iou: 0.1839  d1.loss_cls: 0.1162  d1.loss_bbox: 0.1274  d1.loss_iou: 0.1793  d2.loss_cls: 0.0792  d2.loss_bbox: 0.1417  d2.loss_iou: 0.1864  d3.loss_cls: 0.0766  d3.loss_bbox: 0.1396  d3.loss_iou: 0.1858  d4.loss_cls: 0.0801  d4.loss_bbox: 0.1278  d4.loss_iou: 0.1836  enc_loss_cls: 0.2073  enc_loss_bbox: 0.1438  enc_loss_iou: 0.1927
+11/05 14:51:42 - mmengine - INFO - Epoch(train) [11][220/252]  lr: 1.0000e-05  eta: 0:01:44  time: 0.3679  data_time: 0.0035  memory: 2958  grad_norm: 14.0750  loss: 1.7432  loss_cls: 0.0061  loss_bbox: 0.1226  loss_iou: 0.1140  d0.loss_cls: 0.0177  d0.loss_bbox: 0.1259  d0.loss_iou: 0.1117  d1.loss_cls: 0.0145  d1.loss_bbox: 0.1242  d1.loss_iou: 0.1150  d2.loss_cls: 0.0112  d2.loss_bbox: 0.1248  d2.loss_iou: 0.1156  d3.loss_cls: 0.0055  d3.loss_bbox: 0.1235  d3.loss_iou: 0.1141  d4.loss_cls: 0.0057  d4.loss_bbox: 0.1227  d4.loss_iou: 0.1140  enc_loss_cls: 0.0166  enc_loss_bbox: 0.1301  enc_loss_iou: 0.1077
+11/05 14:51:49 - mmengine - INFO - Epoch(train) [11][240/252]  lr: 1.0000e-05  eta: 0:01:36  time: 0.3746  data_time: 0.0035  memory: 2958  grad_norm: 20.5869  loss: 3.4209  loss_cls: 0.0769  loss_bbox: 0.1584  loss_iou: 0.2458  d0.loss_cls: 0.0846  d0.loss_bbox: 0.1491  d0.loss_iou: 0.2429  d1.loss_cls: 0.0779  d1.loss_bbox: 0.1499  d1.loss_iou: 0.2396  d2.loss_cls: 0.0753  d2.loss_bbox: 0.1547  d2.loss_iou: 0.2419  d3.loss_cls: 0.0788  d3.loss_bbox: 0.1564  d3.loss_iou: 0.2429  d4.loss_cls: 0.0774  d4.loss_bbox: 0.1579  d4.loss_iou: 0.2440  enc_loss_cls: 0.1838  enc_loss_bbox: 0.1346  enc_loss_iou: 0.2481
+11/05 14:51:54 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:51:54 - mmengine - INFO - Saving checkpoint at 11 epochs
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 14:52:04 - mmengine - INFO - Epoch(train) [12][ 20/252]  lr: 1.0000e-05  eta: 0:01:25  time: 0.3765  data_time: 0.0037  memory: 3107  grad_norm: 21.5694  loss: 2.3221  loss_cls: 0.0556  loss_bbox: 0.1057  loss_iou: 0.1066  d0.loss_cls: 0.1675  d0.loss_bbox: 0.1197  d0.loss_iou: 0.1191  d1.loss_cls: 0.0653  d1.loss_bbox: 0.1135  d1.loss_iou: 0.1128  d2.loss_cls: 0.0661  d2.loss_bbox: 0.1092  d2.loss_iou: 0.1110  d3.loss_cls: 0.0605  d3.loss_bbox: 0.1071  d3.loss_iou: 0.1077  d4.loss_cls: 0.0532  d4.loss_bbox: 0.1056  d4.loss_iou: 0.1053  enc_loss_cls: 0.1932  enc_loss_bbox: 0.1762  enc_loss_iou: 0.1612
+11/05 14:52:11 - mmengine - INFO - Epoch(train) [12][ 40/252]  lr: 1.0000e-05  eta: 0:01:17  time: 0.3582  data_time: 0.0036  memory: 2936  grad_norm: 15.1588  loss: 2.8360  loss_cls: 0.0011  loss_bbox: 0.2401  loss_iou: 0.1490  d0.loss_cls: 0.0450  d0.loss_bbox: 0.2343  d0.loss_iou: 0.1480  d1.loss_cls: 0.0162  d1.loss_bbox: 0.2376  d1.loss_iou: 0.1472  d2.loss_cls: 0.0010  d2.loss_bbox: 0.2388  d2.loss_iou: 0.1485  d3.loss_cls: 0.0008  d3.loss_bbox: 0.2404  d3.loss_iou: 0.1490  d4.loss_cls: 0.0008  d4.loss_bbox: 0.2404  d4.loss_iou: 0.1499  enc_loss_cls: 0.0839  enc_loss_bbox: 0.2253  enc_loss_iou: 0.1387
+11/05 14:52:18 - mmengine - INFO - Epoch(train) [12][ 60/252]  lr: 1.0000e-05  eta: 0:01:10  time: 0.3719  data_time: 0.0036  memory: 3107  grad_norm: 35.8870  loss: 4.4322  loss_cls: 0.0880  loss_bbox: 0.2548  loss_iou: 0.2528  d0.loss_cls: 0.1322  d0.loss_bbox: 0.2559  d0.loss_iou: 0.2554  d1.loss_cls: 0.1262  d1.loss_bbox: 0.2579  d1.loss_iou: 0.2558  d2.loss_cls: 0.1146  d2.loss_bbox: 0.2534  d2.loss_iou: 0.2528  d3.loss_cls: 0.0946  d3.loss_bbox: 0.2540  d3.loss_iou: 0.2535  d4.loss_cls: 0.0832  d4.loss_bbox: 0.2552  d4.loss_iou: 0.2537  enc_loss_cls: 0.2129  enc_loss_bbox: 0.2594  enc_loss_iou: 0.2659
+11/05 14:52:25 - mmengine - INFO - Epoch(train) [12][ 80/252]  lr: 1.0000e-05  eta: 0:01:03  time: 0.3643  data_time: 0.0037  memory: 3107  grad_norm: 23.0054  loss: 2.8530  loss_cls: 0.0089  loss_bbox: 0.1478  loss_iou: 0.2491  d0.loss_cls: 0.0139  d0.loss_bbox: 0.1435  d0.loss_iou: 0.2526  d1.loss_cls: 0.0078  d1.loss_bbox: 0.1482  d1.loss_iou: 0.2441  d2.loss_cls: 0.0059  d2.loss_bbox: 0.1483  d2.loss_iou: 0.2482  d3.loss_cls: 0.0055  d3.loss_bbox: 0.1475  d3.loss_iou: 0.2468  d4.loss_cls: 0.0069  d4.loss_bbox: 0.1474  d4.loss_iou: 0.2471  enc_loss_cls: 0.0298  enc_loss_bbox: 0.1489  enc_loss_iou: 0.2548
+11/05 14:52:32 - mmengine - INFO - Epoch(train) [12][100/252]  lr: 1.0000e-05  eta: 0:00:55  time: 0.3505  data_time: 0.0036  memory: 3107  grad_norm: 9.1063  loss: 1.9908  loss_cls: 0.0029  loss_bbox: 0.1436  loss_iou: 0.1251  d0.loss_cls: 0.0064  d0.loss_bbox: 0.1508  d0.loss_iou: 0.1304  d1.loss_cls: 0.0042  d1.loss_bbox: 0.1494  d1.loss_iou: 0.1297  d2.loss_cls: 0.0035  d2.loss_bbox: 0.1417  d2.loss_iou: 0.1251  d3.loss_cls: 0.0036  d3.loss_bbox: 0.1427  d3.loss_iou: 0.1255  d4.loss_cls: 0.0027  d4.loss_bbox: 0.1431  d4.loss_iou: 0.1249  enc_loss_cls: 0.0157  enc_loss_bbox: 0.1695  enc_loss_iou: 0.1502
+11/05 14:52:40 - mmengine - INFO - Epoch(train) [12][120/252]  lr: 1.0000e-05  eta: 0:00:48  time: 0.3599  data_time: 0.0036  memory: 2876  grad_norm: 21.9433  loss: 2.8808  loss_cls: 0.1153  loss_bbox: 0.0997  loss_iou: 0.2004  d0.loss_cls: 0.0868  d0.loss_bbox: 0.1012  d0.loss_iou: 0.1960  d1.loss_cls: 0.1009  d1.loss_bbox: 0.1025  d1.loss_iou: 0.1967  d2.loss_cls: 0.1207  d2.loss_bbox: 0.1023  d2.loss_iou: 0.1931  d3.loss_cls: 0.1156  d3.loss_bbox: 0.1024  d3.loss_iou: 0.1968  d4.loss_cls: 0.1240  d4.loss_bbox: 0.0997  d4.loss_iou: 0.1980  enc_loss_cls: 0.0897  enc_loss_bbox: 0.1172  enc_loss_iou: 0.2218
+11/05 14:52:47 - mmengine - INFO - Epoch(train) [12][140/252]  lr: 1.0000e-05  eta: 0:00:41  time: 0.3568  data_time: 0.0036  memory: 3154  grad_norm: 18.3751  loss: 2.0928  loss_cls: 0.0256  loss_bbox: 0.1486  loss_iou: 0.1229  d0.loss_cls: 0.0113  d0.loss_bbox: 0.1472  d0.loss_iou: 0.1263  d1.loss_cls: 0.0120  d1.loss_bbox: 0.1477  d1.loss_iou: 0.1263  d2.loss_cls: 0.0195  d2.loss_bbox: 0.1490  d2.loss_iou: 0.1243  d3.loss_cls: 0.0184  d3.loss_bbox: 0.1497  d3.loss_iou: 0.1249  d4.loss_cls: 0.0234  d4.loss_bbox: 0.1487  d4.loss_iou: 0.1234  enc_loss_cls: 0.0353  enc_loss_bbox: 0.1661  enc_loss_iou: 0.1421
+11/05 14:52:54 - mmengine - INFO - Epoch(train) [12][160/252]  lr: 1.0000e-05  eta: 0:00:33  time: 0.3714  data_time: 0.0037  memory: 3107  grad_norm: 26.0858  loss: 3.2675  loss_cls: 0.0524  loss_bbox: 0.1545  loss_iou: 0.2491  d0.loss_cls: 0.1341  d0.loss_bbox: 0.1360  d0.loss_iou: 0.2246  d1.loss_cls: 0.0711  d1.loss_bbox: 0.1508  d1.loss_iou: 0.2448  d2.loss_cls: 0.0476  d2.loss_bbox: 0.1530  d2.loss_iou: 0.2464  d3.loss_cls: 0.0453  d3.loss_bbox: 0.1565  d3.loss_iou: 0.2508  d4.loss_cls: 0.0495  d4.loss_bbox: 0.1546  d4.loss_iou: 0.2502  enc_loss_cls: 0.0802  enc_loss_bbox: 0.1629  enc_loss_iou: 0.2529
+11/05 14:53:02 - mmengine - INFO - Epoch(train) [12][180/252]  lr: 1.0000e-05  eta: 0:00:26  time: 0.3863  data_time: 0.0036  memory: 3107  grad_norm: 16.6382  loss: 2.0560  loss_cls: 0.0257  loss_bbox: 0.1203  loss_iou: 0.1410  d0.loss_cls: 0.0324  d0.loss_bbox: 0.1240  d0.loss_iou: 0.1446  d1.loss_cls: 0.0320  d1.loss_bbox: 0.1200  d1.loss_iou: 0.1405  d2.loss_cls: 0.0229  d2.loss_bbox: 0.1201  d2.loss_iou: 0.1404  d3.loss_cls: 0.0260  d3.loss_bbox: 0.1196  d3.loss_iou: 0.1401  d4.loss_cls: 0.0266  d4.loss_bbox: 0.1200  d4.loss_iou: 0.1410  enc_loss_cls: 0.0363  enc_loss_bbox: 0.1279  enc_loss_iou: 0.1545
+11/05 14:53:09 - mmengine - INFO - Epoch(train) [12][200/252]  lr: 1.0000e-05  eta: 0:00:19  time: 0.3822  data_time: 0.0037  memory: 3273  grad_norm: 22.6676  loss: 1.4635  loss_cls: 0.0144  loss_bbox: 0.1009  loss_iou: 0.0829  d0.loss_cls: 0.0131  d0.loss_bbox: 0.1060  d0.loss_iou: 0.0869  d1.loss_cls: 0.0156  d1.loss_bbox: 0.1040  d1.loss_iou: 0.0890  d2.loss_cls: 0.0186  d2.loss_bbox: 0.1059  d2.loss_iou: 0.0867  d3.loss_cls: 0.0171  d3.loss_bbox: 0.0991  d3.loss_iou: 0.0814  d4.loss_cls: 0.0142  d4.loss_bbox: 0.1006  d4.loss_iou: 0.0825  enc_loss_cls: 0.0350  enc_loss_bbox: 0.1120  enc_loss_iou: 0.0975
+11/05 14:53:16 - mmengine - INFO - Epoch(train) [12][220/252]  lr: 1.0000e-05  eta: 0:00:11  time: 0.3477  data_time: 0.0036  memory: 3107  grad_norm: 23.7240  loss: 1.8976  loss_cls: 0.1238  loss_bbox: 0.0958  loss_iou: 0.0470  d0.loss_cls: 0.1025  d0.loss_bbox: 0.1147  d0.loss_iou: 0.0583  d1.loss_cls: 0.1078  d1.loss_bbox: 0.1011  d1.loss_iou: 0.0546  d2.loss_cls: 0.1117  d2.loss_bbox: 0.0971  d2.loss_iou: 0.0508  d3.loss_cls: 0.1093  d3.loss_bbox: 0.0982  d3.loss_iou: 0.0487  d4.loss_cls: 0.1092  d4.loss_bbox: 0.0962  d4.loss_iou: 0.0477  enc_loss_cls: 0.1682  enc_loss_bbox: 0.0952  enc_loss_iou: 0.0597
+11/05 14:53:19 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:53:24 - mmengine - INFO - Epoch(train) [12][240/252]  lr: 1.0000e-05  eta: 0:00:04  time: 0.3543  data_time: 0.0036  memory: 3057  grad_norm: 27.6487  loss: 3.7141  loss_cls: 0.2061  loss_bbox: 0.1313  loss_iou: 0.1706  d0.loss_cls: 0.2004  d0.loss_bbox: 0.1303  d0.loss_iou: 0.1681  d1.loss_cls: 0.2167  d1.loss_bbox: 0.1330  d1.loss_iou: 0.1712  d2.loss_cls: 0.2297  d2.loss_bbox: 0.1354  d2.loss_iou: 0.1723  d3.loss_cls: 0.2104  d3.loss_bbox: 0.1313  d3.loss_iou: 0.1710  d4.loss_cls: 0.2194  d4.loss_bbox: 0.1312  d4.loss_iou: 0.1720  enc_loss_cls: 0.2800  enc_loss_bbox: 0.1478  enc_loss_iou: 0.1859
+11/05 14:53:28 - mmengine - INFO - Exp name: 20261105_143422
+11/05 14:53:28 - mmengine - INFO - Saving checkpoint at 12 epochs

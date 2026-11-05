@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "engineering_only": false,
+  "measurement": "training wall time",
+  "rank": 1,
+  "world_size": 4,
+  "iterations": 3024,
+  "warmup": 0,
+  "steady_seconds": 1133.2052865531296,
+  "steady_images": 3024,
+  "p50_seconds": 0.3526133659761399,
+  "p95_seconds": 0.475653967593098,
+  "optimizer_steps": 3021,
+  "expected_optimizer_steps": 3024,
+  "amp_skipped_steps": 3,
+  "frozen_parameters_unchanged": true,
+  "changed_lora_tensors": 48,
+  "gradient_checks": [
+    {
+      "iteration": 0,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 0,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 1,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 1,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 2,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 2,
+      "finite": true,
+      "nonzero": true
+    }
+  ],
+  "lora_sha256": "855a64b807a2fde7dc87df7674ec09b3f670136bbbaf95f45b5874838bfa6bfb",
+  "peak_allocated_bytes": 3442390528,
+  "peak_reserved_bytes": 3888119808,
+  "trainable_parameters": 688128,
+  "total_parameters": 173600278,
+  "loader_length": 252,
+  "elapsed_seconds": 1142.3079255719204
+}

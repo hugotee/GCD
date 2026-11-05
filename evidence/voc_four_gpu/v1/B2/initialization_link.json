@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "formal_B1_checkpoint_sha256": "2da2f87ff7fdd33dcd213c3f8ec9bb42d4d7b80044c355b23466c90676dd737e",
+  "formal_B2_checkpoint_sha256": "8686f4313d7f88cd74d218db87815ba2e4808f819b2c24dba92172862c8ed8e1",
+  "all_four_ranks_started_exactly_from_B1": true,
+  "optimizer_reset_between_phases": true
+}
