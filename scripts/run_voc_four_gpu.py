@@ -30,6 +30,16 @@ def check_training(path,world):
     return audits
 
 
+def check_profile(audits):
+    """AMP may skip synchronized updates; never count them as successful ones."""
+    for audit in audits:
+        assert audit['passed'] and audit['iterations']==200
+        assert audit['expected_optimizer_steps']==200
+        assert audit['optimizer_steps']+audit['amp_skipped_steps']==200
+        assert 0<=audit['amp_skipped_steps']<=10
+    assert len({a['optimizer_steps'] for a in audits})==1
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--runtime',type=Path,required=True)
@@ -37,6 +47,7 @@ def main():
     p.add_argument('--gpus',default='0,1,2,3')
     p.add_argument('--out',type=Path,required=True)
     p.add_argument('--code-commit',required=True)
+    p.add_argument('--continue-checked',action='store_true',help='Reuse only completed, fully audited stages; never restart an incomplete native run')
     a=p.parse_args()
     runtime=read_runtime(a.runtime);gpus=validate_gpus(a.gpus,runtime['authorized_gpus'])
     assert len(gpus)==4
@@ -50,21 +61,34 @@ def main():
     b0=read(b0_source)
     assert b0['model']=='B0' and not b0['engineering_only']
     assert b0['provenance']['evaluation_ann_sha256']==manifest['test']['sha256']
-    a.out=a.out.resolve();a.out.mkdir(parents=True,exist_ok=False)
-    (a.out/'results/B0').mkdir(parents=True)
-    shutil.copy2(b0_source,a.out/'results/B0/summary.json')
-    write_json(a.out/'B0_reuse.json',dict(source=str(b0_source),sha256=sha256(b0_source),
-        note='Reuse the completed fresh 4952-image frozen run; no new B0 inference.'))
+    a.out=a.out.resolve()
     sources=list((ROOT/'src/gcd').glob('*.py'))+[ROOT/'scripts/run.py',Path(__file__).resolve(),
         ROOT/'scripts/evaluate.py',ROOT/'configs/model/gdino_t.py',a.experiment.resolve()]
-    for source in sources:
-        target=a.out/'source_snapshot'/source.relative_to(ROOT)
-        target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,target)
-    write_json(a.out/'job_identity.json',dict(code_commit=a.code_commit,physical_gpus=gpus,
-        world_size=4,effective_batch=4,manifest_sha256=sha256(runtime['manifest']),
-        experiment_sha256=sha256(a.experiment),pretrained_sha256=runtime['pretrained_sha256'],
-        source_sha256={str(s.relative_to(ROOT)):sha256(s) for s in sources},
-        sampler_note='Native distributed sampler pads Task1 by 3 and Task2 by 2 image exposures per epoch.'))
+    if a.continue_checked:
+        identity=read(a.out/'job_identity.json')
+        assert identity['manifest_sha256']==sha256(runtime['manifest']) and identity['experiment_sha256']==sha256(a.experiment)
+        for source in sources:
+            if source != Path(__file__).resolve():
+                assert sha256(source)==identity['source_sha256'][str(source.relative_to(ROOT))]
+        recovery=a.out/'driver_recovery';recovery.mkdir(exist_ok=False)
+        shutil.copy2(a.out/'job_status.json',recovery/'previous_job_status.json')
+        shutil.copy2(__file__,recovery/'run_voc_four_gpu.py')
+        write_json(recovery/'identity.json',dict(code_commit=a.code_commit,driver_sha256=sha256(__file__),
+            note='Record AMP skips and reuse completed audited native runs. Original snapshots and logs preserved.'))
+    else:
+        a.out.mkdir(parents=True,exist_ok=False)
+        (a.out/'results/B0').mkdir(parents=True)
+        shutil.copy2(b0_source,a.out/'results/B0/summary.json')
+        write_json(a.out/'B0_reuse.json',dict(source=str(b0_source),sha256=sha256(b0_source),
+            note='Reuse the completed fresh 4952-image frozen run; no new B0 inference.'))
+        for source in sources:
+            target=a.out/'source_snapshot'/source.relative_to(ROOT)
+            target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,target)
+        write_json(a.out/'job_identity.json',dict(code_commit=a.code_commit,physical_gpus=gpus,
+            world_size=4,effective_batch=4,manifest_sha256=sha256(runtime['manifest']),
+            experiment_sha256=sha256(a.experiment),pretrained_sha256=runtime['pretrained_sha256'],
+            source_sha256={str(s.relative_to(ROOT)):sha256(s) for s in sources},
+            sampler_note='Native distributed sampler pads Task1 by 3 and Task2 by 2 image exposures per epoch.'))
     stages=[]
     for mode in ['smoke','profile']:
         for phase in ['task1','task2']:
@@ -74,6 +98,15 @@ def main():
                ('B2_eval','eval','task2'),('B2_metrics','metrics','task2')]
     records=[];started=time.perf_counter()
     for name,mode,phase in stages:
+        if a.continue_checked and (a.out/name/'run_complete.json').exists():
+            if mode in ['train','smoke','profile']:
+                audits=check_training(a.out/name,4)
+                if mode=='smoke':assert read(a.out/name/'reload_check.json')['predictions_exact']
+                if mode=='profile':check_profile(audits)
+            elif mode=='eval':assert read(a.out/name/'initialization_audit.json')['checkpoint_tensors_exact']
+            records.append(dict(stage=name,passed=True,elapsed_seconds=None,reused_completed_stage=True))
+            write_json(a.out/'milestones.json',records)
+            continue
         if mode=='metrics':
             model='B1' if phase=='task1' else 'B2'
             command=[sys.executable,str(ROOT/'scripts/evaluate.py'),'--manifest',runtime['manifest'],
@@ -117,7 +150,7 @@ def main():
             audits=check_training(a.out/name,4)
             if mode=='smoke':assert read(a.out/name/'reload_check.json')['predictions_exact']
             if mode=='profile':
-                assert all(x['iterations']==200 and x['optimizer_steps']==200 for x in audits)
+                check_profile(audits)
         elif mode=='eval':
             assert read(a.out/name/'run_complete.json')['passed']
             assert read(a.out/name/'initialization_audit.json')['checkpoint_tensors_exact']
@@ -129,7 +162,8 @@ def main():
         epochs_per_stage=12,groups_B0=b0['groups'],groups_B1=b1['groups'],groups_B2=b2['groups'],
         old_forgetting={m:b1['groups']['old15'][m]-b2['groups']['old15'][m] for m in b1['groups']['old15']},
         new_adaptation={m:b2['groups']['new5'][m]-b1['groups']['new5'][m] for m in b1['groups']['new5']},
-        elapsed_seconds=time.perf_counter()-started,stages=records)
+        elapsed_seconds=time.perf_counter()-started,stages=records,
+        elapsed_note='Current controller invocation; recovered short checks are excluded.' if a.continue_checked else 'Whole controller invocation')
     write_json(a.out/'summary.json',summary)
     write_json(a.out/'job_complete.json',dict(passed=True,engineering_only=False,elapsed_seconds=time.perf_counter()-started))
     write_json(a.out/'job_status.json',dict(stage='complete',status='passed',completed=records))
