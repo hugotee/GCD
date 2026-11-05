@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "engineering_only": false,
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "fresh_formal_training_and_evaluation": true,
+  "B0_reused_from_completed_fresh_run": true,
+  "source_snapshot_hashes_exact": true,
+  "driver_recovery_identity_preserved": true,
+  "standard_per_class_and_group_metrics_agree": true,
+  "all_evaluated_image_ids_exact": true,
+  "training": {
+    "B1": {
+      "phase": "task1",
+      "epochs": 12,
+      "microsteps_per_rank": 13428,
+      "global_optimizer_updates": 13423,
+      "amp_skips": 5,
+      "image_exposures_all_ranks": 53712,
+      "max_rank_training_seconds": 4998.573246230953,
+      "max_peak_allocated_gib": 3.112255573272705,
+      "all_four_rank_adapter_states_exact": true,
+      "checkpoint_sha256": "2da2f87ff7fdd33dcd213c3f8ec9bb42d4d7b80044c355b23466c90676dd737e"
+    },
+    "B2": {
+      "phase": "task2",
+      "epochs": 12,
+      "microsteps_per_rank": 3024,
+      "global_optimizer_updates": 3021,
+      "amp_skips": 3,
+      "image_exposures_all_ranks": 12096,
+      "max_rank_training_seconds": 1142.3079255719204,
+      "max_peak_allocated_gib": 3.2165918350219727,
+      "all_four_rank_adapter_states_exact": true,
+      "checkpoint_sha256": "8686f4313d7f88cd74d218db87815ba2e4808f819b2c24dba92172862c8ed8e1"
+    }
+  },
+  "old_forgetting_VOC07_AP50": 25.46107280845314,
+  "new_adaptation_VOC07_AP50": 1.5298987827793553,
+  "controller_formal_train_eval_seconds": 7302.574735887931,
+  "controller_scope": "Current controller invocation; recovered short checks are excluded.",
+  "project_background_jobs_running": false
+}

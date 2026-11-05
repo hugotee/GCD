@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "engineering_only": false,
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "world_size": 4,
+  "effective_batch": 4,
+  "epochs_per_stage": 12,
+  "groups_B0": {
+    "old15": {
+      "VOC07_AP50": 77.02050578169315,
+      "COCO_AP50": 81.01301790433119,
+      "COCO_AP": 66.02999675833702
+    },
+    "new5": {
+      "VOC07_AP50": 70.2854072752742,
+      "COCO_AP50": 72.47854795037206,
+      "COCO_AP": 59.740081707162304
+    },
+    "all20": {
+      "VOC07_AP50": 75.33673115508842,
+      "COCO_AP50": 78.8794004158414,
+      "COCO_AP": 64.45751799554334
+    }
+  },
+  "groups_B1": {
+    "old15": {
+      "VOC07_AP50": 90.38702291179747,
+      "COCO_AP50": 95.87916977558028,
+      "COCO_AP": 81.92760923302222
+    },
+    "new5": {
+      "VOC07_AP50": 80.95383348278482,
+      "COCO_AP50": 84.38221066068233,
+      "COCO_AP": 71.03349417845916
+    },
+    "all20": {
+      "VOC07_AP50": 88.02872555454431,
+      "COCO_AP50": 93.00492999685581,
+      "COCO_AP": 79.20408046938147
+    }
+  },
+  "groups_B2": {
+    "old15": {
+      "VOC07_AP50": 64.92595010334433,
+      "COCO_AP50": 66.99906620045645,
+      "COCO_AP": 55.574528249876344
+    },
+    "new5": {
+      "VOC07_AP50": 82.48373226556417,
+      "COCO_AP50": 86.63334541668473,
+      "COCO_AP": 72.23911219803121
+    },
+    "all20": {
+      "VOC07_AP50": 69.3153956438993,
+      "COCO_AP50": 71.90763600451355,
+      "COCO_AP": 59.74067423691505
+    }
+  },
+  "old_forgetting": {
+    "VOC07_AP50": 25.46107280845314,
+    "COCO_AP50": 28.880103575123826,
+    "COCO_AP": 26.35308098314588
+  },
+  "new_adaptation": {
+    "VOC07_AP50": 1.5298987827793553,
+    "COCO_AP50": 2.2511347560024006,
+    "COCO_AP": 1.205618019572043
+  },
+  "elapsed_seconds": 7302.574735887931,
+  "stages": [
+    {
+      "stage": "smoke_task1",
+      "passed": true,
+      "elapsed_seconds": null,
+      "reused_completed_stage": true
+    },
+    {
+      "stage": "smoke_task2",
+      "passed": true,
+      "elapsed_seconds": null,
+      "reused_completed_stage": true
+    },
+    {
+      "stage": "profile_task1",
+      "passed": true,
+      "elapsed_seconds": null,
+      "reused_completed_stage": true
+    },
+    {
+      "stage": "profile_task2",
+      "passed": true,
+      "elapsed_seconds": null,
+      "reused_completed_stage": true
+    },
+    {
+      "stage": "B1",
+      "passed": true,
+      "elapsed_seconds": 5026.775236596004
+    },
+    {
+      "stage": "B2",
+      "passed": true,
+      "elapsed_seconds": 1172.9816410390195
+    },
+    {
+      "stage": "B1_eval",
+      "passed": true,
+      "elapsed_seconds": 462.35798905103
+    },
+    {
+      "stage": "B1_metrics",
+      "passed": true,
+      "elapsed_seconds": 116.19047861394938
+    },
+    {
+      "stage": "B2_eval",
+      "passed": true,
+      "elapsed_seconds": 422.3269243609393
+    },
+    {
+      "stage": "B2_metrics",
+      "passed": true,
+      "elapsed_seconds": 101.65567915106658
+    }
+  ],
+  "elapsed_note": "Current controller invocation; recovered short checks are excluded."
+}

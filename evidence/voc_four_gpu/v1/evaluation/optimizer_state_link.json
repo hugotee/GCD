@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "states": {
+    "B1": {
+      "optimizer_step_counts": [
+        13423
+      ],
+      "expected_from_training_audit": 13423,
+      "amp_scale": 128.0
+    },
+    "B2": {
+      "optimizer_step_counts": [
+        3021
+      ],
+      "expected_from_training_audit": 3021,
+      "amp_scale": 16.0
+    }
+  },
+  "B2_uses_B1_model_weights": true,
+  "B2_optimizer_started_fresh": true
+}
