@@ -1,0 +1,61 @@
+Traceback (most recent call last):
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/home/data/dq/miniconda3/lib/python3.10/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/data/dq/miniconda3/lib/python3.10/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/data/dq/miniconda3/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/data/dq/miniconda3/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/home/data/dq/miniconda3/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/home/data/dq/miniconda3/lib/python3.10/http/client.py", line 1455, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "/home/data/dq/miniconda3/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/data/dq/miniconda3/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/data/dq/miniconda3/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/data/dq/gcd-ciod-20261104/scripts/download_coco2017.py", line 151, in <module>
+    if __name__ == '__main__': main()
+  File "/home/data/dq/gcd-ciod-20261104/scripts/download_coco2017.py", line 145, in main
+    name = pending[future]; results[name] = future.result()
+  File "/home/data/dq/miniconda3/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/home/data/dq/miniconda3/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/data/dq/miniconda3/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/data/dq/gcd-ciod-20261104/scripts/download_coco2017.py", line 42, in download
+    with urllib.request.urlopen(urllib.request.Request(url, method='HEAD'), timeout=30) as response:
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 557, in error
+    result = self._call_chain(*args)
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 749, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/home/data/dq/miniconda3/lib/python3.10/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 104] Connection reset by peer>

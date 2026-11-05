@@ -1,0 +1,15 @@
+{
+  "url": "https://hf-mirror.com/datasets/pcuenq/coco-2017-mirror/resolve/fbbee70f52f540987cca6936c9f1d7b1ff969ad1/val2017.zip",
+  "bytes": 815585330,
+  "etag": "\"cae5bf8fdd565c46ebc0113298556371d0e23889dddce1c5ec08dc54e99dbfcb\"",
+  "chunk_bytes": 67108864,
+  "sha256": "4f7e2ccb2866ec5041993c9cf2a952bbed69647b115d0f74da7ce8f4bef82f05",
+  "md5": "442b8da7639aecaf257c1dceb8ba8c80",
+  "published_md5_verified": true,
+  "checksum_source": "https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/ppdet/utils/download.py",
+  "zip_crc_passed": true,
+  "extracted_files": 5000,
+  "source_page": "https://cocodataset.org/#download",
+  "transport": "hf-mirror",
+  "transport_note": "Official bytes verified against published archive MD5; optional mirror uses a fixed repository revision."
+}

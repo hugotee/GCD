@@ -1,0 +1,50 @@
+{
+  "completed": {
+    "annotations_trainval2017.zip": {
+      "url": "https://hf-mirror.com/datasets/pcuenq/coco-2017-mirror/resolve/fbbee70f52f540987cca6936c9f1d7b1ff969ad1/annotations_trainval2017.zip",
+      "bytes": 252907541,
+      "etag": "\"d4136f39c9f42d4f7fe6a15eb44dd9f83297a1f7bff0707a602dad42aa8909b2\"",
+      "chunk_bytes": 67108864,
+      "sha256": "113a836d90195ee1f884e704da6304dfaaecff1f023f49b6ca93c4aaae470268",
+      "md5": "f4bbac642086de4f52a3fdda2de5fa2c",
+      "published_md5_verified": true,
+      "checksum_source": "https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/ppdet/utils/download.py",
+      "zip_crc_passed": true,
+      "extracted_files": 2,
+      "source_page": "https://cocodataset.org/#download",
+      "transport": "hf-mirror",
+      "transport_note": "Official bytes verified against published archive MD5; optional mirror uses a fixed repository revision."
+    },
+    "val2017.zip": {
+      "url": "https://hf-mirror.com/datasets/pcuenq/coco-2017-mirror/resolve/fbbee70f52f540987cca6936c9f1d7b1ff969ad1/val2017.zip",
+      "bytes": 815585330,
+      "etag": "\"cae5bf8fdd565c46ebc0113298556371d0e23889dddce1c5ec08dc54e99dbfcb\"",
+      "chunk_bytes": 67108864,
+      "sha256": "4f7e2ccb2866ec5041993c9cf2a952bbed69647b115d0f74da7ce8f4bef82f05",
+      "md5": "442b8da7639aecaf257c1dceb8ba8c80",
+      "published_md5_verified": true,
+      "checksum_source": "https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/ppdet/utils/download.py",
+      "zip_crc_passed": true,
+      "extracted_files": 5000,
+      "source_page": "https://cocodataset.org/#download",
+      "transport": "hf-mirror",
+      "transport_note": "Official bytes verified against published archive MD5; optional mirror uses a fixed repository revision."
+    },
+    "train2017.zip": {
+      "url": "https://hf-mirror.com/datasets/pcuenq/coco-2017-mirror/resolve/fbbee70f52f540987cca6936c9f1d7b1ff969ad1/train2017.zip",
+      "bytes": 19336861798,
+      "etag": "\"e65b3db4b5f75441acb34158066b2baf5d0f355a862e265e8447d5be8a4f2dac\"",
+      "chunk_bytes": 67108864,
+      "sha256": "69a8bb58ea5f8f99d24875f21416de2e9ded3178e903f1f7603e283b9e06d929",
+      "md5": "cced6f7f71b7629ddf16f17bbcfab6b2",
+      "published_md5_verified": true,
+      "checksum_source": "https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/ppdet/utils/download.py",
+      "zip_crc_passed": true,
+      "extracted_files": 118287,
+      "source_page": "https://cocodataset.org/#download",
+      "transport": "hf-mirror",
+      "transport_note": "Official bytes verified against published archive MD5; optional mirror uses a fixed repository revision."
+    }
+  },
+  "elapsed_seconds": 109.29902522393968
+}
