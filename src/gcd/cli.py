@@ -114,6 +114,11 @@ def main():
             raise ValueError('Use torchrun with one process per selected GPU')
         init_dist('pytorch', backend='nccl')
     rank, world = (0, len(gpus)) if a.dry_run else (get_rank(), get_world_size())
+    if 'expected_world_size' in exp and world != exp['expected_world_size']:
+        raise ValueError('Selected world size differs from the frozen experiment')
+    effective_batch=world*exp['batch_per_gpu']*exp['accumulation']
+    if 'effective_batch' in exp and effective_batch != exp['effective_batch']:
+        raise ValueError('Effective batch differs from the frozen experiment')
     work = a.work_dir.resolve()
     if rank == 0:
         if not a.resume:
@@ -196,6 +201,8 @@ def main():
         evaluation_ann_sha256=manifest['test']['sha256'], num_queries=model.num_queries,
         mmdet_version=mmdet.__version__, mmdet_source=str(Path(mmdet.__file__).resolve()),
         seed=exp['seed'], resumed_from=str(a.resume) if a.resume else None)
+    provenance.update(world_size=world,batch_per_gpu=exp['batch_per_gpu'],
+        accumulation=exp['accumulation'],effective_batch=effective_batch)
     provenance.update(identity, run_identity_sha256=run_hash)
     if rank == 0:
         cfg.dump(str(work / 'resolved_config.py'))
