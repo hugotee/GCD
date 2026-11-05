@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checkpoint_tensors_exact": true,
+  "checkpoint_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+  "compared_tensors": 900,
+  "new_adapter_tensors": 48,
+  "ignored_checkpoint_keys": [
+    "language_model.language_backbone.body.model.embeddings.position_ids",
+    "language_model.language_backbone.body.model.pooler.dense.bias",
+    "language_model.language_backbone.body.model.pooler.dense.weight"
+  ]
+}

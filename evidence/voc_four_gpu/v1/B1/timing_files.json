@@ -1,0 +1,26 @@
+{
+  "timings_rank3.json.gz": {
+    "raw_sha256": "f5b11bc42ee66cb55fc7a11ba8bb7d0cb8e70c9eac17c6a63f9e1d82f373717d",
+    "compressed_sha256": "b341e24858c369580be1521dd972ace7e9f4cb6889f20917c00a852819afa4b9",
+    "rows": 13428,
+    "source": "outputs/voc_four_gpu_v1/pipeline/B1/timings_rank3.json"
+  },
+  "timings_rank0.json.gz": {
+    "raw_sha256": "cf19a491eddfcf63bad471a896ca701bf728df12060a9e1a87e47a610861d2c6",
+    "compressed_sha256": "1b7af58835381b4e7c12e6a232e01e1ce3b73a39f7212a45bfec109341084219",
+    "rows": 13428,
+    "source": "outputs/voc_four_gpu_v1/pipeline/B1/timings_rank0.json"
+  },
+  "timings_rank1.json.gz": {
+    "raw_sha256": "b2269cf6c81771ee439a8fa2d5bda1c1ee8fc54df2aa8b0464dac7f9d6fe67a8",
+    "compressed_sha256": "866183240e7d45e51021379472c35acf13d8555b361f86355976bb54b3ff24de",
+    "rows": 13428,
+    "source": "outputs/voc_four_gpu_v1/pipeline/B1/timings_rank1.json"
+  },
+  "timings_rank2.json.gz": {
+    "raw_sha256": "d2d49137033c816697b68ec176cf395692990a60d1c400235eb96128d338c284",
+    "compressed_sha256": "ccafcd74e88050a1bc0a6709ad2870a04c55ea68b17fa61eff018af291626980",
+    "rows": 13428,
+    "source": "outputs/voc_four_gpu_v1/pipeline/B1/timings_rank2.json"
+  }
+}

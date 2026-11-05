@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "engineering_only": false,
+  "checkpoint": "epoch_1.pth",
+  "model_tensors": 948,
+  "optimizer_parameter_states": 48,
+  "epoch": 1,
+  "iteration": 1119,
+  "scheduler_state_present": true,
+  "optimizer_keys": [
+    "state",
+    "param_groups",
+    "loss_scaler"
+  ]
+}

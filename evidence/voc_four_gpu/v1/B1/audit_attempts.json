@@ -1,0 +1,16 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "KeyError: state_dict",
+      "reason": "The read-only audit initially assumed the pretrained checkpoint had a state_dict wrapper; this W0 is a direct tensor mapping.",
+      "training_affected": false
+    },
+    {
+      "attempt": 2,
+      "passed": true,
+      "result_file": "checkpoint_audit.json",
+      "training_affected": false
+    }
+  ]
+}

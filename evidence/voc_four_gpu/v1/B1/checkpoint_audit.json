@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "engineering_only": false,
+  "phase": "task1",
+  "checkpoint": "outputs/voc_four_gpu_v1/pipeline/B1/epoch_12.pth",
+  "checkpoint_sha256": "2da2f87ff7fdd33dcd213c3f8ec9bb42d4d7b80044c355b23466c90676dd737e",
+  "pretrained_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+  "base_tensors_exact": 900,
+  "saved_model_tensors": 948,
+  "all_model_tensors_finite": true,
+  "checkpoint_adapter_matches_all_ranks": true,
+  "lora_sha256": "ece6743f3e1415fa4b0f2bad8267a83a906a2d8f809a9e510ead30ee89a62086",
+  "epoch": 12,
+  "microsteps_per_rank": 13428,
+  "optimizer_updates": 13423,
+  "amp_skips": 5,
+  "optimizer_parameter_states": 48,
+  "optimizer_moments_finite": true,
+  "amp_scaler_state_present": true,
+  "scheduler_state_present": true,
+  "final_learning_rates": [
+    1e-05
+  ],
+  "audit_code_sha256": "ef4a82d44d79e83ef85e9342e5c337d0f166cf2d74e58be46457b2cb95bcc8f9"
+}
