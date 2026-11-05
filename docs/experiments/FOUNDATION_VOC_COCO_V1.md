@@ -13,4 +13,15 @@
 
 下载文件链接来自[COCO官方下载页](https://cocodataset.org/#download)，官方域名映射到同名S3桶；可使用有效TLS的路径地址。公开MD5同时核对[PaddleDetection数据清单](https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/ppdet/utils/download.py)。原始归档保留，检测标注仅提取instances_train2017.json和instances_val2017.json；其余图像不抽样。
 
-当前仅冻结本轮范围，未填入任何尚未完成的COCO AP或吞吐结果。
+## 新完成的VOC冻结评价
+
+物理GPU1重新完成4952图推理与评价，耗时约21.48分钟（含模型准备和两次指标汇总）。完整20类提示、900 query，直接使用原始预训练模型，不训练LoRA。
+
+|指标|旧15类|新5类|全部20类|
+|---|---:|---:|---:|
+|VOC07 AP50|77.0205|70.2854|75.3367|
+|COCO AP50:95，评价VOC测试集|66.0300|59.7401|64.4575|
+
+与此前保存的B0复核数值一致。该结果确认新工程的完整推理与评价能够复现原始基础输出；不说明增量训练已完成，也不证明抗遗忘方法有效。原始日志、配置、来源快照和逐类结果见evidence/foundation/v1/voc_B0。
+
+COCO接入代码已通过37项单元测试；全80类评价开始前，模型实际900个张量与W0逐项完全相等。COCO AP和吞吐尚待任务完成后填写。

@@ -1,0 +1,16 @@
+{
+  "dataset": "voc2007",
+  "code_commit": "7a34cf5",
+  "source_sha256": {
+    "src/gcd/cli.py": "fb2f1319ec4774873eb40fda882151659d5e6eca60ba12c61aa105a46988901e",
+    "src/gcd/runtime.py": "d9ddb0f25d52f07243c31a60371718a1f41aac82c201b67e6c1a70c49db1428c",
+    "src/gcd/model.py": "fd7ad70a30ebe3bffd591f18c20ca3e2b6bae7adacb60f4aa325d9f48ada81fb",
+    "src/gcd/peft.py": "d37748789aa9901cb99075618dcca843fd30d31f8af63dad2dc18ecf4080ac86",
+    "scripts/run.py": "43406ddd5ad20c7ab9852b12529ed560ceea7f9b5e5b1c580e8b869cb32aadb6",
+    "scripts/run_frozen_baseline.py": "db4a5d6ce2bae3c0083e725bdd1bb6f477bfe08579ef2437cb990fe7d7f11f63",
+    "configs/model/gdino_t.py": "6eaff18a1f20f214e48cc4d4a0fc22c83170680995dd2350703b6b598ef5891d"
+  },
+  "manifest_sha256": "4fb73dd7c880556343030a41dd91efc9690a0acbc0a8a17e0752a5f1d8906aa4",
+  "pretrained_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+  "physical_gpu": 1
+}

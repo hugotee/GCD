@@ -1,6 +1,6 @@
 # Grounding DINO + Single LoRA + CIOD
 
-独立科研基线，连接至 https://github.com/hugotee/GCD 。本项目使用完整预训练 Grounding DINO-T，以同一个 LoRA 顺序学习 VOC2007 旧15类、新5类。后续 COCO70+10/40+40 尚未启动。没有动态分组、任务路由、专家库、教师蒸馏或参数合并。
+独立科研基线，连接至 https://github.com/hugotee/GCD 。本项目使用完整预训练 Grounding DINO-T，以同一个 LoRA 顺序学习旧类、新类。VOC2007 15+5已接通，COCO2017正在完成数据、评价与训练路径验证；本轮进展见[VOC与COCO框架接入](docs/experiments/FOUNDATION_VOC_COCO_V1.md)。尚未完整复现参考论文，也没有实现新的抗遗忘方法。
 
 ## 当前可用材料
 
@@ -76,3 +76,17 @@ python scripts/summarize_results.py --results-root outputs/results --out outputs
 同一阶段恢复用 --resume outputs/B1/epoch_N.pth 和原work-dir，保留optimizer/scheduler/loop状态；跨阶段用 --init，明确重置优化器。配置、模型模板、manifest和W0组成恢复指纹，改变后拒绝续训。--dry-run可只生成配置和来源记录。
 
 参考实现与许可见 THIRD_PARTY_NOTICES.md。已按用户授权将基线与首轮诊断提交推送至GitHub main；后续任务在hugo/分支保留提交与结果。
+
+## COCO2017入口
+
+完整数据必须先通过归档MD5、ZIP CRC、118287张训练图与5000张验证图检查。官方源较慢时可给下载器增加 `--source hf-mirror`；镜像固定到具体提交，仍核对相同的公开MD5。阶段标注保留原始稀疏类别ID、area与crowd，不将类别ID直接减一作为训练标签。
+
+```bash
+python scripts/download_coco2017.py --out data/coco2017
+python scripts/prepare_coco.py --coco-root data/coco2017 --old-classes 70 --out data/coco70_10_v1
+python scripts/prepare_coco.py --coco-root data/coco2017 --old-classes 40 --out data/coco40_40_v1
+```
+
+复制私有runtime配置并将manifest指向相应划分；例如70+10使用 `configs/runtime.coco70_10.local.json` 和 `configs/experiments/coco70_10.json`。训练、恢复与评价仍走同一个原生入口。`scripts/run_coco_checks.py`分别完成两阶段8微步训练/重载核验、200微步性能测量，输出完整训练时间估算；其中产生的工程checkpoint不能初始化正式训练。它不是完整B1/B2实验。
+
+只准备好验证集时，可用 `scripts/prepare_coco.py --evaluation-only` 生成全80类评价manifest，配合 `configs/experiments/coco_eval80.json` 评价原始预训练模型；该manifest会拒绝训练。标准COCO检测指标用 `scripts/evaluate_coco.py` 汇总，默认评价完整5000图；`--split-at 70`或`40`可在同一份预测上额外汇总旧/新类指标。

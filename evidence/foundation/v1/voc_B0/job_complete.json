@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "dataset": "voc2007",
+  "physical_gpu": 1,
+  "evaluated_images": 4952,
+  "elapsed_seconds": 1288.6430307349656,
+  "result_sha256": "1f7f410dc8c88a86fe6a44a1bd4692e7fac46a2cb3961bbbb976bcdb13e889fd"
+}
