@@ -1,0 +1,37 @@
+{
+  "protocol": "COCO2017_id_order40+40_current_positive_v1",
+  "seed": 20261105,
+  "epochs": 12,
+  "batch_per_gpu": 2,
+  "accumulation": 2,
+  "workers": 2,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "lr_milestones": [
+    10
+  ],
+  "lr_gamma": 0.1,
+  "clip_grad": 0.1,
+  "amp_initial_scale": 128,
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.0
+  },
+  "lora_targets": "vision_and_text_encoder_ffn_only",
+  "train_short_edges": [
+    640,
+    672,
+    704,
+    736,
+    768,
+    800
+  ],
+  "eval_short_edge": 800,
+  "max_long_edge": 1333,
+  "num_queries": 900,
+  "max_per_image": 300,
+  "denoising": false,
+  "replay": false,
+  "distillation": false
+}

@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "engineering_only": true,
+  "dataset": "coco2017",
+  "protocol": "COCO2017_id_order70+10_current_positive_v1",
+  "physical_gpu": 1,
+  "batch_per_gpu": 2,
+  "accumulation": 2,
+  "num_queries": 900,
+  "estimated_epochs_per_phase": 12,
+  "stages": {
+    "task1": {
+      "training_images": 113983,
+      "microsteps": 200,
+      "warmup": 20,
+      "optimizer_updates": 100,
+      "amp_skips": 0,
+      "seconds_per_microstep": 0.6282591028442969,
+      "images_per_second": 3.1833999554411,
+      "peak_allocated_gib": 10.75821590423584,
+      "peak_reserved_gib": 16.37890625,
+      "loader_microsteps_per_epoch": 56992,
+      "estimated_training_hours": 119.35247596434056
+    },
+    "task2": {
+      "training_images": 20577,
+      "microsteps": 200,
+      "warmup": 20,
+      "optimizer_updates": 100,
+      "amp_skips": 0,
+      "seconds_per_microstep": 0.6868701968820662,
+      "images_per_second": 2.9117583046675626,
+      "peak_allocated_gib": 10.670580387115479,
+      "peak_reserved_gib": 18.310546875,
+      "loader_microsteps_per_epoch": 10289,
+      "estimated_training_hours": 23.55735818573193
+    }
+  },
+  "estimated_total_training_hours": 142.90983415007247,
+  "caveat": "Estimate from 200-microstep synchronized profiles; excludes loading, saving, evaluation and load changes.",
+  "formal_training_started": false,
+  "elapsed_seconds": 510.6384983009193
+}

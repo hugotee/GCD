@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "engineering_only": true,
+  "measurement": "CUDA synchronized per microstep",
+  "rank": 0,
+  "world_size": 1,
+  "iterations": 8,
+  "warmup": 0,
+  "steady_seconds": 5.485818707966246,
+  "steady_images": 16,
+  "p50_seconds": 0.5581161230220459,
+  "p95_seconds": 1.2688237826630935,
+  "optimizer_steps": 4,
+  "expected_optimizer_steps": 4,
+  "amp_skipped_steps": 0,
+  "frozen_parameters_unchanged": true,
+  "changed_lora_tensors": 48,
+  "gradient_checks": [
+    {
+      "iteration": 0,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 0,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 1,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 1,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 2,
+      "finite": true,
+      "nonzero": true
+    },
+    {
+      "iteration": 2,
+      "finite": true,
+      "nonzero": true
+    }
+  ],
+  "lora_sha256": "b133748fb19d2d6a9d8212ce692646487d0550a77aad4a865d9572844bec1094",
+  "peak_allocated_bytes": 8531083776,
+  "peak_reserved_bytes": 9693036544,
+  "trainable_parameters": 688128,
+  "total_parameters": 173600278,
+  "loader_length": 56992,
+  "elapsed_seconds": 13.317541629076004
+}
