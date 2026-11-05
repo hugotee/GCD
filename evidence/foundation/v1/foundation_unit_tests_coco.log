@@ -1,0 +1,86 @@
+test_category_identity_and_duplicate_annotations_are_rejected (test_coco.CocoTests) ... ok
+test_evaluation_only_manifest_cannot_be_used_for_training (test_coco.CocoTests) ... ok
+test_sparse_ids_crowd_and_original_area_are_preserved (test_coco.CocoTests) ... ok
+test_standard_coco_metric_handles_sparse_ids_and_empty_predictions (test_coco.CocoTests) ... ok
+test_existing_archive_preserves_transport_and_writes_completion (test_coco_download.DownloadTests) ... ok
+test_path_traversal_is_rejected (test_coco_download.DownloadTests) ... ok
+test_selected_detection_annotations_exclude_unrelated_payloads (test_coco_download.DownloadTests) ... ok
+test_confusion_orientation_is_ground_truth_to_predicted_class (test_diagnostics.DiagnosticTests) ... ok
+test_difficult_and_duplicate_are_not_counted_as_new_true_positives (test_diagnostics.DiagnosticTests) ... ok
+test_exact_half_iou_and_empty_predictions (test_diagnostics.DiagnosticTests) ... ok
+test_monotone_score_change_preserves_ap_but_changes_fixed_threshold_coverage (test_diagnostics.DiagnosticTests) ... ok
+test_norm_scaling_is_separate_from_direction_and_topology (test_diagnostics.DiagnosticTests) ... ok
+test_probe_uses_annotations_only_and_is_deterministic (test_diagnostics.DiagnosticTests) ... ok
+test_rigid_rotation_can_change_directions_but_preserve_topology (test_diagnostics.DiagnosticTests) ... ok
+test_score_suppression_is_separate_from_missing_cached_box (test_diagnostics.DiagnosticTests) ... ok
+test_allows_low_compute_utilization_with_sufficient_headroom (test_gpu_launcher.GPULauncherTests) ... ok
+test_evaluation_explicitly_initializes_and_verifies_checkpoint (test_gpu_launcher.GPULauncherTests) ... ok
+test_missing_or_wrong_initialization_is_rejected (test_gpu_launcher.GPULauncherTests) ... ok
+test_never_uses_an_unauthorized_free_gpu (test_gpu_launcher.GPULauncherTests) ... ok
+test_rejects_transient_idle_and_low_free_memory (test_gpu_launcher.GPULauncherTests) ... ok
+test_adapter_checkpoint_and_corrupted_base_are_checked_exactly (test_initialization.InitializationTests) ... ok
+test_zero_adapter_can_initialize_from_exact_pretrained_base (test_initialization.InitializationTests) ... ok
+test_difficult_detection_is_ignored_and_duplicate_is_false_positive (test_metrics.MetricTests) ... ok
+test_exact_half_iou_is_not_positive_in_voc07 (test_metrics.MetricTests) ... ok
+test_nonpositive_category_is_not_silently_zero_ap (test_metrics.MetricTests) ... ok
+test_perfect_20_class_predictions_and_json_serialization (test_metrics.MetricTests) ... ok
+test_strict_checkpoint_and_optimizer_resume_preserve_next_update (test_peft.LoRATests) ... ok
+test_target_scope_excludes_heads_fusion_and_backbone (test_peft.LoRATests) ... ok
+test_zero_initialized_adapter_and_mode_switch_do_not_merge (test_peft.LoRATests) ... ok
+test_local_labels_remap_to_identical_global_supervision (test_prompt_control.PromptControlTests) ... ok
+test_pair_rejects_order_change_duplicate_and_partial_epoch (test_prompt_control.PromptControlTests) ... ok
+test_current_positive_shared_images_and_hidden_annotations (test_protocol.ProtocolTests) ... ok
+test_standard_order_and_global_task2_labels (test_protocol.ProtocolTests) ... ok
+test_voc_inclusive_pixel_coordinates_and_difficult (test_protocol.ProtocolTests) ... ok
+test_configuration_cannot_silently_enable_unimplemented_methods (test_runtime.RuntimeTests) ... ok
+test_gpu_authorization_is_physical_and_explicit (test_runtime.RuntimeTests) ... ok
+test_resume_requires_full_state_and_matching_phase_config (test_runtime.RuntimeTests) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.733s
+
+OK
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.00s).
+Accumulating evaluation results...
+DONE (t=0.02s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+creating index...
+index created!
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.00s).
+Accumulating evaluation results...
+DONE (t=0.01s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000

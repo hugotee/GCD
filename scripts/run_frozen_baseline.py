@@ -26,6 +26,9 @@ dataset = manifest.get('dataset', 'voc2007')
 a.out.mkdir(parents=True, exist_ok=False)
 started = time.perf_counter()
 sources = ['src/gcd/cli.py','src/gcd/runtime.py','src/gcd/model.py','src/gcd/peft.py',
+           'src/gcd/initialization.py','src/gcd/protocol.py','src/gcd/metrics.py',
+           'src/gcd/coco.py','src/gcd/coco_metrics.py','configs/datasets/coco80_reference.json',
+           'scripts/evaluate.py','scripts/evaluate_coco.py',
            'scripts/run.py','scripts/run_frozen_baseline.py','configs/model/gdino_t.py']
 for name in sources:
     target = a.out/'source_snapshot'/name
@@ -49,3 +52,4 @@ for stage, command in commands:
 write_json(a.out/'job_complete.json',dict(passed=True,dataset=dataset,physical_gpu=int(a.gpu),
     evaluated_images=manifest['test']['images'],elapsed_seconds=time.perf_counter()-started,
     result_sha256=sha256(a.out/'results/summary.json')))
+write_json(a.out/'job_status.json',dict(stage='complete',status='passed'))

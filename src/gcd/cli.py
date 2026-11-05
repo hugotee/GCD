@@ -76,7 +76,8 @@ def main():
     validate_experiment(exp)
     manifest = json.loads(Path(runtime['manifest']).read_text())
     engineering = a.mode in ['smoke', 'profile']
-    validate_manifest(manifest, engineering)
+    training = a.mode in ['train', 'smoke', 'profile']
+    validate_manifest(manifest, engineering, training=training)
     if sha256(runtime['pretrained_checkpoint']) != runtime['pretrained_sha256']:
         raise RuntimeError('W0 hash mismatch')
     initial = a.init or Path(runtime['pretrained_checkpoint'])
@@ -120,7 +121,10 @@ def main():
         elif not work.is_dir():
             raise FileNotFoundError('Resume requires the existing work directory')
     barrier()
-    phase = manifest['phases'][a.phase]
+    phase = manifest['phases'].get(a.phase)
+    if phase is None:
+        if training:raise ValueError('Requested training phase is absent')
+        phase=dict(classes=manifest['classes'],expected_coco_dataset_label_ids=list(range(len(manifest['classes']))))
     model = Config.fromfile(str(ROOT / 'configs/model/gdino_t.py')).model
     for key in ('as_two_stage', 'share_pred_layer', 'num_pred_layer', 'train_cfg', 'test_cfg'):
         model.bbox_head.pop(key, None)
@@ -159,7 +163,6 @@ def main():
         launcher='pytorch' if world > 1 else 'none'))
     if world > 1:
         cfg.model_wrapper_cfg = dict(type='MMDistributedDataParallel', find_unused_parameters=True, broadcast_buffers=False)
-    training = a.mode in ['train', 'smoke', 'profile']
     if training:
         cfg.train_dataloader = loader(True)
         cfg.optim_wrapper = dict(type='AmpOptimWrapper',
@@ -199,6 +202,12 @@ def main():
             runner.train()
         else:
             runner._init_model_weights()
+            from gcd.initialization import verify_loaded_checkpoint
+            initialization=verify_loaded_checkpoint(runner.model,initial)
+            if rank==0:
+                write_json(work/'initialization_audit.json',initialization)
+                provenance.update(model_initialization_verified=True,loaded_checkpoint_state_exact=True)
+                write_json(work/'provenance.json',provenance)
         if a.mode in ['eval', 'frozen'] or a.verify:
             runner.test()
             if a.verify:

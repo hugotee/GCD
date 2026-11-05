@@ -30,14 +30,22 @@ def validate_experiment(data):
         raise ValueError('Batch, accumulation, epochs and queries must be positive')
 
 
-def validate_manifest(manifest, engineering=False):
+def validate_manifest(manifest, engineering=False, training=True):
     from gcd.protocol import CLASSES, sha256
     if not manifest.get('passed') or not manifest.get('protocol_frozen'):
         raise ValueError('Protocol has not been verified/frozen')
     if manifest.get('engineering_only') and not engineering:
         raise ValueError('Synthetic/engineering data cannot enter a formal run')
-    if manifest['classes'] != list(CLASSES):
-        raise ValueError('Unexpected class order')
+    if manifest.get('dataset','voc2007') == 'voc2007':
+        if manifest['classes'] != list(CLASSES):raise ValueError('Unexpected VOC class order')
+    elif manifest['dataset'] == 'coco2017':
+        from gcd.coco import categories
+        reference=categories()
+        if manifest['classes'] != [c['name'] for c in reference] or manifest['category_ids'] != [c['id'] for c in reference]:
+            raise ValueError('Unexpected COCO class order or sparse ID mapping')
+        if training and (manifest.get('evaluation_only') or not manifest['phases']):
+            raise ValueError('Evaluation-only COCO data cannot enter training')
+    else:raise ValueError('Unsupported dataset')
     for p in manifest['phases'].values():
         if sha256(p['train_ann']) != p['train_sha256']:
             raise ValueError('Training annotation hash changed')

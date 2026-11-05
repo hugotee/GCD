@@ -39,9 +39,15 @@ def safe_members(archive, names):
 
 def download(root, name, relative, size, workers, source):
     url = BASE + relative if source == 'official' else MIRROR + name
-    with urllib.request.urlopen(urllib.request.Request(url, method='HEAD'), timeout=30) as response:
-        assert int(response.headers['Content-Length']) == size
-        etag = response.headers['ETag']
+    for attempt in range(6):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, method='HEAD'), timeout=30) as response:
+                assert int(response.headers['Content-Length']) == size
+                etag = response.headers['ETag']
+            break
+        except Exception:
+            if attempt == 5: raise
+            time.sleep(min(2 ** attempt, 15))
     parts = root / '.downloads' / (name + '.parts'); parts.mkdir(parents=True, exist_ok=True)
     identity = dict(url=url, bytes=size, etag=etag, chunk_bytes=64 << 20)
     identity_file = parts / 'identity.json'
@@ -92,14 +98,14 @@ def download(root, name, relative, size, workers, source):
         temporary = archive_path.with_suffix('.assembling')
         with temporary.open('wb') as out:
             for i in range(count):
-                with (parts / f'{i:05d}.part').open('rb') as source:
-                    for data in iter(lambda: source.read(8 << 20), b''):
+                with (parts / f'{i:05d}.part').open('rb') as chunk_file:
+                    for data in iter(lambda: chunk_file.read(8 << 20), b''):
                         digest.update(data); md5.update(data); out.write(data)
         temporary.replace(archive_path)
     else:
         digest, md5 = hashlib.sha256(), hashlib.md5()
-        with archive_path.open('rb') as source:
-            for data in iter(lambda: source.read(8 << 20), b''): digest.update(data); md5.update(data)
+        with archive_path.open('rb') as archive_file:
+            for data in iter(lambda: archive_file.read(8 << 20), b''): digest.update(data); md5.update(data)
     assert archive_path.stat().st_size == size
     assert md5.hexdigest() == CHECKSUMS[name], 'Archive differs from the published COCO checksum'
     with zipfile.ZipFile(archive_path) as archive:

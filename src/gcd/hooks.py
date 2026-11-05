@@ -28,6 +28,10 @@ class BaselineAuditHook(Hook):
 
     def before_train(self, runner):
         model = unwrap(runner.model)
+        from gcd.initialization import verify_loaded_checkpoint
+        checkpoint=runner.cfg.get('load_from') or model.initial_checkpoint
+        initialization=verify_loaded_checkpoint(model,checkpoint)
+        write_json(Path(runner.work_dir)/f'initialization_rank{get_rank()}.json',initialization)
         self.rank, self.world = get_rank(), get_world_size()
         self.base = frozen_digest(model)
         self.trainables = audit_trainables(model)
