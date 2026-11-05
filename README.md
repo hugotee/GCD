@@ -56,7 +56,7 @@ profile_task2从工程checkpoint继续同一个LoRA，只验证顺序路径，�
 
 ## B0 / B1 / B2 正式入口
 
-以下是准备好的命令，不由README自动执行。此前相同协议的完整结果已保留，不重复提交正式训练。
+以下是原单卡入口，不由README自动执行。此前完整结果已保留；2026-11-05用户另行明确授权在当前工程用GPU0–3重跑VOC正式基线，见[四卡实验记录](docs/experiments/VOC_FOUR_GPU_V1.md)。
 
 ```bash
 python scripts/run.py frozen --runtime configs/runtime.local.json --gpus 2 --work-dir outputs/B0_eval

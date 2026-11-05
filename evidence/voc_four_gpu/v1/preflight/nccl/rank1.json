@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "rank": 1,
+  "world_size": 4,
+  "device": "NVIDIA GeForce RTX 3090",
+  "all_reduce_exact": true
+}

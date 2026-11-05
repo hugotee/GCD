@@ -1,0 +1,8 @@
+{
+  "iteration": 200,
+  "seconds": 0.33916487800888717,
+  "data_wait_seconds": 0.009531964897178113,
+  "images": 1,
+  "loss": 6.005598545074463,
+  "optimizer_steps": 200
+}

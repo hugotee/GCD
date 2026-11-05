@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "checkpoint_tensors_exact": true,
+  "checkpoint_sha256": "a5b4264ae6a4bff4f7b6db536625d6a7a3364fee940c176ec12a708736501713",
+  "compared_tensors": 948,
+  "new_adapter_tensors": 0,
+  "ignored_checkpoint_keys": []
+}

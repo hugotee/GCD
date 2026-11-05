@@ -1,6 +1,6 @@
 # 基线建设状态
 
-更新：2026-11-05。本仓库根目录为 /Users/hugo/Documents/ChatGPT/GCD，origin=github.com/hugotee/GCD；远程最初为空。独立搭建，不把旧DGS项目作为主体。用户最新允许物理GPU0–3中选择空闲卡；已有训练/探针仍按原记录使用GPU2，all20完整评价已迁到GPU1。不启动新的正式长训练。
+更新：2026-11-05。本仓库根目录为 /Users/hugo/Documents/ChatGPT/GCD，origin=github.com/hugotee/GCD；远程最初为空。独立搭建，不把旧DGS项目作为主体。用户已明确授权GPU0–3完成当前工程VOC两阶段正式训练；四卡短测已通过，正式B1已开始，进展见[VOC四卡实验](VOC_FOUR_GPU_V1.md)。历史训练/探针按原GPU记录保留，COCO正式长训练尚未启动。
 
 ## 已实现
 

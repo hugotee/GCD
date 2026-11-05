@@ -1,0 +1,585 @@
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+11/05 13:03:02 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.14 (main, Mar 21 2024, 16:24:04) [GCC 11.2.0]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 20261103
+    GPU 0,1,2,3: NVIDIA GeForce RTX 3090
+    CUDA_HOME: /usr
+    NVCC: Cuda compilation tools, release 9.1, V9.1.8
+    GCC: gcc (Ubuntu 9.4.0-1ubuntu1~18.04) 9.4.0
+    PyTorch: 2.1.2+cu121
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 12.1
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.9.2
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.1, CUDNN_VERSION=8.9.2, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.2, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.2+cu121
+    OpenCV: 4.10.0
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 20261103
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: pytorch
+    Distributed training: True
+    GPU number: 4
+------------------------------------------------------------
+
+11/05 13:03:02 - mmengine - INFO - Config:
+custom_hooks = [
+    dict(profile=True, type='BaselineAuditHook', warmup=0),
+]
+default_hooks = dict(
+    checkpoint=dict(
+        by_epoch=False,
+        interval=8,
+        max_keep_ckpts=2,
+        save_last=True,
+        type='CheckpointHook'),
+    logger=dict(interval=20, type='LoggerHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmdet'
+engineering_only = True
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+gcd_experiment_hash = '22a70b577d3d06a1d2bdfb1d6be54e30a0a8a7432bd73f3c36d628980c51833a'
+gcd_phase = 'task2'
+launcher = 'pytorch'
+log_level = 'INFO'
+log_processor = dict(by_epoch=False, type='LogProcessor')
+model = dict(
+    adapter=True,
+    as_two_stage=True,
+    backbone=dict(
+        attn_drop_rate=0.0,
+        convert_weights=False,
+        depths=[
+            2,
+            2,
+            6,
+            2,
+        ],
+        drop_path_rate=0.2,
+        drop_rate=0.0,
+        embed_dims=96,
+        frozen_stages=-1,
+        mlp_ratio=4,
+        num_heads=[
+            3,
+            6,
+            12,
+            24,
+        ],
+        out_indices=(
+            1,
+            2,
+            3,
+        ),
+        patch_norm=True,
+        qk_scale=None,
+        qkv_bias=True,
+        type='SwinTransformer',
+        window_size=7,
+        with_cp=False),
+    bbox_head=dict(
+        contrastive_cfg=dict(bias=None, log_scale=None, max_text_len=256),
+        loss_bbox=dict(loss_weight=5.0, type='L1Loss'),
+        loss_cls=dict(
+            alpha=0.25,
+            gamma=2.0,
+            loss_weight=1.0,
+            type='FocalLoss',
+            use_sigmoid=True),
+        loss_iou=dict(loss_weight=2.0, type='GIoULoss'),
+        num_classes=256,
+        sync_cls_avg_factor=True,
+        type='GroundingDINOHead'),
+    data_preprocessor=dict(
+        bgr_to_rgb=True,
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        pad_mask=False,
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='DetDataPreprocessor'),
+    decoder=dict(
+        layer_cfg=dict(
+            cross_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=8),
+            cross_attn_text_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=8),
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=2048, ffn_drop=0.0),
+            self_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=8)),
+        num_layers=6,
+        post_norm_cfg=None,
+        return_intermediate=True),
+    dn_cfg=None,
+    encoder=dict(
+        fusion_layer_cfg=dict(
+            embed_dim=1024,
+            init_values=0.0001,
+            l_dim=256,
+            num_heads=4,
+            v_dim=256),
+        layer_cfg=dict(
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=2048, ffn_drop=0.0),
+            self_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_levels=4)),
+        num_cp=0,
+        num_layers=6,
+        text_layer_cfg=dict(
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=1024, ffn_drop=0.0),
+            self_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=4))),
+    expected_classes=[
+        'aeroplane',
+        'bicycle',
+        'bird',
+        'boat',
+        'bottle',
+        'bus',
+        'car',
+        'cat',
+        'chair',
+        'cow',
+        'diningtable',
+        'dog',
+        'horse',
+        'motorbike',
+        'person',
+        'pottedplant',
+        'sheep',
+        'sofa',
+        'train',
+        'tvmonitor',
+    ],
+    initial_checkpoint=
+    '/home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/smoke_task1/iter_8.pth',
+    language_model=dict(
+        add_pooling_layer=False,
+        name='/home/data/dq/cdiod-dgs/weights/bert-base-uncased',
+        pad_to_max=False,
+        special_tokens_list=[
+            '[CLS]',
+            '[SEP]',
+            '.',
+            '?',
+        ],
+        type='BertModel',
+        use_sub_sentence_represent=True),
+    lora=dict(alpha=32, dropout=0.0, rank=16),
+    neck=dict(
+        act_cfg=None,
+        bias=True,
+        in_channels=[
+            192,
+            384,
+            768,
+        ],
+        kernel_size=1,
+        norm_cfg=dict(num_groups=32, type='GN'),
+        num_outs=4,
+        out_channels=256,
+        type='ChannelMapper'),
+    num_queries=900,
+    positional_encoding=dict(
+        normalize=True, num_feats=128, offset=0.0, temperature=20),
+    test_cfg=dict(max_per_img=300),
+    train_cfg=dict(
+        assigner=dict(
+            match_costs=[
+                dict(type='BinaryFocalLossCost', weight=2.0),
+                dict(box_format='xywh', type='BBoxL1Cost', weight=5.0),
+                dict(iou_mode='giou', type='IoUCost', weight=2.0),
+            ],
+            type='HungarianAssigner')),
+    train_label_ids=[
+        15,
+        16,
+        17,
+        18,
+        19,
+    ],
+    type='SingleLoRAGroundingDINO',
+    with_box_refine=True)
+model_wrapper_cfg = dict(
+    broadcast_buffers=False,
+    find_unused_parameters=True,
+    type='MMDistributedDataParallel')
+optim_wrapper = dict(
+    accumulative_counts=1,
+    clip_grad=dict(max_norm=0.1, norm_type=2),
+    loss_scale=dict(growth_interval=2000, init_scale=128),
+    optimizer=dict(lr=0.0001, type='AdamW', weight_decay=0.0001),
+    type='AmpOptimWrapper')
+param_scheduler = []
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=20261103)
+test_cfg = dict(type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file=
+        '/home/data/dq/gcd-ciod-20261104/data/voc15_5/task2_smoke_eval.json',
+        data_prefix=dict(
+            img=
+            '/home/data/dq/dgs-experiments/gdino_domain_kd_diagnostic_20261101/data/VOCdevkit/VOC2007/JPEGImages/'
+        ),
+        filter_cfg=None,
+        metainfo=dict(
+            classes=(
+                'aeroplane',
+                'bicycle',
+                'bird',
+                'boat',
+                'bottle',
+                'bus',
+                'car',
+                'cat',
+                'chair',
+                'cow',
+                'diningtable',
+                'dog',
+                'horse',
+                'motorbike',
+                'person',
+                'pottedplant',
+                'sheep',
+                'sofa',
+                'train',
+                'tvmonitor',
+            )),
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(keep_ratio=True, scale=(
+                800,
+                1333,
+            ), type='FixScaleResize'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'text',
+                    'custom_entities',
+                ),
+                type='PackDetInputs'),
+        ],
+        return_classes=True,
+        test_mode=True,
+        type='CocoDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(
+    out_file_path=
+    '/home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/smoke_task2/engineering_predictions.pkl',
+    type='DumpDetResults')
+train_cfg = dict(max_iters=8, type='IterBasedTrainLoop')
+train_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file=
+        '/home/data/dq/gcd-ciod-20261104/data/voc15_5/task2_train.json',
+        data_prefix=dict(
+            img=
+            '/home/data/dq/dgs-experiments/gdino_domain_kd_diagnostic_20261101/data/VOCdevkit/VOC2007/JPEGImages/'
+        ),
+        filter_cfg=None,
+        metainfo=dict(
+            classes=(
+                'aeroplane',
+                'bicycle',
+                'bird',
+                'boat',
+                'bottle',
+                'bus',
+                'car',
+                'cat',
+                'chair',
+                'cow',
+                'diningtable',
+                'dog',
+                'horse',
+                'motorbike',
+                'person',
+                'pottedplant',
+                'sheep',
+                'sofa',
+                'train',
+                'tvmonitor',
+            )),
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(prob=0.5, type='RandomFlip'),
+            dict(
+                keep_ratio=True,
+                scales=[
+                    (
+                        640,
+                        1333,
+                    ),
+                    (
+                        672,
+                        1333,
+                    ),
+                    (
+                        704,
+                        1333,
+                    ),
+                    (
+                        736,
+                        1333,
+                    ),
+                    (
+                        768,
+                        1333,
+                    ),
+                    (
+                        800,
+                        1333,
+                    ),
+                ],
+                type='RandomChoiceResize'),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'text',
+                    'custom_entities',
+                    'flip',
+                    'flip_direction',
+                ),
+                type='PackDetInputs'),
+        ],
+        return_classes=True,
+        test_mode=False,
+        type='CocoDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=True, type='DefaultSampler'))
+visualizer = None
+work_dir = '/home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/smoke_task2'
+
+11/05 13:03:05 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_save_checkpoint:
+(ABOVE_NORMAL) BaselineAuditHook                  
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Done (t=0.01s)
+creating index...
+index created!
+Done (t=0.01s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+11/05 13:03:07 - mmengine - WARNING - No pre-trained weights for SwinTransformer, training start from scratch
+11/05 13:03:12 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+11/05 13:03:12 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+11/05 13:03:12 - mmengine - INFO - Checkpoints will be saved to /home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/smoke_task2.
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+11/05 13:03:17 - mmengine - INFO - Saving checkpoint at 8 iterations
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+11/05 13:03:24 - mmengine - WARNING - The prefix is not set in metric class DumpDetResults.
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 13:03:25 - mmengine - INFO - Results has been saved to /home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/smoke_task2/engineering_predictions.pkl.
+11/05 13:03:25 - mmengine - INFO - Iter(test) [1/1]    data_time: 0.1208  time: 0.4186
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+11/05 13:03:27 - mmengine - INFO - Results has been saved to /home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/smoke_task2/engineering_predictions.pkl.
+11/05 13:03:27 - mmengine - INFO - Iter(test) [1/1]    data_time: 0.0747  time: 0.3125

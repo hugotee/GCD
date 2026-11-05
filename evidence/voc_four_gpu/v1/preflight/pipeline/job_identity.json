@@ -1,0 +1,36 @@
+{
+  "code_commit": "333e341",
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "world_size": 4,
+  "effective_batch": 4,
+  "manifest_sha256": "4fb73dd7c880556343030a41dd91efc9690a0acbc0a8a17e0752a5f1d8906aa4",
+  "experiment_sha256": "f3e879820ec0ed1641b469874a6f4f1ba23f29da06261cb6f8a12b3e58640f30",
+  "pretrained_sha256": "822d7e9db9ce6ff2119b72dc6e78606a1b0a2c307234798adf0cab50f1b424e3",
+  "source_sha256": {
+    "src/gcd/cli.py": "9fa159f81344fae7714d2eb14345a6256f2cd775d34d356f3c228523684f6fb5",
+    "src/gcd/initialization.py": "cb32a4b69bed334568d306c179c5e0c6da607b38cfa270c02d8837526e389639",
+    "src/gcd/runtime.py": "cd0f5a487aed3189a276727733fd772136f73efa600b786d32b559b32e518592",
+    "src/gcd/coco_metrics.py": "5b3f3cddc9dfe6e754baf1db2b2cd8b02be8467944da6ba7025316cfe3a769e5",
+    "src/gcd/metrics.py": "fa80190bef2acc1bffa96889467eff13db3f9f852b984a6590993eb4f9a69ada",
+    "src/gcd/coco.py": "c0b12888ca0350e544448f548a915bedc98c03c6e3c52596d17cb8167aef1f9b",
+    "src/gcd/hooks.py": "86086040c4723a2c51b1eb8c1cf9e0f551ecaf914c63a0c280c7c9c28666cd73",
+    "src/gcd/peft.py": "d37748789aa9901cb99075618dcca843fd30d31f8af63dad2dc18ecf4080ac86",
+    "src/gcd/protocol.py": "3108ee13a22c5e9fe571ee001f301c0e9ab0c4cdb450ceb1796237fe9554df9b",
+    "src/gcd/__init__.py": "3b4ed6d1f1b44a31118943876b3d4dc9473899916cdb3d1e894527c0548518a2",
+    "src/gcd/control_hooks.py": "40e608710ae37c97271cb28b2f1d49963c44b72f74813f741867b9a0d30ebc77",
+    "src/gcd/model.py": "fd7ad70a30ebe3bffd591f18c20ca3e2b6bae7adacb60f4aa325d9f48ada81fb",
+    "src/gcd/prompt_control.py": "d22d44b3df97864d882a143b81d480acf6104d776ccb615c0e83396c9b296e2d",
+    "src/gcd/diagnostics.py": "ae221ab102c3d6715ffeea4043440aac93b5f685599c8b964888889d7f035bcf",
+    "scripts/run.py": "43406ddd5ad20c7ab9852b12529ed560ceea7f9b5e5b1c580e8b869cb32aadb6",
+    "scripts/run_voc_four_gpu.py": "8ac821de68b30b2ad4dd51af7756ee2519e021f794065438fc42548aeaf1b11c",
+    "scripts/evaluate.py": "274142ceb1f3514bd87722f14815fc053e124f4936af4e3037562a17a9a391d5",
+    "configs/model/gdino_t.py": "6eaff18a1f20f214e48cc4d4a0fc22c83170680995dd2350703b6b598ef5891d",
+    "configs/experiments/voc15_5_4gpu.json": "f3e879820ec0ed1641b469874a6f4f1ba23f29da06261cb6f8a12b3e58640f30"
+  },
+  "sampler_note": "Native distributed sampler pads Task1 by 3 and Task2 by 2 image exposures per epoch."
+}

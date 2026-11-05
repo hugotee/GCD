@@ -1,0 +1,5 @@
+{
+  "source": "/home/data/dq/gcd-ciod-20261104/outputs/foundation_v1/voc_B0/results/summary.json",
+  "sha256": "1f7f410dc8c88a86fe6a44a1bd4692e7fac46a2cb3961bbbb976bcdb13e889fd",
+  "note": "Reuse the completed fresh 4952-image frozen run; no new B0 inference."
+}

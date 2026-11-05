@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "engineering_only": true,
+  "stages": {
+    "task1": {
+      "seconds_per_microstep_rank0": 0.341402605644867,
+      "slowest_rank_seconds_per_microstep": 0.3414332285064221,
+      "optimizer_updates": 200,
+      "amp_skips": 0,
+      "max_peak_allocated_gib": 3.111288070678711,
+      "max_peak_reserved_gib": 3.484375,
+      "loader_length": 1119,
+      "world_size": 4
+    },
+    "task2": {
+      "seconds_per_microstep_rank0": 0.3849913650832605,
+      "slowest_rank_seconds_per_microstep": 0.3849913650832605,
+      "optimizer_updates": 199,
+      "amp_skips": 1,
+      "max_peak_allocated_gib": 3.1971516609191895,
+      "max_peak_reserved_gib": 3.6328125,
+      "loader_length": 252,
+      "world_size": 4
+    }
+  },
+  "estimated_pure_training_minutes_rank0": 95.80946794351757
+}

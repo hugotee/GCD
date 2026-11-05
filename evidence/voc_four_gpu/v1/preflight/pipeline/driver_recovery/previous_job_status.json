@@ -1,0 +1,46 @@
+{
+  "stage": "profile_task2",
+  "status": "running",
+  "command": [
+    "/home/data/dq/miniconda3/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=4",
+    "/home/data/dq/gcd-ciod-20261104/scripts/run.py",
+    "profile",
+    "--runtime",
+    "configs/runtime.local.json",
+    "--experiment",
+    "configs/experiments/voc15_5_4gpu.json",
+    "--gpus",
+    "0,1,2,3",
+    "--phase",
+    "task2",
+    "--work-dir",
+    "/home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/profile_task2",
+    "--steps",
+    "200",
+    "--warmup",
+    "20",
+    "--init",
+    "/home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/profile_task1/iter_200.pth"
+  ],
+  "completed": [
+    {
+      "stage": "smoke_task1",
+      "passed": true,
+      "elapsed_seconds": 47.10410765197594
+    },
+    {
+      "stage": "smoke_task2",
+      "passed": true,
+      "elapsed_seconds": 47.1556112410035
+    },
+    {
+      "stage": "profile_task1",
+      "passed": true,
+      "elapsed_seconds": 106.9160593720153
+    }
+  ]
+}

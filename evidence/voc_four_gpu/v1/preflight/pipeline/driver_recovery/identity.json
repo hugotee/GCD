@@ -1,0 +1,5 @@
+{
+  "code_commit": "ed4cc70",
+  "driver_sha256": "56a78c0d434123c1bba4770a182748a2c3b1f01f8277236d1889590f1cdbb1b1",
+  "note": "Record AMP skips and reuse completed audited native runs. Original snapshots and logs preserved."
+}

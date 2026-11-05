@@ -1,0 +1,494 @@
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:26: UserWarning: Multi-processing start method `fork` is different from the previous setting `spawn`.It will be force set to `fork`. You can change this behavior by changing `mp_start_method` in your config.
+  warnings.warn(
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+11/05 13:05:35 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.14 (main, Mar 21 2024, 16:24:04) [GCC 11.2.0]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 20261103
+    GPU 0,1,2,3: NVIDIA GeForce RTX 3090
+    CUDA_HOME: /usr
+    NVCC: Cuda compilation tools, release 9.1, V9.1.8
+    GCC: gcc (Ubuntu 9.4.0-1ubuntu1~18.04) 9.4.0
+    PyTorch: 2.1.2+cu121
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 12.1
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.9.2
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.1, CUDNN_VERSION=8.9.2, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.2, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.2+cu121
+    OpenCV: 4.10.0
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 20261103
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: pytorch
+    Distributed training: True
+    GPU number: 4
+------------------------------------------------------------
+
+11/05 13:05:36 - mmengine - INFO - Config:
+custom_hooks = [
+    dict(profile=True, type='BaselineAuditHook', warmup=20),
+]
+default_hooks = dict(
+    checkpoint=dict(
+        by_epoch=False,
+        interval=200,
+        max_keep_ckpts=2,
+        save_last=True,
+        type='CheckpointHook'),
+    logger=dict(interval=20, type='LoggerHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmdet'
+engineering_only = True
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+gcd_experiment_hash = '22a70b577d3d06a1d2bdfb1d6be54e30a0a8a7432bd73f3c36d628980c51833a'
+gcd_phase = 'task2'
+launcher = 'pytorch'
+log_level = 'INFO'
+log_processor = dict(by_epoch=False, type='LogProcessor')
+model = dict(
+    adapter=True,
+    as_two_stage=True,
+    backbone=dict(
+        attn_drop_rate=0.0,
+        convert_weights=False,
+        depths=[
+            2,
+            2,
+            6,
+            2,
+        ],
+        drop_path_rate=0.2,
+        drop_rate=0.0,
+        embed_dims=96,
+        frozen_stages=-1,
+        mlp_ratio=4,
+        num_heads=[
+            3,
+            6,
+            12,
+            24,
+        ],
+        out_indices=(
+            1,
+            2,
+            3,
+        ),
+        patch_norm=True,
+        qk_scale=None,
+        qkv_bias=True,
+        type='SwinTransformer',
+        window_size=7,
+        with_cp=False),
+    bbox_head=dict(
+        contrastive_cfg=dict(bias=None, log_scale=None, max_text_len=256),
+        loss_bbox=dict(loss_weight=5.0, type='L1Loss'),
+        loss_cls=dict(
+            alpha=0.25,
+            gamma=2.0,
+            loss_weight=1.0,
+            type='FocalLoss',
+            use_sigmoid=True),
+        loss_iou=dict(loss_weight=2.0, type='GIoULoss'),
+        num_classes=256,
+        sync_cls_avg_factor=True,
+        type='GroundingDINOHead'),
+    data_preprocessor=dict(
+        bgr_to_rgb=True,
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        pad_mask=False,
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='DetDataPreprocessor'),
+    decoder=dict(
+        layer_cfg=dict(
+            cross_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=8),
+            cross_attn_text_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=8),
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=2048, ffn_drop=0.0),
+            self_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=8)),
+        num_layers=6,
+        post_norm_cfg=None,
+        return_intermediate=True),
+    dn_cfg=None,
+    encoder=dict(
+        fusion_layer_cfg=dict(
+            embed_dim=1024,
+            init_values=0.0001,
+            l_dim=256,
+            num_heads=4,
+            v_dim=256),
+        layer_cfg=dict(
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=2048, ffn_drop=0.0),
+            self_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_levels=4)),
+        num_cp=0,
+        num_layers=6,
+        text_layer_cfg=dict(
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=1024, ffn_drop=0.0),
+            self_attn_cfg=dict(
+                batch_first=True, dropout=0.0, embed_dims=256, num_heads=4))),
+    expected_classes=[
+        'aeroplane',
+        'bicycle',
+        'bird',
+        'boat',
+        'bottle',
+        'bus',
+        'car',
+        'cat',
+        'chair',
+        'cow',
+        'diningtable',
+        'dog',
+        'horse',
+        'motorbike',
+        'person',
+        'pottedplant',
+        'sheep',
+        'sofa',
+        'train',
+        'tvmonitor',
+    ],
+    initial_checkpoint=
+    '/home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/profile_task1/iter_200.pth',
+    language_model=dict(
+        add_pooling_layer=False,
+        name='/home/data/dq/cdiod-dgs/weights/bert-base-uncased',
+        pad_to_max=False,
+        special_tokens_list=[
+            '[CLS]',
+            '[SEP]',
+            '.',
+            '?',
+        ],
+        type='BertModel',
+        use_sub_sentence_represent=True),
+    lora=dict(alpha=32, dropout=0.0, rank=16),
+    neck=dict(
+        act_cfg=None,
+        bias=True,
+        in_channels=[
+            192,
+            384,
+            768,
+        ],
+        kernel_size=1,
+        norm_cfg=dict(num_groups=32, type='GN'),
+        num_outs=4,
+        out_channels=256,
+        type='ChannelMapper'),
+    num_queries=900,
+    positional_encoding=dict(
+        normalize=True, num_feats=128, offset=0.0, temperature=20),
+    test_cfg=dict(max_per_img=300),
+    train_cfg=dict(
+        assigner=dict(
+            match_costs=[
+                dict(type='BinaryFocalLossCost', weight=2.0),
+                dict(box_format='xywh', type='BBoxL1Cost', weight=5.0),
+                dict(iou_mode='giou', type='IoUCost', weight=2.0),
+            ],
+            type='HungarianAssigner')),
+    train_label_ids=[
+        15,
+        16,
+        17,
+        18,
+        19,
+    ],
+    type='SingleLoRAGroundingDINO',
+    with_box_refine=True)
+model_wrapper_cfg = dict(
+    broadcast_buffers=False,
+    find_unused_parameters=True,
+    type='MMDistributedDataParallel')
+optim_wrapper = dict(
+    accumulative_counts=1,
+    clip_grad=dict(max_norm=0.1, norm_type=2),
+    loss_scale=dict(growth_interval=2000, init_scale=128),
+    optimizer=dict(lr=0.0001, type='AdamW', weight_decay=0.0001),
+    type='AmpOptimWrapper')
+param_scheduler = []
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=20261103)
+train_cfg = dict(max_iters=200, type='IterBasedTrainLoop')
+train_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file=
+        '/home/data/dq/gcd-ciod-20261104/data/voc15_5/task2_train.json',
+        data_prefix=dict(
+            img=
+            '/home/data/dq/dgs-experiments/gdino_domain_kd_diagnostic_20261101/data/VOCdevkit/VOC2007/JPEGImages/'
+        ),
+        filter_cfg=None,
+        metainfo=dict(
+            classes=(
+                'aeroplane',
+                'bicycle',
+                'bird',
+                'boat',
+                'bottle',
+                'bus',
+                'car',
+                'cat',
+                'chair',
+                'cow',
+                'diningtable',
+                'dog',
+                'horse',
+                'motorbike',
+                'person',
+                'pottedplant',
+                'sheep',
+                'sofa',
+                'train',
+                'tvmonitor',
+            )),
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(prob=0.5, type='RandomFlip'),
+            dict(
+                keep_ratio=True,
+                scales=[
+                    (
+                        640,
+                        1333,
+                    ),
+                    (
+                        672,
+                        1333,
+                    ),
+                    (
+                        704,
+                        1333,
+                    ),
+                    (
+                        736,
+                        1333,
+                    ),
+                    (
+                        768,
+                        1333,
+                    ),
+                    (
+                        800,
+                        1333,
+                    ),
+                ],
+                type='RandomChoiceResize'),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'text',
+                    'custom_entities',
+                    'flip',
+                    'flip_direction',
+                ),
+                type='PackDetInputs'),
+        ],
+        return_classes=True,
+        test_mode=False,
+        type='CocoDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=True, type='DefaultSampler'))
+visualizer = None
+work_dir = '/home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/profile_task2'
+
+11/05 13:05:38 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_save_checkpoint:
+(ABOVE_NORMAL) BaselineAuditHook                  
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(ABOVE_NORMAL) BaselineAuditHook                  
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Done (t=0.01s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+11/05 13:05:40 - mmengine - WARNING - No pre-trained weights for SwinTransformer, training start from scratch
+11/05 13:05:46 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+11/05 13:05:46 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+11/05 13:05:46 - mmengine - INFO - Checkpoints will be saved to /home/data/dq/gcd-ciod-20261104/outputs/voc_four_gpu_v1/pipeline/profile_task2.
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+/home/data/dq/miniconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/data/dq/miniconda3/lib/python3.10/site-packages/mmcv/cnn/bricks/transformer.py:524: UserWarning: position encoding of key ismissing in MultiheadAttention.
+  warnings.warn(f'position encoding of key is'
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1346] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+11/05 13:05:54 - mmengine - INFO - Iter(train) [ 20/200]  lr: 1.0000e-04  eta: 0:01:17  time: 0.3774  data_time: 0.0085  memory: 3094  grad_norm: 16.2986  loss: 3.5787  loss_cls: 0.2348  loss_bbox: 0.1349  loss_iou: 0.1204  d0.loss_cls: 0.2346  d0.loss_bbox: 0.1367  d0.loss_iou: 0.1276  d1.loss_cls: 0.1940  d1.loss_bbox: 0.1988  d1.loss_iou: 0.1459  d2.loss_cls: 0.1635  d2.loss_bbox: 0.1992  d2.loss_iou: 0.1460  d3.loss_cls: 0.1463  d3.loss_bbox: 0.1992  d3.loss_iou: 0.1459  d4.loss_cls: 0.2332  d4.loss_bbox: 0.1350  d4.loss_iou: 0.1199  enc_loss_cls: 0.1967  enc_loss_bbox: 0.2054  enc_loss_iou: 0.1608
+11/05 13:06:02 - mmengine - INFO - Iter(train) [ 40/200]  lr: 1.0000e-04  eta: 0:01:04  time: 0.3798  data_time: 0.0090  memory: 3108  grad_norm: 14.8266  loss: 5.1044  loss_cls: 0.4287  loss_bbox: 0.1705  loss_iou: 0.1318  d0.loss_cls: 0.4133  d0.loss_bbox: 0.1761  d0.loss_iou: 0.1387  d1.loss_cls: 0.4512  d1.loss_bbox: 0.1739  d1.loss_iou: 0.1329  d2.loss_cls: 0.3951  d2.loss_bbox: 0.1704  d2.loss_iou: 0.1318  d3.loss_cls: 0.4222  d3.loss_bbox: 0.1714  d3.loss_iou: 0.1328  d4.loss_cls: 0.4313  d4.loss_bbox: 0.1687  d4.loss_iou: 0.1310  enc_loss_cls: 0.3940  enc_loss_bbox: 0.1921  enc_loss_iou: 0.1465
+11/05 13:06:09 - mmengine - INFO - Iter(train) [ 60/200]  lr: 1.0000e-04  eta: 0:00:55  time: 0.3717  data_time: 0.0086  memory: 3109  grad_norm: 10.7409  loss: 8.4699  loss_cls: 0.4991  loss_bbox: 0.3288  loss_iou: 0.3813  d0.loss_cls: 0.4893  d0.loss_bbox: 0.3446  d0.loss_iou: 0.3949  d1.loss_cls: 0.5020  d1.loss_bbox: 0.3504  d1.loss_iou: 0.3967  d2.loss_cls: 0.4794  d2.loss_bbox: 0.3303  d2.loss_iou: 0.3835  d3.loss_cls: 0.4853  d3.loss_bbox: 0.3287  d3.loss_iou: 0.3825  d4.loss_cls: 0.4818  d4.loss_bbox: 0.3291  d4.loss_iou: 0.3817  enc_loss_cls: 0.4892  enc_loss_bbox: 0.3201  enc_loss_iou: 0.3913
+11/05 13:06:17 - mmengine - INFO - Iter(train) [ 80/200]  lr: 1.0000e-04  eta: 0:00:47  time: 0.3810  data_time: 0.0086  memory: 2957  grad_norm: 12.6102  loss: 6.2802  loss_cls: 0.4685  loss_bbox: 0.2087  loss_iou: 0.1368  d0.loss_cls: 0.3243  d0.loss_bbox: 0.3972  d0.loss_iou: 0.2623  d1.loss_cls: 0.3996  d1.loss_bbox: 0.2903  d1.loss_iou: 0.2119  d2.loss_cls: 0.3925  d2.loss_bbox: 0.2921  d2.loss_iou: 0.2091  d3.loss_cls: 0.4480  d3.loss_bbox: 0.2503  d3.loss_iou: 0.1689  d4.loss_cls: 0.4719  d4.loss_bbox: 0.2088  d4.loss_iou: 0.1365  enc_loss_cls: 0.3104  enc_loss_bbox: 0.4212  enc_loss_iou: 0.2711
+11/05 13:06:25 - mmengine - INFO - Iter(train) [100/200]  lr: 1.0000e-04  eta: 0:00:39  time: 0.3889  data_time: 0.0084  memory: 3174  grad_norm: 14.8739  loss: 6.0254  loss_cls: 0.4687  loss_bbox: 0.1727  loss_iou: 0.1853  d0.loss_cls: 0.4753  d0.loss_bbox: 0.2116  d0.loss_iou: 0.1968  d1.loss_cls: 0.5013  d1.loss_bbox: 0.1702  d1.loss_iou: 0.1815  d2.loss_cls: 0.4449  d2.loss_bbox: 0.1711  d2.loss_iou: 0.1828  d3.loss_cls: 0.4643  d3.loss_bbox: 0.1724  d3.loss_iou: 0.1858  d4.loss_cls: 0.4722  d4.loss_bbox: 0.1730  d4.loss_iou: 0.1867  enc_loss_cls: 0.4471  enc_loss_bbox: 0.2778  enc_loss_iou: 0.2839
+11/05 13:06:33 - mmengine - INFO - Iter(train) [120/200]  lr: 1.0000e-04  eta: 0:00:31  time: 0.3861  data_time: 0.0087  memory: 3111  grad_norm: 8.3968  loss: 3.5759  loss_cls: 0.2227  loss_bbox: 0.1320  loss_iou: 0.1494  d0.loss_cls: 0.2153  d0.loss_bbox: 0.1545  d0.loss_iou: 0.1642  d1.loss_cls: 0.2208  d1.loss_bbox: 0.1369  d1.loss_iou: 0.1522  d2.loss_cls: 0.2157  d2.loss_bbox: 0.1333  d2.loss_iou: 0.1495  d3.loss_cls: 0.2118  d3.loss_bbox: 0.1299  d3.loss_iou: 0.1486  d4.loss_cls: 0.2173  d4.loss_bbox: 0.1319  d4.loss_iou: 0.1491  enc_loss_cls: 0.2328  enc_loss_bbox: 0.1469  enc_loss_iou: 0.1609
+11/05 13:06:40 - mmengine - INFO - Iter(train) [140/200]  lr: 1.0000e-04  eta: 0:00:23  time: 0.3801  data_time: 0.0087  memory: 2956  grad_norm: 14.3488  loss: 3.6316  loss_cls: 0.2078  loss_bbox: 0.1328  loss_iou: 0.1768  d0.loss_cls: 0.1956  d0.loss_bbox: 0.1530  d0.loss_iou: 0.1934  d1.loss_cls: 0.1922  d1.loss_bbox: 0.1370  d1.loss_iou: 0.1827  d2.loss_cls: 0.1874  d2.loss_bbox: 0.1350  d2.loss_iou: 0.1775  d3.loss_cls: 0.1918  d3.loss_bbox: 0.1315  d3.loss_iou: 0.1765  d4.loss_cls: 0.1971  d4.loss_bbox: 0.1330  d4.loss_iou: 0.1784  enc_loss_cls: 0.1767  enc_loss_bbox: 0.1651  enc_loss_iou: 0.2103
+11/05 13:06:48 - mmengine - INFO - Iter(train) [160/200]  lr: 1.0000e-04  eta: 0:00:15  time: 0.3879  data_time: 0.0087  memory: 2957  grad_norm: 16.2847  loss: 5.7149  loss_cls: 0.3817  loss_bbox: 0.2165  loss_iou: 0.1912  d0.loss_cls: 0.3958  d0.loss_bbox: 0.2291  d0.loss_iou: 0.2027  d1.loss_cls: 0.4449  d1.loss_bbox: 0.2299  d1.loss_iou: 0.2027  d2.loss_cls: 0.4369  d2.loss_bbox: 0.2319  d2.loss_iou: 0.2046  d3.loss_cls: 0.4099  d3.loss_bbox: 0.2158  d3.loss_iou: 0.1901  d4.loss_cls: 0.3938  d4.loss_bbox: 0.2166  d4.loss_iou: 0.1906  enc_loss_cls: 0.2931  enc_loss_bbox: 0.2286  enc_loss_iou: 0.2084
+11/05 13:06:56 - mmengine - INFO - Iter(train) [180/200]  lr: 1.0000e-04  eta: 0:00:07  time: 0.3802  data_time: 0.0087  memory: 3105  grad_norm: 15.7843  loss: 5.2505  loss_cls: 0.3348  loss_bbox: 0.1317  loss_iou: 0.2409  d0.loss_cls: 0.3803  d0.loss_bbox: 0.1398  d0.loss_iou: 0.2527  d1.loss_cls: 0.4052  d1.loss_bbox: 0.1310  d1.loss_iou: 0.2459  d2.loss_cls: 0.3365  d2.loss_bbox: 0.1328  d2.loss_iou: 0.2392  d3.loss_cls: 0.3442  d3.loss_bbox: 0.1317  d3.loss_iou: 0.2419  d4.loss_cls: 0.3336  d4.loss_bbox: 0.1328  d4.loss_iou: 0.2419  enc_loss_cls: 0.4536  enc_loss_bbox: 0.1454  enc_loss_iou: 0.2545
+11/05 13:07:04 - mmengine - INFO - Iter(train) [200/200]  lr: 1.0000e-04  eta: 0:00:00  time: 0.3975  data_time: 0.0088  memory: 2876  grad_norm: 12.9003  loss: 4.1492  loss_cls: 0.2482  loss_bbox: 0.1567  loss_iou: 0.1509  d0.loss_cls: 0.2343  d0.loss_bbox: 0.2073  d0.loss_iou: 0.1822  d1.loss_cls: 0.2768  d1.loss_bbox: 0.1579  d1.loss_iou: 0.1528  d2.loss_cls: 0.2621  d2.loss_bbox: 0.1543  d2.loss_iou: 0.1492  d3.loss_cls: 0.2616  d3.loss_bbox: 0.1579  d3.loss_iou: 0.1537  d4.loss_cls: 0.2578  d4.loss_bbox: 0.1568  d4.loss_iou: 0.1513  enc_loss_cls: 0.2934  enc_loss_bbox: 0.1954  enc_loss_iou: 0.1882
+11/05 13:07:04 - mmengine - INFO - Saving checkpoint at 200 iterations
